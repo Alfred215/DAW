@@ -1,0 +1,46 @@
+@font-face {
+    font-family: "Ballpack";
+    src: url(fonts/ballpark.eot);
+    src: url(fonts/ballpark.ttf);
+}
+
+@font-face {
+    font-family: "Dayrom" ;
+    src: url(fonts/dayrom.eot);
+    src: url(fonts/dayrom.ttf);
+}
+
+header{border: solid 2px red; background-color: rgb(248, 233, 167);}
+nav{border: solid 2px lightblue; background-color: rgb(248, 233, 167);}
+section{border: solid 2px green; background-color: rgb(248, 233, 167);}
+article{background-color: purple}
+aside{background-color: pink}
+footer{background-color: blue}
+
+img{margin: 0mm;}
+
+h1{margin: 0mm;}
+
+#titulo{margin: 0mm;
+        padding-left: 2%;
+        width: 30%;
+
+    }
+
+#nav{
+    float: inline-start;
+    margin: 0mm;
+    text-align: center;
+
+}
+
+nav{float: right;
+    margin-top: 0mm;
+    margin-right:2% ;
+    padding: 0mm;
+    width: 40%;
+}
+
+
+
+body{margin:5%}
