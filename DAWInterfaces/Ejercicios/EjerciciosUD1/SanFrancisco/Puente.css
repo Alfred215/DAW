@@ -13,13 +13,16 @@
 header{border: solid 2px red; background-color: rgb(248, 233, 167);}
 nav{border: solid 2px lightblue; background-color: rgb(248, 233, 167);}
 section{border: solid 2px green; background-color: rgb(248, 233, 167);}
-article{background-color: purple}
-aside{background-color: pink}
+article{border: solid 2px purple}
+aside{border: solid 2px pink}
 footer{background-color: blue}
 
 img{margin: 0mm;}
 
-h1{margin: 0mm;}
+h1{
+    margin: 0mm;
+    
+}
 
 #titulo{margin: 0mm;
         padding-left: 2%;
@@ -31,14 +34,25 @@ h1{margin: 0mm;}
     float: inline-start;
     margin: 0mm;
     text-align: center;
-
+    text-size-adjust: 10%;
 }
 
-nav{float: right;
+nav{
+    background-image: url();
+    float: right;
     margin-top: 0mm;
     margin-right:2% ;
     padding: 0mm;
     width: 40%;
+}
+
+article{
+    width: 80%;
+}
+
+aside{
+    float: right;
+    width: 15%;
 }
 
 
