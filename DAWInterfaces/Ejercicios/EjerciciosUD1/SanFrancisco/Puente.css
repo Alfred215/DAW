@@ -17,7 +17,6 @@ header{
 }
 
 nav{
-    background-image: url();
     float: right;
     margin-top: 0mm;
     margin-right:2% ;
@@ -52,7 +51,9 @@ aside{
 
 .white{color: white;}
 
-footer{background-color: blue}
+footer{
+    border-top: solid 2p gray;
+    }
 
 img{margin: 0mm;}
 
@@ -78,7 +79,34 @@ h1{
     text-size-adjust: 10%;
 }
 
+#divfooter1{
+    vertical-align: center;
+    width: 33%;
+    float: right;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+}
+
+#divfooter2{
+    width: 38%;
+    float: right;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+}
+
+#divfooter3{
+    width: 25%;
+    float: right;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+}
+
 #puente{width: 96%; margin-left: 2%; margin-right: 2%;}
 
 body{margin:5%;
     background-color: rgb(253, 247, 215);}
+
+#mitad1{
+    width: 46%;
+    color: brown;
+}
