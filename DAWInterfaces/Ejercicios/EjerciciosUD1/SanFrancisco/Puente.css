@@ -11,8 +11,6 @@
 }
 
 header{
-    border-bottom: solid 2px gray;
-    border-top: solid 2px gray;
     margin-bottom: 1%;
 }
 
@@ -52,14 +50,25 @@ aside{
 .white{color: white;}
 
 footer{
-    border-top: solid 2p gray;
+    background: url(images/top.png) no-repeat top center ,url(images/line.png) repeat-x top center,
+    url(images/shadow.png) repeat-x center;
+    padding-top: 25px;
     }
 
 img{margin: 0mm;}
 
 h1{
+    font-family: 'Ballpack';
     margin: 0.5%;
     
+}
+
+h3{
+    font-family: 'Dayrom';
+}
+
+h4{
+    font-family: 'Dayrom';
 }
 
 #burro{border:solid 2px black;}
@@ -70,6 +79,7 @@ h1{
 #titulo{margin: 0mm;
         padding-left: 2%;
         margin-left: 1%;
+        font-family: 'Dayrom';
     }
 
 #nav{
@@ -104,7 +114,7 @@ h1{
 #puente{width: 96%; margin-left: 2%; margin-right: 2%;}
 
 body{margin:5%;
-    background-color: rgb(253, 247, 215);}
+    background-color: url(images/yellow_background.png);}
 
 #mitad1{
     width: 46%;
