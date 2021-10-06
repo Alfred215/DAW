@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Ejercicio Estructura Case</title>
+        <script>
+            //funciones
+        </script>
+    </head>
+    <body>
+        <p>Ejercicios Estructura Case</p>
+        <script>
+            dia();
+            function dia (){
+                var dias = prompt("Introduce el dia de la semana");
+                switch(dias){
+                    case 'lunes':
+                        alert("Hoy es Lunes");
+                    break;
+
+                    case 'martes':
+                        alert("Hoy es Martes");
+                    break;
+
+                    case 'miercoles':
+                        alert("Hoy es Miercoles");
+                    break;
+
+                    case 'jueves':
+                        alert("Hoy es Jueves");
+                    break;
+
+                    case 'viernes':
+                        alert("Hoy es Viernes");
+                    break;
+
+                    case 'sabado':
+                        alert("Hoy es Sabado");
+                    break;
+
+                    case 'domingo':
+                        alert("Hoy es Domingo");
+                    break;
+
+                    default:
+                        dia();
+                        break;
+                }
+            }   
+        </script>
+    </body>
+</html>
