@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Ejercicio Encabezado</title>
+        <script>
+            //funciones
+        </script>
+    </head>
+    <body>
+        <p>Encabezados</p>
+        <script>
+            var nombre=prompt("Introduce el nombre");
+            var apellido=prompt("introduce el apellido");
+            var edad=parseInt(prompt("Introduce tu edad"));
+            var año=parseInt(prompt("Introduce tu año de nacimiento"));;
+            var resultado=2021-edad;
+            if(edad<16){
+                alert("No puedes realizar la matricula hasta "+(resultado+2));
+            }else if(edad>=16 && edad<=25){
+                alert("Puedes matricularte en FP")
+            }else if(edad>25){
+                alert("Puedes realizar practicas en el extranjero")
+            }
+            
+        </script>
+    </body>
+</html>
