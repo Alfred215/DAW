@@ -3,7 +3,7 @@
 <html lang="es">
     <head>
         <meta charset="utf-8">
-        <title>Ejercicio Encabezado</title>
+        <title>Ejercicio 11</title>
         <script>
             //funciones
         </script>
@@ -14,7 +14,6 @@
             var nombre=prompt("Introduce el nombre");
             var apellido=prompt("introduce el apellido");
             var edad=parseInt(prompt("Introduce tu edad"));
-            var año=parseInt(prompt("Introduce tu año de nacimiento"));;
             var resultado=2021-edad;
             if(edad<16){
                 alert("No puedes realizar la matricula hasta "+(resultado+2));
@@ -22,6 +21,8 @@
                 alert("Puedes matricularte en FP")
             }else if(edad>25){
                 alert("Puedes realizar practicas en el extranjero")
+            }else{
+                alert("No ha sido posible calcular su edad. LO SIENTO");
             }
             
         </script>

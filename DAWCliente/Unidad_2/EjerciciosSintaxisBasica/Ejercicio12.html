@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Ejercicio 12</title>
+        <script>
+            function comprobar(nombre,apellido){
+                if(nombre.toLowerCase()=="adolfo" && apellido.toLowerCase()=="suarez"){
+                    document.write("Has acertado");
+                }else if(nombre.toLowerCase()=="adolfo"){
+                    apellido=prompt("Te falta el apellido");
+                    comprobar(nombre,apellido);
+                }else if(apellido.toLowerCase()=="suarez"){
+                    nombre=prompt("Te falta el nombre");
+                    comprobar(nombre,apellido);
+                }else{
+                    alert("ERROR. Intentelo de nuevo");
+                    nombre=prompt("Introduce el nombre");
+                    apellido=prompt("Introduce el apellido");
+                    comprobar(nombre,apellido);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <script>
+            var nombre=prompt("Introduce el nombre");
+            var apellido=prompt("introduce el apellido");
+            comprobar(nombre,apellido);
+        </script>
+    </body>
+</html>

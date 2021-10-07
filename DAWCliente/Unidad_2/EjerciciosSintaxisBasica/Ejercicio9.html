@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Ejercicios 9</title>
+        <script>
+            function control(){
+                var apellido = prompt("introduzca el apellido del primer presidente de la democracia");
+                if("suarez"==apellido.toLowerCase()){
+                    document.write("Has pasado el control");
+                }else{
+                    alert("Control parental");
+                    control();
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <ul>
+            <script>
+                control();
+            </script>
+        </ul>
+        
+    </body>
+</html>
