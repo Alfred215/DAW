@@ -10,12 +10,24 @@
     </head>
     <body>
         <h1 id="en1">DOM</h1>
-        <p>Estoy aprendiendo</p>
-        <p>Soy estudiante</p>
-        <p>Tengo los apuntes</p>
+        <h2 class="en2">DOM2</h2>
+        <p name="item1">Estoy aprendiendo</p>
+        <p name="p">Soy estudiante</p>
+        <p name="p">Tengo los apuntes</p>
         <script>
            var encabezados=document.getElementById("en1");
            alert(encabezados.textContent);
+
+           var encabezados2=document.getElementsByClassName("en2");
+           alert(encabezados2[0].textContent);
+
+           var parrafos1=document.getElementsByName("item1");
+           alert(parrafos1[0].textContent);
+
+           var parrafos2=document.getElementsByTagName("p")
+           for(var a = 0;a<=parrafos2.length;a++){
+               alert(parrafos2[a].textContent);
+           }
         </script>
     </body>
 </html>
