@@ -1,0 +1,30 @@
+div#a{
+    float:right;
+    background: blue;
+    width: 2em;
+    height: 4em;
+    top: 1em;
+    left: 2em;
+}
+
+div#b{
+    background: red;
+    width: 4em;
+    height: 2em;
+}
+
+div#c{
+    position: relative;
+    background: pink;
+    width: 1em;
+    height: 1em;
+    top: 1em;
+    left: 2em;
+}
+
+p{
+    font-size: 80px;
+    background: yellow;
+    margin: 0;
+    padding: 0;
+}
