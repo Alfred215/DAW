@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+        <title>EjercicioDOM1</title>
+        
+    </head>
+    <body>
+        <p>
+            Prueba A 
+            <a href="http://prueba">enlace A</a>
+            Prueba B
+            <a href="http://preuab3">enlace B</a>
+            Prueba C
+        </p>
+
+        <p>
+            Prueba D
+            <a href="http://prueba">enlace C</a>
+            Prueba E
+            <a href="http://preuab3">enlace D</a>
+            Prueba F
+        </p>
+
+        <p>
+            Prueba G
+            <a href="http://prueba">enlace G</a>
+            Prueba H
+            <a href="http://preuab4">enlace H</a>
+            Prueba I
+            <a href="http://preuab5">enlace I</a>
+            Prueba J
+        </p>
+
+        <script>
+            var contadorEnlace=0;
+            var contadorPrueba=0;
+            var enlaces = document.getElementsByTagName("a");
+            alert("Numero de enlaces: "+enlaces.length)
+
+            for(i=0;i<enlaces.length;i++){
+                contadorEnlace++;
+                if(enlaces[i].href=="http://preuba" || enlaces[i].href=="http://preuba/" ){
+                    contadorPrueba++;
+                }
+            }
+
+            //a)
+            document.write(contadorEnlace+" enlaces<br>");
+            //b)
+            document.write(enlaces[enlaces.length-2].href+"<br>");
+            //c)
+            document.write(contadorPrueba+" enlaces a http://preuba<br>");
+            //d)
+            var parrafos=document.getElementsByTagName("p");
+            var enlacestercerParrafo=parrafos[2].getElementsByTagName("a");
+            document.write(enlacestercerParrafo+" enlaces que hay en el tercer párrafo <br>");
+
+        </script>
+    </body>
+</html>
