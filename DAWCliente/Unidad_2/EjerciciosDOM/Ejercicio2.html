@@ -2,20 +2,25 @@
 <html>
     <head>
         <title>EjercicioDOM2</title>
-        <style type="tet/css">
+        <style type="text/css">
             .oculto{display: none;}
             .visible{display: inline;}
         </style>
 
+
         <script type="text/javascript">
             function muestra(){
-                alert("Hola buenas")
+                var elemento = document.getElementById("adicional");
+                elemento.className= "visible";
+
+                var enlace = document.getElementById("enlace");
+                enlace.className="oculto";
             }
         </script>
     </head>
 
     <body>
-        <p id="texto">Texto ejercicio2 <span id="adicional" class="visible">segunda parte</span></p>
-        <a id="enlace" href="#" onclick="muestra();">Seguir leyendo</a>
+        <p id="texto">Texto ejercicio2 <span id="adicional" class="oculto">segunda parte</span></p>
+        <a id="enlace" href="#" onclick="muestra()">Seguir leyendo</a>
     </body>
 </html>

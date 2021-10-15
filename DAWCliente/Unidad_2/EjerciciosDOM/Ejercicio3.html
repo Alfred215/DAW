@@ -4,7 +4,15 @@ z<html>
         <title>EjercicioDOM3</title>
         <script type="text/javascript">
             function insertar(){
+                var elemento = document.createElement("li");
+                var texto = document.createTextNode("Elemento de prueba");
+                elemento.appendChild(texto);
 
+                var lista = document.getElementById("lista");
+                lista.appendChild(elemento);
+
+                var nuevoElemento = "<li> Texto prueba</li>";
+                lista.innerHTML = lista.innerHTML + nuevoElemento;
             }
         </script>
     </head>
