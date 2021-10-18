@@ -1,0 +1,62 @@
+*{border: solid 2px red;}
+body{
+    margin: 20px;
+}
+
+header{
+    text-align: center;
+    padding-top: 10px;
+    background-color: black;
+    color: white;
+    padding-bottom: 10px;
+}
+
+section{
+width: 51%;
+display: inline-block;
+height: 100%;
+}
+
+article{
+    text-align: justify;
+}
+
+aside{
+width: 44%;
+display: inline-block;
+}
+
+footer{
+ text-align: center;
+}
+
+.lista{
+    width: 80px;
+    text-align: right;
+    font-weight: bold;
+}
+
+dt{
+    margin-bottom: 5px;
+}
+.lista1{
+    padding-left: 62px;
+
+}
+
+.lista11{
+    padding-left: 70px;
+
+}
+
+.negrita{
+    width: 10px;
+}
+
+dt a{
+    padding-left: 20px;
+}
+
+div.simbolo{
+    text-align: center;
+}
