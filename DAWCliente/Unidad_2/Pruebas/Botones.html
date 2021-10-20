@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Botones</title>
+        <script>
+            function cambiaColor(color){
+                document.body.style.backgroundColor=color;
+            }
+
+            function cambiaColor2(color2,colorFondo){
+                var parrafo = document.getElementsByTagName("p");
+                parrafo[0].style.color=color2;
+                parrafo[0].style.backgroundColor=colorFondo;
+            }
+        </script>
+    </head>
+    <body>
+        <p onclick="cambiaColor2('green','white')">Bienvenido</p>
+        <input type="Button" value="Rojo" onclick="cambiaColor('red');"/>
+        <input type="Button" value="Verde" onclick="cambiaColor('verde');"/>
+        <input type="Button" value="Azul" onclick="cambiaColor('azul');"/>
+
+        <script>
+           
+        </script>
+    </body>
+</html>
