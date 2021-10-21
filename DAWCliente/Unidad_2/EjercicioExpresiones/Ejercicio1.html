@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ejercicio1</title>
+        <script>
+            function enviar1(){
+                var input = document.getElementById('respuesta1');
+                var cadena = input.value;
+                var ex=/\s/;
+                var ex2=/\d{9}/
+                if(ex.test(cadena) && !ex2.text(cadena)){
+                    alert("La entrada de valores no es valida")
+                }else{
+                    alert("Es correcto el número")
+                }
+            }
+            
+        </script>
+    </head>
+    <body>
+        <h3>Número de telefono</h3>
+        <input type="text" id="respuesta1" value="">
+        <button type="button" onclick="enviar1();">enviar</button>
+    </body>
+</html>
