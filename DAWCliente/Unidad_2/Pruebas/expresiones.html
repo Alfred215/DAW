@@ -10,14 +10,24 @@
             var cadena= "abc1Hola a abc2bbtodos";
             var ex1=/abc[0-9]/g;
 
-            alert(ex1.exec(cadena));
+            //alert(ex1.exec(cadena));
 
-            alert(ex1.test(cadena));
+            //alert(ex1.test(cadena));
 
-            var ex=/x$/;
-            alert(ex2.test(cadena));
+            //var ex=/x$/;
+            //alert(ex2.test(cadena));
 
-            alert(cadena.match(ex1));
+            //alert(cadena.match(ex1));
+ 
+            //alert(cadena.search(ex1));
+
+            //alert(cadena.split(""));
+
+            //con el metodo test, buscar dos apariciones
+            //seguidas del caracter b, usando caracteres especiales
+
+            var partb =/b{2}/;
+            alert(partb.test(cadena));
         </script>
     </body>
 </html>
