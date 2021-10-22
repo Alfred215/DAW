@@ -8,11 +8,44 @@
                 var input = document.getElementById('respuesta1');
                 var cadena = input.value;
                 var ex=/\s/;
-                var ex2=/\d{9}/
+                var ex2=/[0-9]{9}/
                 if(ex.test(cadena) && !ex2.text(cadena)){
                     alert("La entrada de valores no es valida")
                 }else{
                     alert("Es correcto el número")
+                }
+            }
+
+            function enviar2(){
+                var input = document.getElementById('respuesta2');
+                var cadena = input.value;
+                var ex=/[0-9]{2}\/[0-9]{2}\/[0-9]{4}/;
+                if(ex.test(cadena)){
+                    alert("La fecha es valida")
+                }else{
+                    alert("La fecha no es valida")
+                }
+            }
+
+            function enviar3(){
+                var input = document.getElementById('respuesta3');
+                var cadena = input.value;
+                var ex=/[0-9]{5}/;
+                if(ex.test(cadena)){
+                    alert("Código postal valido")
+                }else{
+                    alert("Código postal no valida")
+                }
+            }
+
+            function enviar4(){
+                var input = document.getElementById('respuesta4');
+                var cadena = input.value;
+                var ex=/^\w([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/;
+                if(ex.test(cadena)){
+                    alert("El correo es corecto")
+                }else{
+                    alert("El correo no es valido")
                 }
             }
             
@@ -22,5 +55,17 @@
         <h3>Número de telefono</h3>
         <input type="text" id="respuesta1" value="">
         <button type="button" onclick="enviar1();">enviar</button>
+
+        <h3>Fecha con formato dd/mm/yyyy</h3>
+        <input type="text" id="respuesta2" value="">
+        <button type="button" onclick="enviar2();">enviar</button>
+
+        <h3>Código Postal</h3>
+        <input type="text" id="respuesta3" value="">
+        <button type="button" onclick="enviar3();">enviar</button>
+
+        <h3>Fecha con formato dd/mm/yyyy</h3>
+        <input type="text" id="respuesta4" value="">
+        <button type="button" onclick="enviar4();">enviar</button>
     </body>
 </html>
