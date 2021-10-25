@@ -59,7 +59,6 @@ div#idioma{
 }
 
 div#program{
-    padding: 3px;
     margin-bottom: 5px;
     width: 890px;
     vertical-align: middle;
@@ -76,14 +75,12 @@ div#circo{
 }
 
 div#what{
-    padding: 3px;
     width: 490px;
     display: inline-block;
     margin-right: 10px;
 }
 
 div#schedule{
-    padding: 3px;
     display: inline-block;
     width: 390px;
 }
