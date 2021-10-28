@@ -4,12 +4,35 @@
     <head>
         <meta charset="utf-8">
         <title>Eventos</title>
+        <script>
+            function cambiop3(){
+                var p3=document.getElementById("p3");
+                p3.style.color="red";
+                p3.textContent="hola";
+            }
+
+            function mensaje(){
+                alert("Estoy aburrida (div)");
+
+            }
+
+            function mensaje2(){
+                alert("Sigo estando aburrida (div)");
+
+            }
+        </script>
     </head>
     <body>
         <p onclick="alert('me has pulsado');">Pulsame</p>
-        <p onmouseover="this,style,color='red'">Pasa sobre mi</p>
+        <p onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">Pasa sobre mi</p>
+        <p id="p3">Pulsa aqui para cambiar el color y el texto</p>
+        <div id="div1">
+            <p id="p4"> Esto es un parrafo con <b id="n1">negrita</b></p>
+        </div>
         <script>
-           
+            document.getElementById("p3").onclick=cambiop3;
+            document.getElementById("div1").addEventListener("click",mensaje,false);
+            document.getElementById("div1").addEventListener("click",mensaje2,false);
         </script>
     </body>
 </html>
