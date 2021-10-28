@@ -28,7 +28,6 @@ header{
     width: 590px;
     margin-right: 5px;
     margin-bottom: 5px;
-    display: inline-block;
 }
 
 nav#principal{
@@ -81,13 +80,11 @@ div#circo{
 div#what{
     width: 490px;
     height: 142px;
-    display: inline-block;
     margin-right: 10px;
     
 }
 
 div#schedule{
-    display: inline-block;
     width: 390px;
     height: 142px;
 }
@@ -134,4 +131,22 @@ div#register{
     width: 290px;
     height: 100px;
     margin-left: 10px;
+}
+
+div#lista{
+    left: 1485px;
+    top: 320px;
+    position: absolute;
+    width: 290px;
+    margin-left: 10px;
+}
+div#who{
+    width: 250px;
+    margin-left: 10px;
+    padding-left: 40px;
+    padding-top: 10px;
+}
+
+#who li{
+    list-style-image: url("../img/check.png");
 }
