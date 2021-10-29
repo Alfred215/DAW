@@ -56,12 +56,26 @@ a{
         display: none;
     }
 
+    section{
+        width: 100%;
+    }
+
     article{
         border:none;
         margin: 0px;
+        padding: 7px;
+        page-break-inside: avoid;
     }
 
     h1{
         border:solid 2px black;
+    }
+
+    a::after{
+        content: " (" attr(href)")";
+    }
+
+    footer{
+        display: none;
     }
 }
