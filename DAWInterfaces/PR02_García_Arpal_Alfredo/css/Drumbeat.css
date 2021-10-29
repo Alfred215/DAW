@@ -131,17 +131,20 @@ div#register{
     width: 290px;
     height: 100px;
     margin-left: 10px;
+    display: none;
 }
 
 div#lista{
     width: 290px;
     margin-left: 10px;
+    display: none;
 }
 div#who{
     width: 280px;
     margin-left: 10px;
     padding-left: 10px;
     padding-top: 10px;
+    display: none;
 }
 
 #who li{
