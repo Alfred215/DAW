@@ -10,28 +10,36 @@
                 var altura = parseInt(document.getElementById('altura').value);
                 var altura2 = Math.pow((altura/100),2);
                 var imc = peso/altura2;
-                
                 mostrar(imc);
             }
 
             function mostrar(calculo){
                 if(calculo<16){
-                    document.getElementById('muestra').innerHTML="Infrapeso (delgadez severa)";
+                    document.getElementById('muestra').innerHTML="Infrapeso (delgadez severa) "+calculo;
+                    document.getElementById('1').style.color="green";
                 }else if(calculo>=16 && calculo<17){
-                    document.getElementById('muestra').innerHTML="Infrapeso (delgadez moderada)";
-                }else if(calculo>=17 && calculo<18){
-                    document.getElementById('muestra').innerHTML="Infrapeso (delgadez aceptable)";
-                }else if(calculo>18 && calculo<25){
-                    document.getElementById('muestra').innerHTML="Peso normal";
+                    document.getElementById('muestra').innerHTML="Infrapeso (delgadez moderada) "+calculo;
+                    document.getElementById('2').style.color="green";
+                }else if(calculo>=17 && calculo<18.50){
+                    document.getElementById('muestra').innerHTML="Infrapeso (delgadez aceptable) "+calculo;
+                    document.getElementById('3').style.color="green";
+                }else if(calculo>18.50 && calculo<25){
+                    document.getElementById('muestra').innerHTML="Peso normal "+calculo;
+                    document.getElementById('4').style.color="green";
                 }else if(calculo>=25 && calculo<30){
-                    document.getElementById('muestra').innerHTML="Sobrepeso";
+                    document.getElementById('muestra').innerHTML="Sobrepeso "+calculo;
+                    document.getElementById('5').style.color="green";
                 }else if(calculo>=30 && calculo<35){
-                    document.getElementById('muestra').innerHTML="Obeso (Tipo I)";
+                    document.getElementById('muestra').innerHTML="Obeso (Tipo I) "+calculo;
+                    document.getElementById('6').style.color="green";
                 }else if(calculo>=35 && calculo<40){
-                    document.getElementById('muestra').innerHTML="Obeso (Tipo II)";
+                    document.getElementById('muestra').innerHTML="Obeso (Tipo II) "+calculo;
+                    document.getElementById('7').style.color="green";
                 }else if(calculo>=40){
-                    document.getElementById('muestra').innerHTML="Obeso (Tipo III)";
+                    document.getElementById('muestra').innerHTML="Obeso (Tipo III) "+calculo;
+                    document.getElementById('8').style.color="green";
                 }
+                document.getElementById('lista').style.display="block";
             }
         </script>
     </head>
@@ -42,6 +50,16 @@
             <label>Altura en centímetros     </label><input type="number" id="altura" value=""><br>
             <input type="button" onclick="calcular()" value="Enviar">
             <h2><span id="muestra"></span></h2>
+            <ul id="lista" style="display: none;">
+                <li id="1">&lt;16.00: Infrapeso (delgadez severa)</li>
+                <li id="2">16.00 - 16.99: Infrapeso (delgadez moderada)</li>
+                <li id="3">17.00 - 18.49: Infrapeso (delgadez aceptable)</li>
+                <li id="4">18.50 - 24.99: Peso normal</li>
+                <li id="5">25.00 - 29.99: Sobrepeso</li>
+                <li id="6">30.00 - 35.99: Obeso (Tipo I)</li>
+                <li id="7">35.00 - 40.00: Obeso (Tipo II)</li>
+                <li id="8">&gt;40.00: Obeso(Tipo III)</li>
+            </ul>
         </form>
         <script>
             
