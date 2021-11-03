@@ -6,17 +6,19 @@
         <title>Eventos</title>
         <script>
             function calcular(){
+                for(var i=1;i<9;i++){
+                    document.getElementById(i).style.color="black";
+                }
                 var peso = parseInt(document.getElementById('peso').value);
-                var altura = parseInt(document.getElementById('altura').value);
-                //var ex=/\./;
-                //if(ex.test(altura)){
-                    var altura2 = Math.pow((altura/100),2);
-                    var imc = peso/altura2;
-                    mostrar(imc);
-                //}else{
-                    alert("Porfavor introduzca la altura en cm")
-                //}
-               
+                var altura =  parseInt(document.getElementById('altura').value);
+                if(peso<300 && altura<260){
+                     var altura2 = Math.pow((altura/100),2);
+                var imc = peso/altura2;
+                mostrar(imc); 
+                }else{
+                    alert("Introduzca unos datos reales")
+                }
+                   
             }
 
             function mostrar(calculo){
