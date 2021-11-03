@@ -7,14 +7,16 @@
         <script>
             function calcular(){
                 var peso = parseInt(document.getElementById('peso').value);
-                var altura = document.getElementById('altura').value;
-                var ex=/\D/;
-                if(ex.test(altura)){
-                       
-                }
-                var altura2 = Math.pow((altura/100),2);
-                var imc = peso/altura2;
-                mostrar(imc);
+                var altura = parseInt(document.getElementById('altura').value);
+                //var ex=/\./;
+                //if(ex.test(altura)){
+                    var altura2 = Math.pow((altura/100),2);
+                    var imc = peso/altura2;
+                    mostrar(imc);
+                //}else{
+                    alert("Porfavor introduzca la altura en cm")
+                //}
+               
             }
 
             function mostrar(calculo){
