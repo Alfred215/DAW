@@ -4,7 +4,9 @@ for(var a =1;a<15;a++){
     var elemento= document.createElement("th");
     var lista = document.getElementById(a);
     for(var i = 0; i<6;i++){
-    document.write("<th>"+deportes[a]+"</th>");
+        var texto = document.write(deportes[a]);
+        elemento.appendChild(texto);
+        lista.appendChild(elemento);
     }
 }
 
