@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Calculadora</title> 
+    </head>
+    <body>
+        <script>
+            //crear funciones constructoras de objetos
+            function Persona(nombre, apellidos){
+                this.nombre=nombre;
+                this.apellidos=apellidos;
+            }
+            var persona1= new Persona();
+            persona1.nombre="Juan";
+            persona1.apellidos="Perez Gonzalez"
+
+            //añadir propiedad ciudad y mostrar con un alert:" Hola, me llamo xxxx y de apellidos xxxx. Mi ciudad es xxxx"
+            persona1.ciudad="Zaragoza";
+            alert("Hola, me llamo "+ persona1.nombre+" y de apellido "+persona1.apellidos+". Mi ciudad es "+persona1.ciudad);
+        </script>
+    </body >
+</html>
