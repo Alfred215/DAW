@@ -20,8 +20,6 @@ body{
     margin-top: 8px;
     width: 1190px;
     background-color: white;
-    flex-wrap: wrap;
-    display: inline-flex;
 }
 
 header{
