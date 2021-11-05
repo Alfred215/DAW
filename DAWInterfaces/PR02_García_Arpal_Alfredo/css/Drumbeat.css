@@ -151,6 +151,13 @@ div#bottom{
     width: 230px;
     height: 40px;
 }
+
+#bottom a{
+    font-size: 30px;
+    background-color: rgb(87, 173, 87);
+    color: white;
+}
+
 div#or{
     margin-top: 10px;
     text-align: center;
