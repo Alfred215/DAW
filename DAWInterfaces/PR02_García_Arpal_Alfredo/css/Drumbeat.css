@@ -20,14 +20,13 @@ body{
     margin-top: 8px;
     width: 1190px;
     background-color: white;
-    flex-wrap: wrap;
-    display: inline-flex;
 }
 
 header{
     width: 590px;
     margin-right: 5px;
     margin-bottom: 5px;
+    float: left;
 }
 
 nav#principal{
@@ -35,6 +34,7 @@ nav#principal{
     width: 590px;
     margin-bottom: 5px;
     margin-left: 5px;
+    float: right;
 }
 
 h3{
@@ -48,23 +48,28 @@ h3{
 div#subtitulo{
     margin-bottom: 5px;
     width: 1190px;
+    float: left;
+    width: 100%;
 }
 
 nav#secundario{
     margin-bottom: 20px;
     width: 690px;
+    float: left;
 }
 
 div#idioma{
     margin-bottom: 5px;
     width: 490px;
     margin-left: 10px;
+    float: right;
 }
 
 div#program{
     margin-bottom: 5px;
     width: 890px;
     vertical-align: middle;
+    float: left;
 }
 
 p#parrafo{
@@ -81,12 +86,13 @@ div#what{
     width: 490px;
     height: 142px;
     margin-right: 10px;
-    
+    float: left;
 }
 
 div#schedule{
     width: 390px;
     height: 142px;
+    float: left;
 }
 
 section{
@@ -94,6 +100,7 @@ section{
     background-color: white;
     flex-wrap: wrap;
     display: inline-flex;
+    float: left;
 }
 
 div.posit{
@@ -131,20 +138,21 @@ div#register{
     width: 290px;
     height: 100px;
     margin-left: 10px;
-    display: none;
+    float: right;
 }
 
 div#lista{
     width: 290px;
     margin-left: 10px;
-    display: none;
+    float: right;
+    margin-top: -83px;
 }
 div#who{
     width: 280px;
     margin-left: 10px;
     padding-left: 10px;
     padding-top: 10px;
-    display: none;
+    float: left;
 }
 
 #who li{
