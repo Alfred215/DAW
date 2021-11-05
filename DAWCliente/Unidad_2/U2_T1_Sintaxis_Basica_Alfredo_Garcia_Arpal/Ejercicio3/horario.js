@@ -1,5 +1,4 @@
 var deportes = ["Aerobic","Ciclismo","Yoga","KickBoxing","Crossfit","Karate","Sgrima","Sumo","Aquagym","Zumba","Body combat","Body pump","Spinning","Xcore"];
-var nombre = ["Alfredo","Alfredo","Maria","Maria","Sergio","Sergio","Marta","Marta","Adrian","Adrian"];
 for(var a=1;a<15;a++){
     for(var i = 0; i<6;i++){
         var elemento = document.createElement("td");
@@ -10,12 +9,13 @@ for(var a=1;a<15;a++){
     }   
 }  
 
-for(var a=15;a<25;a++){
-    for(var i = 0; i<5;i++){
+for(var b=15;b<25;b++){
+    var fisios = ["Alfredo","Alfredo","Maria","Maria","Sonia","Sonia","Alberto","Alberto","Sergio","Sergio"];
+    for(var j = 0; j<5;j++){
         var elemento = document.createElement("td");
-        var texto = document.createTextNode(nombre[a]) 
+        var texto = document.createTextNode(fisios[(b-15)]) 
         elemento.appendChild(texto);   
-        var lista = document.getElementById(a);
+        var lista = document.getElementById(b);
         lista.appendChild(elemento); 
     }   
 }  
