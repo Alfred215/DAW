@@ -136,17 +136,45 @@ div#video{
 
 div#register{
     width: 290px;
-    height: 100px;
+    height: 120px;
     margin-left: 10px;
     float: right;
+}
+
+div#bottom{
+    margin: auto;
+    margin-top: 24px;
+    padding-top: 10px;
+    vertical-align: middle;
+    text-align: center;
+    background-color: rgb(87, 173, 87);
+    width: 230px;
+    height: 40px;
+}
+div#or{
+    margin-top: 10px;
+    text-align: center;
 }
 
 div#lista{
     width: 290px;
     margin-left: 10px;
     float: right;
-    margin-top: -83px;
+    margin-top: -67px;
 }
+
+#lista dt{
+    width: 45px;
+    height: 45px;
+    float: left;
+}
+
+#lista dd{
+    width: 225px;
+    height: 45px;
+    float: right;
+}
+
 div#who{
     width: 280px;
     margin-left: 10px;
@@ -163,4 +191,42 @@ div#who{
     padding-left: 40px;
     padding-bottom: 20px;
     padding-top: 10px;
+}
+
+div#share{
+    justify-content: center;
+    width: 280px;
+    margin-left: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    float: left;
+}
+
+div#identi{
+    float: left;
+    width: 270px;
+    background-color: rgb(86, 86, 184);
+}
+
+#identi img{
+    float: left;
+}
+
+#identi a{
+    float: left;
+}
+
+div#twitter{
+    float: left;
+    width: 270px;
+    background-color: rgb(77, 185, 235);
+    text-align: center;
+}
+
+#twitter img{
+    float: left;
+}
+
+#twitter a{
+    float: left;
 }
