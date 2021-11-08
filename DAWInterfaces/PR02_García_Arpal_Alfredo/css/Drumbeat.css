@@ -139,6 +139,7 @@ div#register{
     height: 120px;
     margin-left: 10px;
     float: right;
+    background-color: rgb(157, 193, 240);
 }
 
 div#bottom{
@@ -164,10 +165,12 @@ div#or{
 }
 
 div#lista{
-    width: 290px;
+    background-color: rgb(216, 214, 214);
+    width: 280px;
     margin-left: 10px;
     float: right;
     margin-top: -67px;
+    padding-left: 10px;
 }
 
 #lista dt{
