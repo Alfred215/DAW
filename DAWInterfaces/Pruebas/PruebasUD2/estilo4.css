@@ -1,0 +1,49 @@
+*{
+    padding: 0mm;
+    margin: 0mm;
+    width: 100px;
+    height: 30px;
+    font-size: x-large;
+    text-align: center;  
+}
+
+body{
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+li{
+    background-color: rgb(40, 103, 240);
+    border: solid black 1px;
+    list-style-type: none;
+}
+
+ul{
+    position: fixed;  
+}
+
+li:hover{
+    background-color: rgb(109, 196, 230);
+}
+
+li:hover+ul{
+    margin-left: 103px;
+    display: block;
+    background-color: rgb(40, 103, 240);
+    margin-top: -15px;
+    display: inherit;
+    position: absolute;
+}
+
+ul.ciudades:hover{
+    margin-left: 103px;
+    display: block;
+    background-color: rgb(109, 196, 230);
+    margin-top: -15px;
+    display: inherit;
+}
+
+ul.ciudades{
+    display: none;
+}
+

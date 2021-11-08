@@ -1,7 +1,7 @@
 *{
     margin: 0mm;
     padding: 0mm;
-    background-color: wheat;
+    
     margin-bottom: 5px;
 }
 
@@ -39,6 +39,10 @@ nav#principal{
 
 h3{
     margin-bottom: 10px;
+}
+
+h2#Part{
+    color: rgb(67, 221, 221);
 }
 
 .posit>h4{
@@ -186,6 +190,7 @@ div#lista{
 }
 
 div#who{
+    background-color: rgb(247, 240, 149);
     width: 280px;
     margin-left: 10px;
     padding-left: 10px;

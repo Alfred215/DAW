@@ -1,0 +1,39 @@
+*{
+    padding: 0mm;
+    margin: 0mm;
+    width: 100px;
+    height: 30px;
+    font-size: x-large;
+    text-align: center; 
+}
+
+ul.submenu{
+    display: none;
+}
+
+.menu{
+    display: inline-flex;
+}
+
+li{
+    position: fixed;  
+}
+
+li{
+    background-color: rgb(40, 103, 240);
+    border: solid black 1px;
+    list-style-type: none;
+}
+
+li:hover{
+    background-color: rgb(109, 196, 230);
+}
+
+li:hover+ul{
+    margin-left: 103px;
+    display: block;
+    background-color: rgb(40, 103, 240);
+    margin-top: -15px;
+    display: inherit;
+    position: absolute;
+}
