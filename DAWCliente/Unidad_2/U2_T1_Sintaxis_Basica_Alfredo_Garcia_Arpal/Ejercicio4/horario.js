@@ -3,6 +3,7 @@ function crear(){
     for(var a=1;a<8;a++){
         for(var i = 0; i<6;i++){
             var elemento = document.createElement("td");
+
             var texto = document.createTextNode(deportes[a-1]) 
             elemento.appendChild(texto);   
             var lista = document.getElementById("deporte"+a);
@@ -20,6 +21,10 @@ function crear(){
             lista.appendChild(elemento); 
         }   
     }      
+}
+
+function resaltarActividad(actividad){
+
 }
 
 
