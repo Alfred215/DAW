@@ -37,6 +37,27 @@ nav#principal{
     float: right;
 }
 
+div#sesion>ul{
+    list-style-type: none;
+    display: flex; 
+    justify-content: space-between; 
+}
+div#sesion>ul>li{
+    padding-right: 10px;
+}
+
+div#sesion{
+    float: right;
+    margin-top: 20px;
+}
+
+div#nav>ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
 h3{
     margin-bottom: 10px;
 }
