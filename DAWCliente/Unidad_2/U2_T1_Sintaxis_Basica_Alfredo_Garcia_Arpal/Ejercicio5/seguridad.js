@@ -1,12 +1,11 @@
 function comprobar(){
-    var password = document.getElementsByTagName("password");
+    var password = document.getElementById('valor').value;
     var contador=0;
     var seguro=[];
     for(var i=0;i<5;i++){
         switch(i){
             case 0:
-                var ex1 = /\w{8,16}/;
-                if(ex1.test(password)){
+                if(password.length>=8 && password.length<=16){
                     contador++;
                 }else{
                     seguro[0]="No cumple con el rango de caracteres (8-16)";
@@ -47,7 +46,7 @@ function comprobar(){
         }
     }
     if(contador==5){
-        alert("La contraseña es segura");
+        alert("La contraseña es segura: "+password);
     }else{
         alert("Tendra que escribir otra contraseña más segura");
         for(var i=0;i<seguro.length;i++){
