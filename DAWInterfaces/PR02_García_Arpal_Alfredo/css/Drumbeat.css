@@ -409,3 +409,92 @@ div#twitter{
     margin-top: 8px;
     float: left;
 }
+
+footer{
+    height: 130px;
+    padding-top: 20px;
+    background-color: #777676;
+    float: left;
+    width: 1190px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+div#left{
+    margin-left: 100px;
+    width: 260px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+}
+
+div#blog{
+    display: flex;
+    float: left;
+    width: 150px;
+}
+
+div#blog>p{
+    margin-left: 7px;
+    float: right;
+    color: white;
+    font-size: 15px;
+}
+
+div#blog>img{
+    float: left;
+    width: 20px;
+    height: 20px;
+}
+
+div#redes{
+    color: white;
+    font-size: 15px;
+}
+
+div#redes>img{
+    width: 20px;
+    height: 20px;
+    margin-right: 7px;
+}
+
+div#center{
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+}
+
+div#element>ul{
+    list-style-type: none;
+    color: white;
+}
+
+div#dino{
+    display: flex;
+}
+
+div#dino>img{
+    width: 30px;
+    height: 23px;
+    float: left;
+}
+
+div#dino>p{
+    float: right;
+    font-size: 15px;
+    color: white;
+    margin-left: 7px;
+}
+
+div#right{
+    margin-right: 100px;
+    width: 360px;
+    flex-direction: row;
+    text-align: right;
+}
+
+p#creative{
+    color: white;
+}
