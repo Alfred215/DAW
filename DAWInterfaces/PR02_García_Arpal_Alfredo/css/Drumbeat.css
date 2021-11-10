@@ -1,8 +1,6 @@
 *{
     margin: 0mm;
     padding: 0mm;
-    
-    margin-bottom: 5px;
 }
 
 /*  Tamaño de ancho del html 1200px */
@@ -22,10 +20,15 @@ body{
     background-color: white;
 }
 
+a{
+    color: rgb(16, 182, 174);
+    text-decoration: none;
+}
+
 header{
     width: 590px;
     margin-right: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     float: left;
 }
 
@@ -41,9 +44,10 @@ div#sesion>ul{
     list-style-type: none;
     display: flex; 
     justify-content: space-between; 
+    font-size: 15px;
 }
 div#sesion>ul>li{
-    padding-right: 10px;
+    padding-left: 20px;
 }
 
 div#sesion{
@@ -51,11 +55,32 @@ div#sesion{
     margin-top: 20px;
 }
 
+div#nav{
+    float: right;
+    margin-top: 20px;
+}
+
 div#nav>ul{
+    padding-left: 40px;
     list-style-type: none;
+    font-size: 22px;
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
+    width: 500px;
+    justify-items: flex-start;
+}
+
+div#nav>ul>li{
+    background-color: rgb(240, 236, 236);
+    width: 16%;
+    height: 30px;
+    padding-top: 2px;
+    border-radius: 10%;
+    text-align: center;
+}
+
+div#nav>ul>li>a{
+    color: rgb(150, 146, 146);
 }
 
 h3{
@@ -71,7 +96,7 @@ h2#Part{
 }
 
 div#subtitulo{
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     width: 1190px;
     float: left;
     width: 100%;
@@ -81,13 +106,71 @@ nav#secundario{
     margin-bottom: 20px;
     width: 690px;
     float: left;
+    font-family: PTSans;
+}
+
+nav#secundario>ul{
+    height: 30px;
+    width: 650px;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    font-size: 16px;
+    text-align: center;
+}
+
+nav#secundario>ul>li{
+    padding-top: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color:rgb(244,240,243);
+    border-start-end-radius: 10px;
+    border-top-left-radius: 10px;
+}
+a#prog{
+    color: black;
+    font-weight: bold;
+}
+
+nav#secundario>ul>li>a{
+    color: rgb(150, 146, 146);
 }
 
 div#idioma{
     margin-bottom: 5px;
-    width: 490px;
-    margin-left: 10px;
+    width: 480px;
     float: right;
+    display: flex;
+    justify-content: right;
+    font-family: PTSans;
+    height: 30px;
+}
+div#idioma>p{
+    padding-right: 5px;
+    padding-top: 10px;
+}
+
+div#idioma>ul{
+    padding-top: 10px;
+}
+
+div#idioma>ul>li{
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    background-color:rgb(244,240,243);
+    list-style-type: none; 
+}
+
+div#idioma>ul>:first-child{
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background: rgb(228, 225, 225);
+}
+
+div#idioma>ul>:last-child{
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 div#program{
@@ -95,6 +178,7 @@ div#program{
     width: 890px;
     vertical-align: middle;
     float: left;
+    margin-bottom: 8px;
 }
 
 p#parrafo{
@@ -112,6 +196,7 @@ div#what{
     height: 142px;
     margin-right: 10px;
     float: left;
+    margin-bottom: 8px;
 }
 
 div#schedule{
@@ -126,37 +211,68 @@ section{
     flex-wrap: wrap;
     display: inline-flex;
     float: left;
+    margin-bottom: 8px;
+}
+
+div#festival{
+    margin-bottom: 8px;
 }
 
 div.posit{
-    width: 270px;
-    height: 110px;
-    margin-bottom: 10px;
+    width: 260px;
+    height: 150px;
+    margin-bottom: 40px;
     padding: 10px;  
 }
 
+
+div.posit>div{
+    padding: 20px;
+}
+
+div.posit>div>h4{
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+div.green{
+    background-color: rgb(48, 136, 48);
+}
+
+div.yellow{
+    background-color: rgb(243, 241, 118);
+}
+
+div.blue{
+    background-color: rgb(24, 152, 175);
+}
+
+div.pink{
+    background-color: rgb(221, 170, 178);
+}
+
 div#webcraft{
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 div#peer{
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 div#openc{
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 div#hackerspace{
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 div#opens{
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 div#video{
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 div#register{
@@ -165,6 +281,8 @@ div#register{
     margin-left: 10px;
     float: right;
     background-color: rgb(157, 193, 240);
+    border-radius: 5px;
+    margin-bottom: 8px;
 }
 
 div#bottom{
@@ -176,6 +294,7 @@ div#bottom{
     background-color: rgb(87, 173, 87);
     width: 230px;
     height: 40px;
+    border-radius: 5px;
 }
 
 #bottom a{
@@ -190,33 +309,40 @@ div#or{
 }
 
 div#lista{
-    background-color: rgb(216, 214, 214);
-    width: 280px;
+    background-color: rgb(240, 236, 236);
+    width: 270px;
     margin-left: 10px;
     float: right;
-    margin-top: -67px;
-    padding-left: 10px;
+    margin-top: -60px;
+    border-radius: 20px;
+    margin-bottom: 8px;
+    padding: 10px;
 }
 
 #lista dt{
     width: 45px;
     height: 45px;
     float: left;
+    padding-top: 7px;
+    padding-bottom: 7px;
 }
 
 #lista dd{
     width: 225px;
     height: 45px;
     float: right;
+    padding-top: 7px;
+    padding-bottom: 7px;
 }
 
 div#who{
     background-color: rgb(247, 240, 149);
-    width: 280px;
+    width: 270px;
+    padding: 10px;
     margin-left: 10px;
-    padding-left: 10px;
-    padding-top: 10px;
     float: left;
+    border-radius: 10px;
+    margin-bottom: 8px;
 }
 
 #who li{
@@ -230,39 +356,53 @@ div#who{
 }
 
 div#share{
-    justify-content: center;
     width: 280px;
     margin-left: 10px;
     padding-left: 10px;
     padding-top: 10px;
     float: left;
+    flex-direction: column;
+    display: flex;
 }
 
 div#identi{
-    float: left;
-    width: 270px;
-    background-color: rgb(86, 86, 184);
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    border-radius: 10px;
+    background-color: rgb(107, 164, 168);
 }
 
 #identi img{
+    margin-left: 30px;
     float: left;
 }
 
 #identi a{
+    color: white;
+    padding-left: 10px;
+    margin-top: 8px;
     float: left;
 }
 
 div#twitter{
-    float: left;
-    width: 270px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    border-radius: 10px;
     background-color: rgb(77, 185, 235);
     text-align: center;
 }
 
 #twitter img{
+    margin-left: 30px;
     float: left;
 }
 
 #twitter a{
+    color: white;
+    padding-left: 40px;
+    margin-top: 8px;
     float: left;
 }
