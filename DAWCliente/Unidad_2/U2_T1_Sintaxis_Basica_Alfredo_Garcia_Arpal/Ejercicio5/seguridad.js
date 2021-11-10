@@ -5,6 +5,7 @@ function comprobar(){
     for(var i=0;i<5;i++){
         switch(i){
             case 0:
+                var ex1 = /\w{8,16}/;
                 if(ex1.test(password)){
                     contador++;
                 }else{
@@ -12,6 +13,7 @@ function comprobar(){
                 }
                 break;
             case 1:
+                var ex2 = /[A-Z]/;
                 if(ex2.test(password)){
                     contador++;
                 }else{
@@ -19,6 +21,7 @@ function comprobar(){
                 }
                 break;
             case 2:
+                var ex3 = /[a-z]/;
                 if(ex3.test(password)){
                     contador++;
                 }else{
@@ -26,6 +29,7 @@ function comprobar(){
                 }
                 break;
             case 3:
+                var ex4 = /[0-9]/;
                 if(ex4.test(password)){
                     contador++;
                 }else{
@@ -33,6 +37,7 @@ function comprobar(){
                 }
                 break;
             case 4:
+                var ex5 = /\W/;
                 if(ex5.test(password)){
                     contador++;
                 }else{
