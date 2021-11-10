@@ -2,11 +2,6 @@ function comprobar(){
     var password = document.getElementsByTagName("password");
     var contador=0;
     var seguro=[];
-    var ex1 = /\w{8,16}/;
-    var ex2 = /[A-Z]+/;
-    var ex3 = /[a-z]+/;
-    var ex4 = /[0-9]+/;
-    var ex5 = /[-_@#$%&]+/
     for(var i=0;i<5;i++){
         switch(i){
             case 0:
