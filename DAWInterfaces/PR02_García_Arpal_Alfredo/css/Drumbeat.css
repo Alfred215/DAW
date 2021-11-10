@@ -85,7 +85,7 @@ div#nav>ul{
 
 div#nav>ul>li{
     background-color: rgb(240, 236, 236);
-    width: 16%;
+    width: 18%;
     height: 30px;
     padding-top: 2px;
     border-radius: 10%;
@@ -193,6 +193,7 @@ div#program{
 }
 
 div#program>h1{
+    color: rgb(68, 219, 224);
     font-family: sans-serif;
     margin-bottom: 12px;
 }
@@ -218,9 +219,14 @@ div#what{
 }
 
 div#what>h4{
+    font-weight: bold;
     font-family: sans-serif;
+    color: rgb(9, 155, 130);
+    margin-bottom: 5px;
 }
 div#what>p{
+    color: rgb(160, 155, 155);
+    width: 430px;
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -231,11 +237,16 @@ div#schedule{
 }
 
 div#schedule>h4{
+    font-weight: bold;
     font-family: sans-serif;
+    color: rgb(9, 155, 130);
+    margin-bottom: 5px;
 }
 
 div#schedule>p{
+    color: rgb(160, 155, 155);
     font-family: 'Times New Roman', Times, serif;
+    width: 350px;
 }
 
 section{
@@ -249,14 +260,19 @@ section{
 
 div#festival{
     margin-bottom: 8px;
+    width: 890px;
 }
 
 div#festival>p{
     font-family: 'Times New Roman', Times, serif;
+    width: 570px;
 }
 
 div#festival>h4{
+    font-weight: bold;
     font-family: sans-serif;
+    color: rgb(9, 155, 130);
+    margin-bottom: 10px;
 }
 
 div.posit{
@@ -372,7 +388,7 @@ div#lista{
     width: 270px;
     margin-left: 10px;
     float: right;
-    margin-top: -60px;
+    margin-top: -68px;
     border-radius: 20px;
     margin-bottom: 8px;
     padding: 10px;
@@ -395,6 +411,7 @@ div#lista{
 }
 
 div#who{
+    margin-top: 20px;
     background-color: rgb(247, 240, 149);
     width: 270px;
     padding: 10px;
