@@ -3,6 +3,20 @@
     padding: 0mm;
 }
 
+@font-face{
+    font-family: 'PTSans';
+    src: url('../');
+    font-weight: 1;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'PTSansBold';
+    src: url();
+    font-weight: 2;
+    font-style: normal;
+}
+
 /*  Tamaño de ancho del html 1200px */
 html{
     width: 1200px;
