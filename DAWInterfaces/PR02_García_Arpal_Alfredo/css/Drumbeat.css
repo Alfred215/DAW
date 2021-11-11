@@ -158,11 +158,11 @@ div#idioma{
 }
 div#idioma>p{
     padding-right: 5px;
-    padding-top: 10px;
+    padding-top: 5px;
 }
 
 div#idioma>ul{
-    padding-top: 10px;
+    padding-top: 5px;
 }
 
 div#idioma>ul>li{
@@ -215,7 +215,7 @@ div#what{
     height: 142px;
     margin-right: 10px;
     float: left;
-    margin-bottom: 8px;
+    margin-bottom: 25px;
 }
 
 div#what>h4{
@@ -234,6 +234,7 @@ div#schedule{
     width: 390px;
     height: 142px;
     float: left;
+    margin-bottom: 15px;
 }
 
 div#schedule>h4{
@@ -259,7 +260,7 @@ section{
 }
 
 div#festival{
-    margin-bottom: 8px;
+    margin-bottom: 15px;
     width: 890px;
 }
 
@@ -278,7 +279,7 @@ div#festival>h4{
 div.posit{
     width: 260px;
     height: 150px;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     padding: 10px;  
 }
 
@@ -288,7 +289,7 @@ div.posit>p{
 
 
 div.posit>div{
-    padding: 20px;
+    font-size: 18px;
 }
 
 div.posit>div>h4{
@@ -298,19 +299,19 @@ div.posit>div>h4{
 }
 
 div.green{
-    background-color: rgb(48, 136, 48);
+    background-color: rgb(173, 233, 145);
 }
 
 div.yellow{
-    background-color: rgb(243, 241, 118);
+    background-color: rgb(245, 244, 173);
 }
 
 div.blue{
-    background-color: rgb(24, 152, 175);
+    background-color: rgb(134, 218, 233);
 }
 
 div.pink{
-    background-color: rgb(221, 170, 178);
+    background-color: rgb(235, 196, 202);
 }
 
 div#webcraft{
@@ -346,6 +347,59 @@ div#in>p{
     font-family: 'Times New Roman', Times, serif;
 }
 
+div#badge>div{
+    transform: rotate(-2deg);
+    padding: 15px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+div#webcraft>div{
+    transform: rotate(1deg);
+    padding: 15px;
+}
+
+div#peer>div{
+    transform: rotate(-2deg);
+    padding: 15px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+div#local>div{
+    transform: rotate(1deg);
+    padding: 17px;
+}
+
+div#openc>div{
+    transform: rotate(2deg);
+    padding: 15px;
+}
+
+div#hackerspace>div{
+    transform: rotate(1deg);
+    padding: 15px;
+}
+
+div#wikipedia>div{
+    transform: rotate(-1deg);
+    padding: 15px;
+}
+
+div#opens>div{
+    transform: rotate(1deg);
+    padding: 15px;
+}
+
+div#video>div{
+    transform: rotate(-1deg);
+    padding: 15px;
+}
+
+div#main>div{
+    transform: rotate(1deg);
+    padding: 15px;
+}
 
 div#register{
     width: 290px;
