@@ -191,31 +191,37 @@ div#idioma>p{
     padding-top: 5px;
 }
 
-/*Coloco los elementos de la lista en la misma linea*/
+/*Coloco los elementos de la lista en la misma linea y le quito la decoración*/
 div#idioma>ul{
     padding-top: 5px;
     display: flex;
     list-style-type: none; 
 }
 
-/*Q*/
 div#idioma>ul>li{  
     width: 30px;
     text-align: center;
     background-color:rgb(244,240,243);
 }
 
+/*El primer elemento de la lista de asigno bordes redondeados en la parte
+de la izquierda*/
 div#idioma>ul>:first-child{
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
     background: rgb(228, 225, 225);
 }
 
+/*Al ultimo elemento de la lista le asignos bordes redondeados en la parte
+de la derecha*/
 div#idioma>ul>:last-child{
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
 }
+/*Aqui termina el bloque de idioma*/
 
+/*En el bloque de program, pongo un ancho maximo de 890, alineo verticalmente
+todo al centro y coloco el bloque a la izquierda*/
 div#program{
     margin-bottom: 5px;
     width: 890px;
@@ -230,18 +236,22 @@ div#program>h1{
     margin-bottom: 12px;
 }
 
+/*Coloco un ancho al parrafo para que no ocupe todo el bloque*/
 p#parrafo{
     font-family: 'Times New Roman', Times, serif;
     width: 680px;
     margin-bottom: 10px;
 }
 
+/*Coloco la imagen de circo a la derecha y juego con el margen para centralo*/
 div#circo{
     margin-top: 30px;
     margin-right: 20px;
     float: right;
 }
+/*Aqui termina el bloque de program*/
 
+/*El bloque de what, tiene un ancho de 490 y lo coloco a la izquierda*/
 div#what{
     width: 490px;
     height: 142px;
@@ -256,12 +266,17 @@ div#what>h4{
     color: rgb(9, 155, 130);
     margin-bottom: 5px;
 }
+
+/*Le doy un ancho maximo al parrafo*/
 div#what>p{
     color: rgb(160, 155, 155);
     width: 430px;
     font-family: 'Times New Roman', Times, serif;
 }
+/*Aqui termina el bloque de what*/
 
+/*El bloque de schedule, tiene un ancho de 390 y esta colocado a la izquierda 
+para que se coloque al lado del bloque de what*/
 div#schedule{
     width: 390px;
     height: 142px;
@@ -281,7 +296,12 @@ div#schedule>p{
     font-family: 'Times New Roman', Times, serif;
     width: 350px;
 }
+/*Aqui termina el bloque de schedule*/
 
+/*El bloque de section, tiene un ancho de 890, esta colocado a la izquierda y 
+utilizo el wrap y el inline-flex para que todos elementos que hay dentro 
+se coloque ocupando uno al lado del otro para que ocupen el ancho 
+maximo del bloque*/
 section{
     width: 890px;
     background-color: white;
@@ -308,6 +328,8 @@ div#festival>h4{
     margin-bottom: 10px;
 }
 
+/*Le asigno a todos los posit un ancho de 260 porque al poner el padding, 
+loe añade 10px a cada lado y eso hace que el ancho sea de 280px */
 div.posit{
     width: 260px;
     height: 150px;
@@ -323,7 +345,7 @@ div.posit>p{
     font-family: 'Times New Roman', Times, serif;
 }
 
-
+/*Coloco un borde redondeado a todos los posit*/
 div.posit>div{
     font-size: 18px;
     border-radius: 5px;
@@ -335,22 +357,27 @@ div.posit>div>h4{
     font-weight: bold;
 }
 
+/*Le doy un color de fondo a todos los posit con la clase green*/
 div.green{
     background-color: rgb(173, 233, 145);
 }
 
+/*Le doy un color de fondo a todos los posit con la clase yellow*/
 div.yellow{
     background-color: rgb(245, 244, 173);
 }
 
+/*Le doy un color de fondo a todos los posit con la clase blue*/
 div.blue{
     background-color: rgb(134, 218, 233);
 }
 
+/*Le doy un color de fondo a todos los posit con la clase pink*/
 div.pink{
     background-color: rgb(235, 196, 202);
 }
 
+/*Coloco margenes a los posit para que hay espacio entre ellos*/
 div#webcraft{
     margin-left: 20px;
 }
@@ -384,6 +411,8 @@ div#in>p{
     font-family: 'Times New Roman', Times, serif;
 }
 
+/*Roto los posit y les doy un padding para que sean de diferente tamaño, 
+sin sobre pasar el tamaño maximo del bloque posit*/
 div#badge>div{
     transform: rotate(-2deg);
     padding: 15px;
@@ -437,7 +466,11 @@ div#main>div{
     transform: rotate(1deg);
     padding: 15px;
 }
+/*Aqui termino de rotar los posit y acaba el bloque de section*/
 
+/*El bloque de register, tiene un ancho maximo de 290, esta colocado 
+a la derecha del program, cambio el color de fondo y 
+redondeo las esquinas del bloque*/
 div#register{
     width: 290px;
     height: 120px;
@@ -449,6 +482,9 @@ div#register{
     font-family: Georgia;
 }
 
+/*Le asigno un ancho de 230 al boton para que no ocupe todo el bloque de ancho,
+juego con los margenes para que este en el centro, redondeo las esquinas y
+le pongo un color de fondo*/
 div#bottom{
     margin: auto;
     margin-top: 24px;
@@ -472,7 +508,11 @@ div#or{
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
 }
+/*Aqui termina el bloque de register*/
 
+/*El bloque de listan tiene un tamaño de 270, ya que el padding se le suma 
+el padding de los lados, un color de fondo y esta colocado a la derecha
+de schedule*/
 div#lista{
     font-family: PTSans;
     background-color: rgb(240, 236, 236);
@@ -485,6 +525,8 @@ div#lista{
     padding: 10px;
 }
 
+/*Le doy un tamaño al bloque donde se encuentran las imagenes
+para que no coupe todo y lo coloco a la izquierda*/
 #lista dt{
     width: 45px;
     height: 45px;
@@ -493,6 +535,7 @@ div#lista{
     padding-bottom: 7px;
 }
 
+/*Le doy un tamaño y lo coloco a la derecha de la imagen*/
 #lista dd{
     width: 225px;
     height: 45px;
@@ -500,7 +543,11 @@ div#lista{
     padding-top: 7px;
     padding-bottom: 7px;
 }
+/*Aqui termina el bloque de lista*/
 
+/*El bloque de who, tiene un tamaño de ancho de 270, al que se le suma
+el padding, esta colocado a la derecha del section y tiene los bordes redondeados
+y un color de fondo*/
 div#who{
     margin-top: 20px;
     background-color: rgb(247, 240, 149);
@@ -520,6 +567,7 @@ div#who>p{
     font-family: 'Times New Roman', Times, serif;
 }
 
+/*Cambio el simbolo por defecto de una lista, a la imagen del check*/
 #who li{
     font-family: PTSans;
     list-style-image: url("../img/check.png");
@@ -530,7 +578,11 @@ div#who>p{
     padding-bottom: 20px;
     padding-top: 10px;
 }
+/*Aqui termina el bloque de who*/
 
+/*El bloque de share, tiene un ancho de 280, al que se le suma el padding,
+esta colocado a la derecha del section debajo del who y los elementos,
+estan alineados en columna */
 div#share{
     width: 280px;
     margin-left: 10px;
@@ -584,8 +636,12 @@ div#twitter{
     margin-top: 8px;
     float: left;
 }
+/*Aqui termina el bloque de share*/
 
+/*El footer, tiene el tamaño maximo de ancho y esta dividido en tres secciones
+para darles un espacio entre ellas y estan colocados en la misma linea*/
 footer{
+    margin-top: 20px;
     font-family: 'Times New Roman', Times, serif;
     height: 130px;
     padding-top: 20px;
