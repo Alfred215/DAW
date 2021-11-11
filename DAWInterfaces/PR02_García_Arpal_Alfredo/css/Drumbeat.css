@@ -32,11 +32,17 @@ body{
     width: 1190px;
 }
 
+/*Hay que eliminar la decorración de todos los enlaces y ponerle el color,
+aunque algunos enlaces determinados tienen otro color que se le dara
+en su respectiva localización*/
 a{
     color: rgb(16, 182, 174);
     text-decoration: none;
 }
 
+/*Al logo de la página le damos un ancho maximo, lo colocamos a la izquierda
+y le colocamos dos margenes, uno a la derecha y otro abajo para la separación
+con el resto de bloques*/
 header{
     width: 590px;
     margin-right: 5px;
@@ -44,6 +50,7 @@ header{
     float: left;
 }
 
+/*Este bloque, contiene el login y un menu, que colocamos a la derecha del logo*/
 nav#principal{
     font-family: sans-serif;
     height: 109px;
@@ -53,12 +60,15 @@ nav#principal{
     float: right;
 }
 
+/*Elimino de la lista de iniciar sesion las decoraciones, creo un espacio entre los elementos de la lista
+y los coloco todos en la misma linea con el flex*/
 div#sesion>ul{
     list-style-type: none;
     display: flex; 
     justify-content: space-between; 
     font-size: 15px;
 }
+
 div#sesion>ul>li{
     padding-left: 20px;
 }
@@ -73,6 +83,9 @@ div#nav{
     margin-top: 20px;
 }
 
+/*Elimino de la lista de menu las decoraciones, creo un espacio entre los elementos de la lista,
+los coloco todos en la misma linea con el flex y le doy un ancho a la lista
+para ajustar el espacio entre los elementos*/
 div#nav>ul{
     padding-left: 40px;
     list-style-type: none;
@@ -80,9 +93,10 @@ div#nav>ul{
     display: flex;
     justify-content: space-between;
     width: 500px;
-    justify-items: flex-start;
 }
 
+/*A los elementos de la lista de menu, les pongo un fondo, les asigno un tamaño
+de ancho y alto, les pongo un borde y alineo texto al centro.*/
 div#nav>ul>li{
     background-color: rgb(240, 236, 236);
     width: 18%;
@@ -95,29 +109,36 @@ div#nav>ul>li{
 div#nav>ul>li>a{
     color: rgb(150, 146, 146);
 }
+/*Aqui termina el bloque de navegación principal*/
 
+/*Pongo un margen debajo de 10px a todos los h3*/
 h3{
     margin-bottom: 10px;
 }
 
-.posit>h4{
-    margin-bottom: 20px;
-}
-
+/*Al titulo que esta debajo del logo, le doy un tamaño de letra de 25px,
+le cambio el color, le doy un margen con el elemento que tiene debajo,
+lo posiciono a la izquierda y le doy el ancho maximo de la página.*/
 div#subtitulo{
+    color:rgb(23, 117, 117);
     font-family: PTSans;
+    font-size: 25px;
     margin-bottom: 15px;
     width: 1190px;
     float: left;
-    width: 100%;
 }
 
+/*El menu secundario, se encuantra debajo del titulo, con un ancho de 690px
+y un marge debajo*/
 nav#secundario{
     margin-bottom: 20px;
     width: 690px;
     float: left;
 }
 
+/*La lista tiene un ancho para ajustar el espacio entre los elementos,
+se elemina la decoración, se colocan en la misma linea y se centra el texto
+que contienen.*/
 nav#secundario>ul{
     font-family: PTSans;
     height: 30px;
@@ -129,6 +150,8 @@ nav#secundario>ul{
     text-align: center;
 }
 
+/*Los elemento de la lista, tienen un color de fondo, los bordes de arriba
+redondeados y juego con los padding para ajustarlos*/
 nav#secundario>ul>li{
     padding-top: 8px;
     padding-left: 10px;
@@ -137,6 +160,8 @@ nav#secundario>ul>li{
     border-start-end-radius: 10px;
     border-top-left-radius: 10px;
 }
+
+/*Le doy un color diferente al enlace de program y negrita*/
 a#prog{
     color: black;
     font-weight: bold;
@@ -145,7 +170,11 @@ a#prog{
 nav#secundario>ul>li>a{
     color: rgb(150, 146, 146);
 }
+/*Aqui termina el menu secundario*/
 
+/*El bloque de idioma, se compone por un parrafo y una lista. Estos esta
+colocados en la misma linea con el flex y el bloque esta colocado 
+a la derecha del menu*/
 div#idioma{
     font-family: PTSans;
     margin-bottom: 5px;
@@ -156,21 +185,24 @@ div#idioma{
     font-family: PTSans;
     height: 30px;
 }
+
 div#idioma>p{
     padding-right: 5px;
     padding-top: 5px;
 }
 
+/*Coloco los elementos de la lista en la misma linea*/
 div#idioma>ul{
     padding-top: 5px;
+    display: flex;
+    list-style-type: none; 
 }
 
-div#idioma>ul>li{
-    display: inline-block;
+/*Q*/
+div#idioma>ul>li{  
     width: 30px;
     text-align: center;
     background-color:rgb(244,240,243);
-    list-style-type: none; 
 }
 
 div#idioma>ul>:first-child{
@@ -283,6 +315,10 @@ div.posit{
     padding: 10px;  
 }
 
+.posit>h4{
+    margin-bottom: 20px;
+}
+
 div.posit>p{
     font-family: 'Times New Roman', Times, serif;
 }
@@ -290,6 +326,7 @@ div.posit>p{
 
 div.posit>div{
     font-size: 18px;
+    border-radius: 5px;
 }
 
 div.posit>div>h4{
