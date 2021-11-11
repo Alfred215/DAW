@@ -16,7 +16,7 @@
                 this.fabricante ="Renault S.A";
                 this.direccionFabricante="C/Paris";
                 this.getCapacidad=function(){
-                    if(tipoMotor=="Diesel"){
+                    if(this.tipoMotor=="Diesel"){
                         return 40;
                     }else{
                         return 35;
@@ -36,6 +36,7 @@
             TaxiRenault.prototype = new prototipoTaxiRenault();
             var taxiRenault1=new TaxiRenault("Diesel",4,500,120);
             alert(taxiRenault1.fabricante); 
+            alert(taxiRenault1.getCapacidad());
         </script>
     </body >
 </html>

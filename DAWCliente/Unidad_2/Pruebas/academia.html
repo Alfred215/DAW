@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Academia</title>
+        <script>
+            function Alumno(nombre,edad,intereses,materia,importe){
+                this.nombre=nombre;
+                this.edad=edad;
+                this.intereses=intereses;
+                this.materia=materia;
+                this.importe=importe;
+            }
+
+            function prototipoAcademia(){
+                this.nombreAcademia="Facil";
+                this.direccion="zaragoza";
+                this.ciudad="zaragoza";
+                this.variarIngresos=function(importe){
+                    this.ingresos=this.ingresos+importe;
+                }
+                this.darBienvenida=function(){
+                    alert("Hola "+Alumno.nombre+", bienvenido a la academia ");
+                }
+            }
+        </script> 
+    </head>
+    <body>
+        <script>
+            //utilizando una función constructora y un prototipo:
+            //Función constructora: Alumno con propiedades: nombre, edad, intereses(array), materia e importe
+            //Función prototipo: Academia con propiedades: nombreAcademia, dirección, ciudad. Y metodos variarIngresos(ingresos+importe),
+            //darBienvenida("Hola nombre, bienvenido a la academia nombreAcademia")
+            //Usar un botón que al pulsar pida los datos del alumno y muestre la bienvenida
+            </script>
+    </body >
+</html>
