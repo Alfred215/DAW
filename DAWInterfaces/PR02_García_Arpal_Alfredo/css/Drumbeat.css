@@ -654,6 +654,9 @@ footer{
     margin-bottom: 10px;
 }
 
+/*El bloque de la izquierda, tiene un tamaño de ancho de 260,
+los elementos que hay dentro, tienen un espaciado entre ellos y se encuentran
+en linea*/
 div#left{
     margin-left: 100px;
     width: 260px;
@@ -662,6 +665,7 @@ div#left{
     flex-direction: row;
 }
 
+/*Esta sección esta a la izquierda y los elementos estan en linea*/
 div#blog{
     display: flex;
     float: left;
@@ -692,7 +696,10 @@ div#redes>img{
     margin-right: 7px;
 }
 
+/*El bloque de en medio, sus elementos esta con un espaciado en medio
+y todos en linea*/
 div#center{
+    width: 260px;
     justify-content: space-between;
     display: flex;
     flex-direction: row;
@@ -720,6 +727,8 @@ div#dino>p{
     margin-left: 7px;
 }
 
+/*El bloque de la derecha tiene un tamaño de 360, estan alineados a la derecha
+y estan el linea los elementos*/
 div#right{
     margin-right: 100px;
     width: 360px;
