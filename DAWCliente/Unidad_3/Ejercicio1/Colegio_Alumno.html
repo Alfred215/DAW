@@ -4,13 +4,72 @@
         <title>Colegio_Alumno</title>
         <meta charset="utf-8">
         <script>
+            function recogerColegio(){
+                var nombre=document.getElementById("nombre").value;
+                var aulas=document.getElementById("aulas").value;
+                var alumnos=document.getElementById("alumnos").value;
+                var colegio1 = new Alumno(nombre,aulas,alumnos);
+            }
 
+            function Colegio(nombre,numAulas,numAlumnos){
+                this.nombre=nombre;
+                this.numAulas=numAulas;
+                this.numAlumnos=numAlumnos;
+                this.variarAlumnos=function(alumnos){
+                    this.numAlumnos=parseInt(alumnos);
+                }
+                insertarFila();
+            }
+
+            function insertarFilaColegio(){
+
+            }
+
+            function recogerAlumno(){
+                var nombre=document.getElementById("nombre").value;
+                var dni=document.getElementById("dni").value;
+                var nota=document.getElementById("nota").value;
+                var alumno1 = new Alumno(nombre,dni,nota);
+            }
+
+
+            function Alumno(nombre,dni,notaMedia){
+                this.nombre=nombre;
+                this.dni=dni;
+                this.notaMedia=notaMedia;
+                this.variarNota=function(nota){
+                    this.notaMedia=parseInt(nota);
+                }
+            }
+
+            function insertarFilaAlumno(){
+
+            }
         </script>
     </head>
     <body>
-        
-        <script>
+        <h2>Alumno</h2>
+        <form>
+            <label>Nombre: </label><input type="text" value="" id="nombre"><br>
+            <label>Dni: </label><input type="text" value="" id="dni" ><br>
+            <label>Nota media: </label><input type="text" value="" id="nota"><br>
+            <input type="submit" onclick="recogerAlumno()"><br><br>
+        </form>
 
-        </script>
+        <table border="1">
+            <tr><th>Nombre</th><th>Dni</th><th>Nota media</th></tr>
+        </table>
+
+        <h2>Colegio</h2>
+        <form>
+            <label>Nombre: </label><input type="text" value="" id="nombre"><br>
+            <label>Número de aulas: </label><input type="text" value="" id="aulas" ><br>
+            <label>Número de alumnos: </label><input type="text" value="" id="alumnos"><br>
+            <input type="submit" onclick="recogerColegio()"><br><br>
+        </form>
+
+        <table border="1">
+            <tr><th>Nombre</th><th>Número de aulas</th><th>Número de alumnos</th></tr>
+        </table>
     </body>
 </html>
