@@ -22,7 +22,7 @@
             }
 
             function insertarFilaColegio(){
-
+                
             }
 
             function recogerAlumno(){
@@ -30,6 +30,7 @@
                 var dni=document.getElementById("dni").value;
                 var nota=document.getElementById("nota").value;
                 var alumno1 = new Alumno(nombre,dni,nota);
+
             }
 
 
@@ -40,11 +41,22 @@
                 this.variarNota=function(nota){
                     this.notaMedia=parseInt(nota);
                 }
+                var lista = document.getElementById("alumno");
+                var elementovar  = "<tr><th>"+Alumno.nombre+"</th><th>"+Alumno.dni+"</th><th id='"+Alumno.nota+"'>"+Alumno.nota+"</th><th><input type='submit' value='Variar' onclick='variarNota()'></th></tr>";
+                lista.innerHTML = lista.innerHTML + nuevoElemento;
             }
-
+            /*
             function insertarFilaAlumno(){
-
+                var elementovar  = "<tr><th>"+Alumno.nombre+"</th><th>"+Alumno.dni+"</th><th id='"+Alumno.nota+"'>"+Alumno.nota+"</th><th><input type='submit' value='Variar' onclick='variarNota()'></th></tr>";
+                lista.innerHTML = lista.innerHTML + nuevoElemento;
             }
+            */
+            function variarNota(){
+                var nota=prompt("Cambiar la nota: ");
+                document.getElementById(Alumno.nota).innerHTML=nota;
+                Alumno.nota=nota;
+            }
+
         </script>
     </head>
     <body>
@@ -56,8 +68,8 @@
             <input type="submit" onclick="recogerAlumno()"><br><br>
         </form>
 
-        <table border="1">
-            <tr><th>Nombre</th><th>Dni</th><th>Nota media</th></tr>
+        <table border="1" id="alumno">
+            <tr><th>Nombre</th><th>Dni</th><th>Nota media</th><th>Variar nota</th></tr>
         </table>
 
         <h2>Colegio</h2>
@@ -68,8 +80,8 @@
             <input type="submit" onclick="recogerColegio()"><br><br>
         </form>
 
-        <table border="1">
-            <tr><th>Nombre</th><th>Número de aulas</th><th>Número de alumnos</th></tr>
+        <table border="1" id="colegio">
+            <tr><th>Nombre</th><th>Número de aulas</th><th>Número de alumnos</th><th>Variar aulas</th></tr>
         </table>
     </body>
 </html>
