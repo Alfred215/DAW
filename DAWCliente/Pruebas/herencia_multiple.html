@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Herencia</title>
+        <script>
+            function Canido(){
+                this.patas=4;
+                this.morder=function(){
+                    alert("Mordisco");
+                }
+            }
+
+            function Cuadrupedo(){
+                this.velocidad=10;
+                this.correr=function(){
+                    this.velocidad+=10;
+                }
+            }
+
+            function Perro(){
+                Canido.call(this);
+                Cuadrupedo.call(this);
+            }
+        </script> 
+    </head>
+    <body>
+        <script>
+            var perro1 = new Perro();
+            alert(perro1.velocidad);
+            perro1.correr();
+            alert(perro1.velocidad);
+            perro1.morder();  
+        </script>
+    </body>
+</html>
