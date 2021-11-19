@@ -8,7 +8,9 @@
                 var nombre=document.getElementById("nombre").value;
                 var aulas=document.getElementById("aulas").value;
                 var alumnos=document.getElementById("alumnos").value;
-                var colegio1 = new Alumno(nombre,aulas,alumnos);
+
+
+                var colegio1 = new Colegio(nombre,aulas,alumnos);
             }
 
             function Colegio(nombre,numAulas,numAlumnos){
@@ -18,19 +20,17 @@
                 this.variarAlumnos=function(alumnos){
                     this.numAlumnos=parseInt(alumnos);
                 }
-                insertarFila();
-            }
-
-            function insertarFilaColegio(){
-                
             }
 
             function recogerAlumno(){
                 var nombre=document.getElementById("nombre").value;
                 var dni=document.getElementById("dni").value;
                 var nota=document.getElementById("nota").value;
+                var table=document.getElementById("alumno");
+                    table.innerHTML= table.innerHTML+("<td>"+nombre+"</td><td>"+dni+"</td><td id='"+nota+"'>"+nota+"</td><td><input type='submit' value='Variar' onclick='variarNota();'></td>");
+
                 var alumno1 = new Alumno(nombre,dni,nota);
-                alumno1.insertar();
+
             }
 
 
@@ -38,19 +38,14 @@
                 this.nombre=nombre;
                 this.dni=dni;
                 this.notaMedia=nota;
-                this.variarNota=function(nota){
+                this.cambiarNota=function(nota){
+                    document.getElementById(this.nota).innerHTML=nota;
                     this.notaMedia=parseInt(nota);
-                }
-                this.insertar=function(){
-                    var table=document.getElementById("alumno");
-                    table.innerHTML= table.innerHTML+("<td>"+this.nombre+"</td><td>"+this.dni+"</td><td id='"+this.nota+"'>"+this.nota+"</td><td><input type='submit' value='Variar' onclick='variarNota()'></td>");
                 }
             }
             
-            function variarNota(){
-                var nota=prompt("Cambiar la nota: ");
-                document.getElementById(Alumno.nota).innerHTML=nota;
-                Alumno.nota=nota;
+            function cambiarNota(){
+                alumno1.variarNota(prompt("Cambiar la nota: "));
             }
 
         </script>
@@ -61,7 +56,7 @@
             <label>Nombre: </label><input type="text" value="" id="nombre"><br>
             <label>Dni: </label><input type="text" value="" id="dni" ><br>
             <label>Nota media: </label><input type="text" value="" id="nota"><br>
-            <input type="submit" onclick="recogerAlumno()"><br><br>
+            <input type="submit" onclick="recogerAlumno();"><br><br>
         </form>
 
         <table border="1" id="alumno">
