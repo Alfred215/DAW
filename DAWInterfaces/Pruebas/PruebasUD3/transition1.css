@@ -1,0 +1,25 @@
+div{
+width: 200px;
+height: 50px;
+background-color: orange;
+margin: 10px;
+-webkit-transition: height 1s, width 1s, background-color 1s linear;
+transition: height 1s, width 1s, background-color 1s linear;
+}
+
+
+div#uno:hover{
+    width: 400px;
+    background-color: orangered;
+}
+
+div#dos:hover{
+    width: 300000000000px;
+    background-color: rgb(255, 0, 200);
+}
+
+div#tres:hover{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+}

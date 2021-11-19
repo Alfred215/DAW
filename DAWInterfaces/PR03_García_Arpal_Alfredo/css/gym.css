@@ -56,3 +56,27 @@ nav>ul{
 nav>ul>li{
     list-style-type: none;
 }
+
+aside{
+    margin-top: 20px;
+    float: left;
+    width: 30px;
+    height: 30px;
+    -webkit-transition: height 1s, width 1s linear;
+    transition: height 1s, width 1s linear;
+}
+
+aside:hover{
+    width: 250px;
+    height: 500px;
+}
+
+div#login{
+    visibility: hidden;
+    -webkit-transition: visibility 5s linear;
+    transition: visibility 5s linear;
+}
+
+aside:hover>#login{
+    visibility: visible;
+}
