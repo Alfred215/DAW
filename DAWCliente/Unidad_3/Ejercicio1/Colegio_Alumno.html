@@ -27,8 +27,9 @@
                 var dni=document.getElementById("dni").value;
                 var nota=document.getElementById("nota").value;
                 var table=document.getElementById("alumno");
-                    table.innerHTML= table.innerHTML+("<td>"+nombre+"</td><td>"+dni+"</td><td id='"+nota+"'>"+nota+"</td><td><input type='submit' value='Variar' onclick='variarNota();'></td>");
-
+                var tr =document.createElement("tr");
+                tr.innerHTML+="<td>"+nombre+"</td><td>"+dni+"</td><td id='"+nota+"'>"+nota+"</td><td><input type='submit' value='Variar' onclick='variarNota();'></td>";
+                table.appendChild(tr);
                 var alumno1 = new Alumno(nombre,dni,nota);
 
             }

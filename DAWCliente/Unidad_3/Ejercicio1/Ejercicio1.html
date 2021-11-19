@@ -18,17 +18,11 @@
                 var alumnos=document.getElementById("alumnos").value
 
                 var tabla=document.getElementById("tablaColegio");
-                if((nombre=="")||(Aulas=="")||(alumnos=="")){
                     var colegio=new Colegio(nombre,aulas,alumnos,0);
                     var filaColegio=document.createElement("tr");
                     var cadenaBoton="<input type='buttom' value='Variar alumnos' id='boton1' onclick='modificar(this)'>"
-                    filaColegio.innerHTML+="<td>"+colegio.nombre+"<td>";
-                    filaColegio.innerHTML+="<td>"+colegio.aulas+"<td>";
-                    filaColegio.innerHTML+="<td>"+colegio.alumnos+"<td>";
-                    filaColegio.innerHTML+="<td>"+cadenaBoton+"</td>";
+                    filaColegio.innerHTML+="<td>"+nombre+"</td><td>"+aulas+"</td><td id='"+alumnos+"'>"+alumnos+"</td><td>"+cadenaBoton+"</td>";
                     tabla.appendChild(filaColegio);
-                }
-
             }
 
             function modificar(celda){
