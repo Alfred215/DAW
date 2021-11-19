@@ -15,20 +15,18 @@
             function crearColegio(){
                 var nombre=document.getElementById("nombre").value;
                 var aulas=document.getElementById("aulas").value;
-                var alumnos=document.getElementById("alumnos").value
+                var alumnos=document.getElementById("alumnos").value;
+                var colegio=new Colegio(nombre,aulas,alumnos,0);
 
-                var tabla=document.getElementById("tablaColegio");
-                    var colegio=new Colegio(nombre,aulas,alumnos,0);
-                    var filaColegio=document.createElement("tr");
+                if((nombre!="")&&(aulas!="")&&(alumnos!="")){
+                    var table = document.getElementById("table1");
+                    var tr = document.createElement("tr");
                     var cadenaBoton="<input type='buttom' value='Variar alumnos' id='boton1' onclick='modificar(this)'>";
-                    filaColegio.innerHTML+="<td>"+nombre+"</td><td>"+aulas+"</td><td id='"+alumnos+"'>"+alumnos+"</td><td>"+cadenaBoton+"</td>";
-                    tabla.appendChild(filaColegio);
+                    tr.innerHTML=("<td>"+nombre+"</td><td>"+aulas+"</td><td id='"+alumnos+"'>"+alumnos+"</td><td>"+cadenaBoton+"</td>");
+                    table.appendChild(tr);
+                }  
             }
 
-            function modificar(celda){
-                var nuevoValor=prompt("Nuevo valor: ");
-                celda.parentNode.previousSibling.textContent=nuevoValor;
-            }
         </script>
     </head>
 
@@ -40,7 +38,7 @@
             <input type="submit" onclick="crearColegio()" id="botónColegio"><br><br>
         </form>
 
-        <table border="1" id="tablaColegio">
+        <table border="1" id="table1">
             <tr><th>Nombre</th><th>Número de aulas</th><th>Número de alumnos</th><th>Variar aulas</th></tr>
         </table>
     </body>
