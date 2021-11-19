@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EjercicioDOM3</title>
+        <script type="text/javascript">
+            class TarjetaFelicitacion{
+                constructor(mensaje){
+                    this.mensajeTarjeta=mensaje;
+                }
+
+                personaliza(nombre){
+                    return(nombre+", tengo este mensaje para ti: "+this.mensajeTarjeta);
+                }
+            }
+
+            function insertarParrafo(){
+                var tarjeta2 = new TarjetaFelicitacion("Feliz cumple!!");
+                var parrafo=document.getElementById("feliz");
+                parrafo.innerHTML=tarjeta2.mensajeTarjeta;
+            }
+        </script>
+    </head>
+
+    <body>
+        <script>
+            var tarjeta1= new TarjetaFelicitacion("felicidades!!");
+            alert(tarjeta1.mensajeTarjeta);
+            alert(tarjeta1.personaliza("Juan"));
+
+            //Crea un nuevo objeto con mensaje "Feliz cumple!!" y que lo 
+            //grabe en el contenido de un párrafo al hacer click en un botón.
+
+            
+
+        </script>
+
+        <p id="feliz"></p>
+        <input type="submit" onclick="insertarParrafo()">
+    </body>
+</html>

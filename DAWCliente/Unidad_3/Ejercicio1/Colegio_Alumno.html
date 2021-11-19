@@ -30,27 +30,23 @@
                 var dni=document.getElementById("dni").value;
                 var nota=document.getElementById("nota").value;
                 var alumno1 = new Alumno(nombre,dni,nota);
-
+                alumno1.insertar();
             }
 
 
-            function Alumno(nombre,dni,notaMedia){
+            function Alumno(nombre,dni,nota){
                 this.nombre=nombre;
                 this.dni=dni;
-                this.notaMedia=notaMedia;
+                this.notaMedia=nota;
                 this.variarNota=function(nota){
                     this.notaMedia=parseInt(nota);
                 }
-                var lista = document.getElementById("alumno");
-                var elementovar  = "<tr><th>"+Alumno.nombre+"</th><th>"+Alumno.dni+"</th><th id='"+Alumno.nota+"'>"+Alumno.nota+"</th><th><input type='submit' value='Variar' onclick='variarNota()'></th></tr>";
-                lista.innerHTML = lista.innerHTML + nuevoElemento;
+                this.insertar=function(){
+                    var table=document.getElementById("alumno");
+                    table.innerHTML= table.innerHTML+("<td>"+this.nombre+"</td><td>"+this.dni+"</td><td id='"+this.nota+"'>"+this.nota+"</td><td><input type='submit' value='Variar' onclick='variarNota()'></td>");
+                }
             }
-            /*
-            function insertarFilaAlumno(){
-                var elementovar  = "<tr><th>"+Alumno.nombre+"</th><th>"+Alumno.dni+"</th><th id='"+Alumno.nota+"'>"+Alumno.nota+"</th><th><input type='submit' value='Variar' onclick='variarNota()'></th></tr>";
-                lista.innerHTML = lista.innerHTML + nuevoElemento;
-            }
-            */
+            
             function variarNota(){
                 var nota=prompt("Cambiar la nota: ");
                 document.getElementById(Alumno.nota).innerHTML=nota;
