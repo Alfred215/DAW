@@ -72,11 +72,11 @@ aside:hover{
 }
 
 div#login{
-    visibility: hidden;
-    -webkit-transition: visibility 5s linear;
-    transition: visibility 5s linear;
+    opacity: 0;
+    -webkit-transition: opacity 1s linear;
+    transition: opacity 1s linear;
 }
 
 aside:hover>#login{
-    visibility: visible;
+    opacity: 1;
 }
