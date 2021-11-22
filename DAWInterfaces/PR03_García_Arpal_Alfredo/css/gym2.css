@@ -1,7 +1,6 @@
 *{
     padding: 0mm;
     margin: 0mm;
-    background-color: wheat;
 }
 
 html{
@@ -17,7 +16,7 @@ body{
 }
 
 header{
-    height: 100px;
+    height: 200px;
     width: 50%;
     margin-right: 5px;
     float: left;
@@ -26,35 +25,57 @@ header{
 header>img{
     margin-top: 5px;
     margin-left: 5px;
-    width: 200px;
-    height: 90px;
+    width: 400px;
+    height: 180px;
     float: left;
 }
 
-header>h1{
-    margin-top: 20px;
-    margin-left: 20px;
-    font-size: 50px;
-    float: left;
-}
-
-nav{
-    height: 100px;
+div#menu{
     width: 49%;
+    height: 200px;
     margin-left: 5px;
     float: right;
 }
 
-nav>ul{
+div#menu>h1{
+    margin-top: 30px;
+    font-size: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+div#menu>nav{
+    opacity: 0;
+    -webkit-transition: opacity 1s,  background-color 3s linear;
+    transition: opacity 1s, background-color 3s linear;
+}
+div#menu:hover>nav{
+    opacity: 1;
+    display: block;
+    overflow: hidden;
+}
+
+div#menu>nav>ul{
     font-size: 20px;
-    margin-top: 35px;
+    margin-top: 25px;
     margin-left: 30px;
     margin-right: 30px;
     display: flex;
     justify-content: space-between;
 }
 
-nav>ul>li{
+div#menu>nav>ul>li{
+    -webkit-transition:  background-color 3s, border-radius 3s linear;
+    transition:  background-color 3s, border-radius 3s linear;
+    padding: 10px;
+    background-color: red;
+    list-style-type: none;
+}
+
+div#menu:hover>nav>ul>li{
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgb(192, 220, 233);
     list-style-type: none;
 }
 
