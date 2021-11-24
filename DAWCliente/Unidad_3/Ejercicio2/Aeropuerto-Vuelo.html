@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Aeropuerto-Vuelo</title>
+        <script>
+            function recogerAeropuerto(){
+                var nombre = document.getElementById("nombre").value;
+                var ciudad = document.getElementById("ciudad").value;
+                var vuelos = document.getElementById("vuelos").value;
+                var aeropuerto1 = new Aeropuerto(nombre,ciudad,vuelos);
+                if((nombre!="")&&(ciudad!="")&&(vuelos!="")){
+                    var table=document.getElementById("tableAeropuerto");
+                    var tr =document.createElement("tr");
+                    var cadenaBoton="<input type='buttom' value='Variar vuelos' id='boton1' onclick='modificar(this)'>";
+                    tr.innerHTML+="<td>"+nombre+"</td><td>"+ciudad+"</td><td>"+vuelos+"</td><td>"+cadenaBoton+"</td>";
+                    table.appendChild(tr);  
+                }
+            }
+
+            function Aeropuerto(nombreAuro,ciudad,numVuelos,variacion){
+                this.nombreAuro=nombreAuro;
+                this.ciudad=ciudad;
+                this.numVuelos=numVuelos;
+                this.variacion=function modificarAeropuerto(variacion){
+                    this.numVuelos=this.numVuelos+variacion;
+                }
+            }
+
+            function modificar(celda){
+                var nuevoValor=prompt("Variar vuelos: ");
+                celda.parentNode.previousSibling.textContent=nuevoValor;
+            }
+
+            function recogerVuelo(){
+                var codigo = document.getElementById("codigo").value;
+                var hllegada = document.getElementById("hllegada").value;
+                var mllegada = document.getElementById("mllegada").value;
+                var hsalida = document.getElementById("hsalida").value;
+                var msalida = document.getElementById("msalida").value;
+                alert(msalida);
+                var vuelo1 = new Vuelo(codigo,hllegada,mllegada,hsalida,msalida);
+                alert(msalida);
+                if((codigo!="")){
+                    var table=document.getElementById("tableVuelo");
+                    var tr =document.createElement("tr");
+                    var fecha = new Date();
+                    var cadenaBoton="<input type='buttom' value='Variar vuelos' id='boton1' onclick='modificarLlegada(this)'>";
+                    var cadenaBoton1="<input type='buttom' value='Variar vuelos' id='boton1' onclick='modificarSalida(this)'>";
+                    tr.innerHTML+="<td>"+vuelo1.codigo+"</td><td>"+vuelo1.llegada.setHours(hllegada,mllegada,0,0)+"</td><td>"+vuelo1.salida+"</td><td>"+cadenaBoton+"</td><td>"+cadenaBoton1+"</td>";
+                    table.appendChild(tr);
+                }
+            }
+
+            function Vuelo(codigo,horaLlegada,minLlegada,horaSalida,minSalida,variarLlegada,variarSalida){
+                this.codigo=codigo;
+                this.llegada= new Date();
+                this.salida= new Date(0,0,0,horaSalida,minSalida,0,0);
+                this.variarLlegada=function modificarLlegada(variacion){
+                    this.llegada=this.llegada+variacion;
+                }
+                this.variarSalida=function modificarSalida(variacion){
+                    this.salida=this.salida+variacion;
+                }
+            }
+
+            function modificar(celda){
+                var nuevoValor=prompt("Variar vuelos: ");
+                celda.parentNode.previousSibling.textContent=nuevoValor;
+            }
+
+            function modificar(celda){
+                var nuevoValor=prompt("Variar vuelos: ");
+                celda.parentNode.previousSibling.textContent=nuevoValor;
+            }
+
+        </script> 
+    </head>
+    <body>
+        <h2>Aeropuerto</h2>
+        <form>
+            <label>Nombre: </label><input type="text" value="" id="nombre"><br>
+            <label>Ciudad: </label><input type="text" value="" id="ciudad"><br>
+            <label>Número de vuelos: </label><input type="number" value="" id="vuelos"><br>
+            <input type="button" onclick="recogerAeropuerto();" value="Enviar"><br><br>
+        </form>
+
+        <table border="1" id="tableAeropuerto">
+            <tr><th>Nombre</th><th>Ciudad</th><th>Número de vuelos</th><th>Variar vuelos</th></tr>
+        </table>
+
+        <h2>Vuelo</h2>
+        <form>
+            <label>Codigo: </label><input type="text" value="" id="codigo"><br>
+            <label>Hora LLegada: </label><input type="number" value="" id="hllegada"><br>
+            <label>Minutos LLegada: </label><input type="number" value="" id="mllegada"><br>
+            <label>Hora Salida: </label><input type="number" value="" id="hsalida"><br>
+            <label>Minutos Salida: </label><input type="number" value="" id="msalida"><br>
+            <input type="button" onclick="recogerVuelo();" value="Enviar"><br><br>
+        </form>
+
+        <table border="1" id="tableVuelo">
+            <tr><th>Codigo</th><th>Hora llegada</th><th>Hora salida</th><th>Variar hora llegada</th><th>Variar hora salida</th></tr>
+        </table>
+    </body >
+</html>

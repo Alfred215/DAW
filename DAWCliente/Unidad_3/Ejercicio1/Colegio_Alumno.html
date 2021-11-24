@@ -5,48 +5,61 @@
         <meta charset="utf-8">
         <script>
             function recogerColegio(){
-                var nombre=document.getElementById("nombre").value;
+                var nombre1=document.getElementById("nombre1").value;
                 var aulas=document.getElementById("aulas").value;
                 var alumnos=document.getElementById("alumnos").value;
-
-
-                var colegio1 = new Colegio(nombre,aulas,alumnos);
+                var colegio1 = new Colegio(nombre1,aulas,alumnos);
+                alert(nombre1);
+                if((nombre1!="")&&(aulas!="")&&(alumnos!="")){
+                    var table=document.getElementById("colegio");
+                    var tr =document.createElement("tr");
+                    var cadenaBoton="<input type='buttom' value='Variar alumnos' id='boton1' onclick='modificar2(this)'>";
+                    tr.innerHTML+="<td>"+nombre1+"</td><td>"+aulas+"</td><td>"+alumnos+"</td><td>"+cadenaBoton+"</td>";
+                    table.appendChild(tr);      
+                }    
             }
 
-            function Colegio(nombre,numAulas,numAlumnos){
-                this.nombre=nombre;
+            function Colegio(nombre1,numAulas,numAlumnos,variacion){
+                this.nombre1=nombre1;
                 this.numAulas=numAulas;
                 this.numAlumnos=numAlumnos;
-                this.variarAlumnos=function(alumnos){
-                    this.numAlumnos=parseInt(alumnos);
+                this.variacion=function modificarColegio(variacion){
+                    this.numAlumnos=this.numAlumnos+variacion;
                 }
+            }
+
+            function modificar2(celda){
+                var nuevoValor=prompt("Variar colegio: ");
+                celda.parentNode.previousSibling.textContent=nuevoValor;
             }
 
             function recogerAlumno(){
                 var nombre=document.getElementById("nombre").value;
                 var dni=document.getElementById("dni").value;
                 var nota=document.getElementById("nota").value;
-                var table=document.getElementById("alumno");
-                var tr =document.createElement("tr");
-                tr.innerHTML+="<td>"+nombre+"</td><td>"+dni+"</td><td id='"+nota+"'>"+nota+"</td><td><input type='submit' value='Variar' onclick='variarNota();'></td>";
-                table.appendChild(tr);
                 var alumno1 = new Alumno(nombre,dni,nota);
-
+                if((nombre!="")&&(dni!="")&&(nota!="")){
+                    var table=document.getElementById("alumno");
+                    var tr =document.createElement("tr");
+                    var cadenaBoton="<input type='buttom' value='Variar nota' id='boton1' onclick='modificar1(this)'>";
+                    tr.innerHTML+="<td>"+nombre+"</td><td>"+dni+"</td><td>"+nota+"</td><td>"+cadenaBoton+"</td>";
+                    table.appendChild(tr);        
+                }
             }
 
 
-            function Alumno(nombre,dni,nota){
+            function Alumno(nombre,dni,nota,variacion){
                 this.nombre=nombre;
                 this.dni=dni;
                 this.notaMedia=nota;
-                this.cambiarNota=function(nota){
-                    document.getElementById(this.nota).innerHTML=nota;
-                    this.notaMedia=parseInt(nota);
+                this.variacion=function modificarAlumnos(variacion){
+                    this.notaMedia=this.notaMedia+variacion;
                 }
             }
             
-            function cambiarNota(){
-                alumno1.variarNota(prompt("Cambiar la nota: "));
+            function modificar1(celda){
+                var nuevoValor=prompt("Variar Alumno: ");
+                celda.parentNode.previousSibling.textContent=nuevoValor;
             }
 
         </script>
@@ -55,9 +68,9 @@
         <h2>Alumno</h2>
         <form>
             <label>Nombre: </label><input type="text" value="" id="nombre"><br>
-            <label>Dni: </label><input type="text" value="" id="dni" ><br>
-            <label>Nota media: </label><input type="text" value="" id="nota"><br>
-            <input type="submit" onclick="recogerAlumno();"><br><br>
+            <label>Dni: </label><input type="text" value="" id="dni"><br>
+            <label>Nota media: </label><input type="number" value="" id="nota"><br>
+            <input type="button" onclick="recogerAlumno();" value="Enviar"><br><br>
         </form>
 
         <table border="1" id="alumno">
@@ -66,10 +79,10 @@
 
         <h2>Colegio</h2>
         <form>
-            <label>Nombre: </label><input type="text" value="" id="nombre"><br>
-            <label>Número de aulas: </label><input type="text" value="" id="aulas" ><br>
-            <label>Número de alumnos: </label><input type="text" value="" id="alumnos"><br>
-            <input type="submit" onclick="recogerColegio()"><br><br>
+            <label>Nombre: </label><input type="text" value="" id="nombre1"><br>
+            <label>Número de aulas: </label><input type="number" value="" id="aulas"><br>
+            <label>Número de alumnos: </label><input type="number" value="" id="alumnos"><br>
+            <input type="button" onclick="recogerColegio()" value="Enviar"><br><br>
         </form>
 
         <table border="1" id="colegio">
