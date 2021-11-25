@@ -39,24 +39,21 @@
                 var mllegada = document.getElementById("mllegada").value;
                 var hsalida = document.getElementById("hsalida").value;
                 var msalida = document.getElementById("msalida").value;
-                alert(msalida);
                 var vuelo1 = new Vuelo(codigo,hllegada,mllegada,hsalida,msalida);
-                alert(msalida);
                 if((codigo!="")){
                     var table=document.getElementById("tableVuelo");
                     var tr =document.createElement("tr");
-                    var fecha = new Date();
                     var cadenaBoton="<input type='buttom' value='Variar vuelos' id='boton1' onclick='modificarLlegada(this)'>";
                     var cadenaBoton1="<input type='buttom' value='Variar vuelos' id='boton1' onclick='modificarSalida(this)'>";
-                    tr.innerHTML+="<td>"+vuelo1.codigo+"</td><td>"+vuelo1.llegada.setHours(hllegada,mllegada,0,0)+"</td><td>"+vuelo1.salida+"</td><td>"+cadenaBoton+"</td><td>"+cadenaBoton1+"</td>";
+                    tr.innerHTML+="<td>"+vuelo1.codigo+"</td><td>"+vuelo1.llegada+"</td><td>"+vuelo1.salida+"</td><td>"+cadenaBoton+"</td><td>"+cadenaBoton1+"</td>";
                     table.appendChild(tr);
                 }
             }
 
             function Vuelo(codigo,horaLlegada,minLlegada,horaSalida,minSalida,variarLlegada,variarSalida){
                 this.codigo=codigo;
-                this.llegada= new Date();
-                this.salida= new Date(0,0,0,horaSalida,minSalida,0,0);
+                this.llegada= new Date().horaLlegada;
+                this.salida= new Date();
                 this.variarLlegada=function modificarLlegada(variacion){
                     this.llegada=this.llegada+variacion;
                 }
@@ -65,13 +62,13 @@
                 }
             }
 
-            function modificar(celda){
-                var nuevoValor=prompt("Variar vuelos: ");
+            function modificarLlegada(celda){
+                var nuevoValor=prompt("Variar llegada: ");
                 celda.parentNode.previousSibling.textContent=nuevoValor;
             }
 
-            function modificar(celda){
-                var nuevoValor=prompt("Variar vuelos: ");
+            function modificarSalida(celda){
+                var nuevoValor=prompt("Variar salida: ");
                 celda.parentNode.previousSibling.textContent=nuevoValor;
             }
 
