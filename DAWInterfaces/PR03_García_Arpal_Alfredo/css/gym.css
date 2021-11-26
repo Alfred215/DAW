@@ -101,7 +101,6 @@ aside:hover{
     width: 300px;
     height: 500px;
     overflow: hidden;
-    border: solid black 2px;
 }
 
 aside:hover>img{
@@ -112,6 +111,7 @@ div#login{
     background-color: rgb(192, 220, 233);
     display: none;
     border: solid black 2px;
+    border-radius: 10px;
     margin: auto;
     margin-top: 10px;
 }
@@ -132,10 +132,41 @@ div#login>input{
     margin-top: 10px;
 }
 
+div#paginas{
+    background-color: rgb(192, 220, 233);
+    display: none;
+    margin: auto;
+    margin-top: 10px;
+    border: solid 2px black;
+    border-radius: 10px;
+}
+
+div#paginas>h2{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+div#paginas>ul>li{
+    margin-bottom: 2px;
+    margin-left: 20px;
+    list-style-type: none;
+}
+
+div#paginas>ul>li>a{
+    color: rgb(0, 140, 255);
+}
+
 aside:hover>#login{
     display: block;
     width: 260px;
     height: 140px;
+}
+
+aside:hover>#paginas{
+    display: block;
+    width: 260px;
+    height: 210px;
 }
 
 section{
@@ -230,4 +261,10 @@ article#cuarto>form>input#boton2{
 article#fotos{
     flex-wrap: wrap;
     display: flex;
+    margin-top: 20px;
+}
+
+article#fotos>img{
+    width: 250px;
+    height: 183px;
 }
