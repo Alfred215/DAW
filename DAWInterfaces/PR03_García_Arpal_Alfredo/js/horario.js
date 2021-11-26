@@ -28,6 +28,9 @@ function resaltarActividad(){
     var  actividad  =  document.getElementsByName("deportes");
     var  table1  =  document.getElementById("table1");
     var  celdas  =  table1.getElementsByTagName('td');
+    for(var i=0;i<=celdas.length-1;i++) {
+        celdas[i].style.backgroundColor ="white";
+    }
 
     for(var i=0;i<actividad.length;i++) {
         if( actividad[i].checked==true) {

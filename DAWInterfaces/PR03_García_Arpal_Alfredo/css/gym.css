@@ -1,7 +1,6 @@
 *{
     padding: 0mm;
     margin: 0mm;
-    background-color: wheat;
 }
 
 html{
@@ -86,7 +85,7 @@ div#menu:hover>nav>ul>li{
 }
 
 aside{
-    margin-top: 20px;
+    margin-top: 40px;
     float: left;
     width: 30px;
     height: 30px;
@@ -151,6 +150,7 @@ article#primero{
 
 article#segundo{
     margin-left: 50px;
+    float: left;
 }
 
 article#primero>h2{
@@ -203,7 +203,31 @@ article#primero>h2#horario{
 }
 
 table{
-    margin-right: auto;
-    margin-left: auto;
+    margin-left: 40px;
     margin-bottom: 20px;
+}
+
+article#tercero{
+    float:left;
+    margin-left: 20px;
+}
+
+article#cuarto{
+    float:left;
+    margin-left: 20px;
+}
+
+article#tercero>form>input#boton{
+    height: 25px;
+    font-size: 16px;
+}
+
+article#cuarto>form>input#boton2{
+    height: 25px;
+    font-size: 16px;
+}
+
+article#fotos{
+    flex-wrap: wrap;
+    display: flex;
 }
