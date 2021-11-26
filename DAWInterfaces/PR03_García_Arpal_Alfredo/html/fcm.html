@@ -3,8 +3,8 @@
     <head>
         <title>Gym</title>
         <meta charset="UTF-8"/>
-        <link type="text/css" rel="stylesheet" href="../css/gym2.css"/> 
-        <script type="text/javascript" src="../js/imc.js"></script> 
+        <link type="text/css" rel="stylesheet" href="../css/gym.css"/> 
+        <script type="text/javascript" src="../js/fcm.js"></script> 
     </head>
     <body>
         <div id="titulo">
@@ -27,6 +27,7 @@
         </div>
 
         <aside>
+            <img src="../img/lupa.PNG" alt="buscar">
             <div id="login">
                 <img src="../img/inicio.PNG" alt="usuario">
                 <input type="text" value=""><br>
@@ -37,7 +38,32 @@
         </aside>
 
         <section>
-            
+            <article id="primero">
+                <h2>Calculadora de FCM</h2>
+                <p id="first">Esto es un calculador de índice de masa corporal, 
+                    que se usa para conocer si te encuentras en un peso saludable. 
+                    De todas formas es recomendable no hacer mucho caso a este tipo de calculadoras, 
+                    ya que es una aproximación y cada persona, es diferente. 
+                    Si quiere saber si se encuentra en un IMC saludable, 
+                    consulte con su médico de cabecera.<br> 
+                    (Esta calculador está diseñada para personas de más de 20 años de edad)
+                </p>
+            </article>
+            <article id="segundo">
+                <form action="./fcm.js">
+                    <label>Edad: </label><input type="number" id="edad" value=""><br>
+                    <label>Sexo: </label><input type="text" id="sexo" value=""><label> (Hombre o Mujer) </label><br>
+                    <input type="button" id="boton" src="fcm.js" onclick="calcular()" value="Enviar">
+                </form>
+                <h2 id="h2"></h2>
+                <ul id="lista">
+                    <li>Zona de recuperación (60% - 70%) <span id="1"></span></li>
+                    <li>Zona de aeróbica (70% - 80%) <span id="2"></span></li>
+                    <li>Zona de anaeróbica (80% - 90%) <span id="3"></span></li>
+                    <li>Línea roja (90% - 100%) <span id="4"></span></li>
+                </ul>
+            </article>
+               
         </section>
     </body>
 </html>
