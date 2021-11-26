@@ -1,7 +1,6 @@
 *{
     padding: 0mm;
     margin: 0mm;
-    background-color: wheat;
 }
 
 html{
@@ -86,7 +85,7 @@ div#menu:hover>nav>ul>li{
 }
 
 aside{
-    margin-top: 40px;
+    margin-top: 30px;
     float: left;
     width: 30px;
     height: 30px;
@@ -274,6 +273,38 @@ footer{
     margin-top: 20px;
     float: right;
     width: 100%;
-    height: 100px;
-    background-color: rgb(95, 93, 93);
+    background-color: #777676;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+}
+
+div#left{
+    margin-left: 80px;
+    margin-top: 20px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    width: 270px;
+    margin-bottom: 20px;
+}
+
+div#blog{
+    width: 150px;
+    display: flex;
+}
+
+div#blog>img{
+    width: 20px;
+    height: 20px;
+}
+
+div#left>div>img{
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+div#left>div>a{
+    margin-left: 10px;
 }
