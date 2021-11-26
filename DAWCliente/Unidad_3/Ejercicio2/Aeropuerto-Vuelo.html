@@ -19,57 +19,68 @@
                 }
             }
 
-            function Aeropuerto(nombreAuro,ciudad,numVuelos,variacion){
-                this.nombreAuro=nombreAuro;
-                this.ciudad=ciudad;
-                this.numVuelos=numVuelos;
-                this.variacion=function modificarAeropuerto(variacion){
-                    this.numVuelos=this.numVuelos+variacion;
+            class Aeropuerto{
+                constructor(nombreAuro,ciudad,numVuelos,variacion){
+                    this.nombreAuro=nombreAuro;
+                    this.ciudad=ciudad;
+                    this.numVuelos=numVuelos;
+                    this.variacion=function modificarAeropuerto(variacion){
+                        this.numVuelos=this.numVuelos+variacion;
+                    }       
                 }
             }
 
             function modificar(celda){
-                var nuevoValor=prompt("Variar vuelos: ");
+                var nuevoValor=null;
+                do{
+                    nuevoValor=prompt("Variar vuelos: ");
+                }while(isNaN(nuevoValor));
                 celda.parentNode.previousSibling.textContent=nuevoValor;
             }
 
             function recogerVuelo(){
                 var codigo = document.getElementById("codigo").value;
-                var hllegada = document.getElementById("hllegada").value;
-                var mllegada = document.getElementById("mllegada").value;
-                var hsalida = document.getElementById("hsalida").value;
-                var msalida = document.getElementById("msalida").value;
+                var hllegada = parseInt(document.getElementById("hllegada").value);
+                var mllegada = parseInt(document.getElementById("mllegada").value);
+                var hsalida = parseInt(document.getElementById("hsalida").value);
+                var msalida = parseInt(document.getElementById("msalida").value);
                 var vuelo1 = new Vuelo(codigo,hllegada,mllegada,hsalida,msalida);
                 if((codigo!="")){
                     var table=document.getElementById("tableVuelo");
                     var tr =document.createElement("tr");
-                    var cadenaBoton="<input type='buttom' value='Variar vuelos' id='boton1' onclick='modificarLlegada(this)'>";
-                    var cadenaBoton1="<input type='buttom' value='Variar vuelos' id='boton1' onclick='modificarSalida(this)'>";
+                    var cadenaBoton="<input type='buttom' value='Variar hora llegada' id='boton1' onclick='modificarLlegada(this)'>";
+                    var cadenaBoton1="<input type='buttom' value='Variar hora salida' id='boton1' onclick='modificarSalida(this)'>";
                     tr.innerHTML+="<td>"+vuelo1.codigo+"</td><td>"+vuelo1.llegada+"</td><td>"+vuelo1.salida+"</td><td>"+cadenaBoton+"</td><td>"+cadenaBoton1+"</td>";
                     table.appendChild(tr);
                 }
             }
 
-            function Vuelo(codigo,horaLlegada,minLlegada,horaSalida,minSalida,variarLlegada,variarSalida){
-                this.codigo=codigo;
-                this.llegada= new Date().horaLlegada;
-                this.salida= new Date();
-                this.variarLlegada=function modificarLlegada(variacion){
-                    this.llegada=this.llegada+variacion;
-                }
-                this.variarSalida=function modificarSalida(variacion){
-                    this.salida=this.salida+variacion;
+            class Vuelo{
+                constructor(codigo,horaLlegada,minLlegada,horaSalida,minSalida,variarLlegada,variarSalida){
+                    this.codigo=codigo;
+                    this.llegada= new Date();
+                    this.llegada.setHours(horaLlegada);
+                    this.llegada.setMinutes(minLlegada);
+                    this.salida= new Date();
+                    this.salida.setHours(horaSalida);
+                    this.salida.setMinutes(minSalida);
+                    this.variarLlegada=function modificarLlegada(variacion){
+                        this.llegada=this.llegada+variacion;
+                    }
+                    this.variarSalida=function modificarSalida(variacion){
+                        this.salida=this.salida+variacion;
+                    }
                 }
             }
 
             function modificarLlegada(celda){
-                var nuevoValor=prompt("Variar llegada: ");
-                celda.parentNode.previousSibling.textContent=nuevoValor;
+                var nuevoValor=prompt("Variar llegada: (hh:mm)");
+                celda.parentNode.previousSibling.previousSibling.textContent=nuevoValor;
             }
 
             function modificarSalida(celda){
-                var nuevoValor=prompt("Variar salida: ");
-                celda.parentNode.previousSibling.textContent=nuevoValor;
+                var nuevoValor=prompt("Variar salida: (hh:mm)");
+                celda.parentNode.previousSibling.previousSibling.textContent=nuevoValor;
             }
 
         </script> 

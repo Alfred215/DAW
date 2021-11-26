@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Gimnasio</title>
+        <script>
+
+            function crearAdministrador(){
+                var login = prompt("Introduce el usuario: ");
+                var password = prompt("Introduce la contraseña: "); 
+                var nombre = prompt("Introduce el nombre: ");
+                var dni = prompt("Introduce el dni: ");
+                UsuarioAdministrador.prototype = new UsuarioWeb(login,password,nombre,dni);       
+            }
+
+            function comprobarAdministrador(){
+                if(document.getElementById("user").value==UsuarioAdministrador.prototype.login && document.getElementById("password").value==UsuarioAdministrador.prototype.password){
+                    var admin1 = new UsuarioAdministrador();
+                    admin1.comprobar();
+                } 
+            }
+
+            function crearCliente(){
+                var login = prompt("Introduce el usuario: ");
+                var password = prompt("Introduce la contraseña: "); 
+                var nombre = prompt("Introduce el nombre: ");
+                var dni = prompt("Introduce el dni: ");
+                var peso = prompt("Peso: ");
+                var altura = prompt("Altura: ");
+                var edad = prompt("Edad: ");
+                var sexo = prompt("Sexo: ");
+                var historialImc = prompt("IMC: ");
+                var fcm = prompt("FCM: ");
+                UsuarioCliente.prototype = new UsuarioWeb(login,password,nombre,dni);
+                var cliente1= new UsuarioCliente(peso,altura,edad,sexo,historialImc,fcm);      
+            }
+
+            function comprobarCliente(){
+                if(document.getElementById("user").value==UsuarioCliente.prototype.login && document.getElementById("password").value==UsuarioCliente.prototype.password){
+                    var cliente1 = new UsuarioCliente();
+                    cliente1.comprobar();
+                }  
+            }
+
+
+            function iniciar(){
+                comprobarAdministrador();
+                comprobarCliente();
+            }
+
+            function UsuarioWeb(login, password,nombre,dni){
+                this.login=login;
+                this.password=password;
+                this.nombre=nombre;
+                this.dni=dni;
+            }
+
+            function UsuarioAdministrador(darAlta,crearTabla){
+                this.darAlta=darAlta;
+                this.crearTabla=crearTabla;
+                this.comprobar=function (){
+                    alert("Bienvenido "+UsuarioAdministrador.prototype.nombre+". Eres un administrador");
+                }
+            }
+
+            function UsuarioCliente(peso,altura,edad,sexo,historialImc,Fcm){
+                this.peso=peso;
+                this.altura=altura;
+                this.edad=edad;
+                this.sexo=sexo;
+                this.historialImc=historialImc;
+                this.Fcm=Fcm;
+                this.comprobar=function (){
+                    alert("Bienvenido "+UsuarioCliente.prototype.nombre+". Eres un cliente");
+                }
+            }
+
+        </script> 
+    </head>
+    <body>
+        <input type="button" value="Crear usuario administrador" onclick="crearAdministrador()"><br>
+        <input type="button" value="Crear usuario cliente" onclick="crearCliente()"><br><br>
+        <form>
+            <label>Usuario: </label><input type="text" value="" id="user"><br>
+            <label>Contraseña: </label><input type="password" value="" id="password"><br>
+            <input type="button" value="Entrar" id="form" onclick="iniciar()">
+        </form>
+    </body >
+</html>

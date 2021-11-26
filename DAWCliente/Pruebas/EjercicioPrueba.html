@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>EjercicioPruebaHerencia</title>
+        <script>
+            class Padre{
+                constructor(nombre,edad,sexo){
+                    this.nombre=nombre;
+                    this.edad=edad;
+                    this.sexo=sexo;
+                }
+            }
+
+            class Hijo extends Padre{
+                constructor(nombre,edad,sexo,asignatura,colegio){
+                    super(nombre,edad,sexo);
+                    this.asignatura=asignatura;
+                    this.colegio=colegio;
+                }
+            }
+        </script> 
+    </head>
+    <body>
+        <script>
+            var hijo1 = new Hijo("juan","21","Hombre","mates","Felix");
+            alert(hijo1.nombre+" . Edad: "+hijo1.edad+" . Colegio "+hijo1.colegio);
+        </script>
+    </body >
+</html>
