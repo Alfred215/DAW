@@ -169,10 +169,30 @@ aside:hover>#paginas{
     height: 210px;
 }
 
-section{
+body:hover>section{
     margin-top: 20px;
     float: right;
+    display: block;
     width: 750px;
+    height: 500px;
+    overflow: hidden;
+}
+
+*:hover>section{
+    margin-top: 20px;
+    float: right;
+    display: block;
+    width: 750px;
+    height: 500px;
+    overflow: hidden;
+}
+
+section{
+    display: none;
+    margin-top: 20px;
+    float: right;
+    width: 0px;
+    height: 0px;
 }
 
 article#primero{
