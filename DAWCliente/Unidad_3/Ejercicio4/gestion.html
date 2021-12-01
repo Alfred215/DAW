@@ -8,7 +8,7 @@
             var listaFisio=[];
             var listaMonitores=[];
             var exDni=/^[0-9]{8}[A-Z]{1}$/i;
-            var exTel=/^[0-9]{9}$/i;
+            var exTel=/\d{9}/;
 
             function crearFisio(){
                 var contador=0;
@@ -18,17 +18,23 @@
                     dni = prompt("Introduce el dni");
                 }while(!exDni.test(dni));
                 var telefono;
-                do{
+                //do{
                     telefono = prompt("Introduce el telefono");
-                }while(!exDni.test(telefono));
+                //}while(!exDni.test(telefono));
                 var fisio = new Fisio(nombre,dni,telefono);
                 listaFisio.push(fisio);
             }
 
             function crearMonitor(){
                 var nombre = prompt("Introduce el nombre");
-                var dni = prompt("Introduce el dni");
-                var telefono = prompt("Introduce el telefono");
+                var dni;
+                do{
+                    dni = prompt("Introduce el dni");
+                }while(!exDni.test(dni));
+                var telefono;
+                //do{
+                    telefono = prompt("Introduce el telefono");
+                //}while(!exDni.test(telefono));
                 var monitor = new Fisio(nombre,dni,telefono);
                 listaMonitores.push(monitor);   
             }
