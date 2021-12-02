@@ -20,6 +20,12 @@ a{
     color: black;
 }
 
+div#titulo{
+    width: 1100px;
+    position: fixed;
+    background-color: white;
+}
+
 header{
     height: 220px;
     width: 50%;
@@ -44,7 +50,7 @@ div#menu{
 
 div#menu>h1{
     margin-top: 40px;
-    font-size: 50px;
+    font-size: 60px;
     width: 100%;
     text-align: center;
 }
@@ -85,6 +91,8 @@ div#menu:hover>nav>ul>li{
 }
 
 aside{
+    position: fixed;
+    top: 210px;
     margin-top: 30px;
     float: left;
     width: 30px;
@@ -169,130 +177,106 @@ aside:hover>#paginas{
     height: 210px;
 }
 
-body:hover>section{
-    margin-top: 20px;
-    float: right;
-    display: block;
-    width: 750px;
-    height: 500px;
-    overflow: hidden;
-}
-
-*:hover>section{
-    margin-top: 20px;
-    float: right;
-    display: block;
-    width: 750px;
-    height: 500px;
-    overflow: hidden;
-}
-
 section{
-    display: none;
-    margin-top: 20px;
+    margin-top: 200px;
+    margin-bottom: 240px;
     float: right;
-    width: 0px;
-    height: 0px;
+    width: 760px;
 }
 
-article#primero{
-    margin-left: 50px;
+article{
+    margin-bottom: 300px;
 }
 
-article#segundo{
-    margin-left: 50px;
-    float: left;
-}
-
-article#primero>h2{
-    margin-top: 10px;
+article>div>h2{
+    font-size: 40px;
+    margin-top: 30px;
     margin-bottom: 20px;
-    font-size: 30px;
-    width: 600px;
-    text-align: center;
+    margin-left: 40px;
+    
 }
 
-article#primero>p#first{
-    width: 600px;
-    text-align: left;
+article>div>p{
+    width: 650px;
     margin-left: 20px;
-    font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
 }
 
-article#segundo>form{
-    margin:20px;
-    text-align: left;
+article>div>form{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
     font-size: 20px;
 }
 
-article#segundo>h2{
-    font-size: 24px;
-    margin-top: 20px;
-    margin-left: 20px;
-}
-
-article#segundo>form>input{
+article>div>form>input{
     height: 20px;
     margin-top: 5px;
 }
 
-article#segundo>form>input#boton{
+article>div>form>input.boton{
     height: 25px;
     font-size: 18px;
 }
 
-article#segundo>ul#lista{
+article>div>ul#lista{
     font-size: 18px;
     margin-left: 20px;
     list-style-type: none;
 }
 
-article#primero>h2#horario{
-    width: 95%;
-    text-align: center;
+article>div>form>input{
+    height: 16px;
+}
+
+.muestra{
+    font-size: 25px;
+    margin-left: 20px;
 }
 
 table{
-    margin-left: 40px;
+    margin-left: 20px;
     margin-bottom: 20px;
 }
 
-article#tercero{
-    float:left;
-    margin-left: 20px;
+div.table{
+    float: left;
 }
 
-article#cuarto{
-    float:left;
-    margin-left: 20px;
+div.form{
+    float: left;
 }
 
-article#tercero>form>input#boton{
-    height: 25px;
+form.formulario{
+    margin-top: 40px;
+    margin-left: 10px;
     font-size: 16px;
 }
 
-article#cuarto>form>input#boton2{
-    height: 25px;
-    font-size: 16px;
+#formulario{
+    margin-top: 75px;
 }
 
-article#fotos{
+article>div#fotos{
+    padding-top: 300px;
+    float: left;
     flex-wrap: wrap;
     display: flex;
     margin-top: 20px;
 }
 
-article#fotos>img{
+.img{
     width: 250px;
     height: 183px;
 }
 
 footer{
+    position: fixed;
+    top:800px;
     margin-top: 20px;
     float: right;
-    width: 100%;
+    width: 1100px;
     background-color: #777676;
     justify-content: space-between;
     display: flex;

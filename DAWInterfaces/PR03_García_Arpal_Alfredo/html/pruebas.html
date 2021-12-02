@@ -4,9 +4,11 @@
         <title>Gym</title>
         <meta charset="UTF-8"/>
         <link type="text/css" rel="stylesheet" href="../css/pruebas.css"/> 
-        <script type="text/javascript" src="../js/imc.js"></script> 
+        <script type="text/javascript" src="../js/imc.js"></script>
+        <script type="text/javascript" src="../js/fcm.js"></script>
+        <script type="text/javascript" src="../js/horario.js"></script>  
     </head>
-    <body>
+    <body onload="crear()">
         <div id="titulo">
            <header>
                 <img src="../img/logo/logo.jpg">
@@ -15,10 +17,10 @@
                 <h1>Time to Sport</h1>
                 <nav>  
                     <ul>
-                        <li><a href="../html/imc.html">IMC</a></li>
-                        <li><a href="../html/fcm.html">Pulsaciones</a></li>
-                        <li><a href="../html/horario.html">Horario</a></li>
-                        <li><a href="../html/maquinaria.html">Galeria de imagenes</a></li>
+                        <li><a href="#IMC">IMC</a></li>
+                        <li><a href="#FMC">Pulsaciones</a></li>
+                        <li><a href="#horario">Horario</a></li>
+                        <li><a href="#galeria">Galeria de imagenes</a></li>
                     </ul>
                 </nav>
             </div>
@@ -52,35 +54,132 @@
         </aside>
 
         <section>
-            <article id="primero">
-                <h2>Calculadora de IMC</h2>
-                <p id="first">Esto es un calculador de índice de masa corporal, 
-                    que se usa para conocer si te encuentras en un peso saludable. 
-                    De todas formas es recomendable no hacer mucho caso a este tipo de calculadoras, 
-                    ya que es una aproximación y cada persona, es diferente. 
-                    Si quiere saber si se encuentra en un IMC saludable, 
-                    consulte con su médico de cabecera.<br> 
-                    (Esta calculador está diseñada para personas de más de 20 años de edad)
-                </p>
+            <article>
+                <div>
+                    <h2  id="IMC">Calculadora de IMC</h2>
+                    <p id="first">Esto es un calculador de índice de masa corporal, 
+                        que se usa para conocer si te encuentras en un peso saludable. 
+                        De todas formas es recomendable no hacer mucho caso a este tipo de calculadoras, 
+                        ya que es una aproximación y cada persona, es diferente. 
+                        Si quiere saber si se encuentra en un IMC saludable, 
+                        consulte con su médico de cabecera.<br> 
+                        (Esta calculador está diseñada para personas de más de 20 años de edad)
+                    </p>
+                </div>
+                <div>
+                    <form>
+                    <label>Peso en Kg    </label><input type="number" id="peso" value=""><br>
+                    <label>Altura en centímetros     </label><input type="number" id="altura" value=""><br>
+                    <input type="button" onclick="calcularIMC()" value="Enviar" class="boton">
+                    </form>
+                    <h3 class="muestra"><span id="muestra"></span></h2>
+                    <ul id="lista">
+                        <li id="1">&lt;16.00: Infrapeso (delgadez severa)</li>
+                        <li id="2">16.00 - 16.99: Infrapeso (delgadez moderada)</li>
+                        <li id="3">17.00 - 18.49: Infrapeso (delgadez aceptable)</li>
+                        <li id="4">18.50 - 24.99: Peso normal</li>
+                        <li id="5">25.00 - 29.99: Sobrepeso</li>
+                        <li id="6">30.00 - 35.99: Obeso (Tipo I)</li>
+                        <li id="7">35.00 - 40.00: Obeso (Tipo II)</li>
+                        <li id="8">&gt;40.00: Obeso(Tipo III)</li>
+                    </ul>
+                </div>
             </article>
-            <article id="segundo">
-                <form>
-                <label>Peso en Kg    </label><input type="number" id="peso" value=""><br>
-                <label>Altura en centímetros     </label><input type="number" id="altura" value=""><br>
-                <input type="button" onclick="calcular()" value="Enviar" id="boton">
-                </form>
-                <h2><span id="muestra"></span></h2>
-                <ul id="lista">
-                    <li id="1">&lt;16.00: Infrapeso (delgadez severa)</li>
-                    <li id="2">16.00 - 16.99: Infrapeso (delgadez moderada)</li>
-                    <li id="3">17.00 - 18.49: Infrapeso (delgadez aceptable)</li>
-                    <li id="4">18.50 - 24.99: Peso normal</li>
-                    <li id="5">25.00 - 29.99: Sobrepeso</li>
-                    <li id="6">30.00 - 35.99: Obeso (Tipo I)</li>
-                    <li id="7">35.00 - 40.00: Obeso (Tipo II)</li>
-                    <li id="8">&gt;40.00: Obeso(Tipo III)</li>
-                </ul> 
-            </article>   
+
+            <article id="FMC">    
+                <div>
+                    <h2>Calculadora de FCM</h2>
+                    <p id="first">Esto es un calculador de índice de masa corporal, 
+                        que se usa para conocer si te encuentras en un peso saludable. 
+                        De todas formas es recomendable no hacer mucho caso a este tipo de calculadoras, 
+                        ya que es una aproximación y cada persona, es diferente. 
+                        Si quiere saber si se encuentra en un IMC saludable, 
+                        consulte con su médico de cabecera.<br> 
+                        (Esta calculador está diseñada para personas de más de 20 años de edad)
+                    </p>
+                </div>
+                <div>
+                    <form action="./fcm.js">
+                        <label>Edad: </label><input type="number" id="edad" value=""><br>
+                        <label>Sexo: </label><input type="text" id="sexo" value=""><label> (Hombre o Mujer) </label><br>
+                        <input type="button" class="boton" src="fcm.js" onclick="calcularFMC()" value="Enviar">
+                    </form>
+                    <h3 id="h2" class="muestra"></h2>
+                    <ul id="lista">
+                        <li>Zona de recuperación (60% - 70%) <span id="9"></span></li>
+                        <li>Zona de aeróbica (70% - 80%) <span id="10"></span></li>
+                        <li>Zona de anaeróbica (80% - 90%) <span id="11"></span></li>
+                        <li>Línea roja (90% - 100%) <span id="12"></span></li>
+                    </ul>
+                </div>
+            </article>
+            <article>
+                <div class="table" id="primero">
+                    <h2 id="horario">Horario</h2>
+                    <table border="1" id="table1">
+                        <tr><td></td><td>Lunes</td><td>Martes</td><td>Miercoles</td><td>Jueves</td><td>Viernes</td><td>Sabado</td></tr>
+                        <tr id="deporte1"><td>7:00 - 9:00</td></tr>
+                        <tr id="deporte2"><td>9:00 - 11:00</td></tr>
+                        <tr id="deporte3"><td>11:00 - 13:00</td></tr>
+                        <tr id="deporte4"><td>13:00 - 15:00</td></tr>
+                        <tr id="deporte5"><td>15:00 - 17:00</td></tr>
+                        <tr id="deporte6"><td>17:00 - 19:00</td></tr>
+                        <tr id="deporte7"><td>19:00 - 21:00</td></tr>
+                    </table >
+                </div> 
+
+                <div class="form" id="segundo">
+                    <form  class="formulario" id="formulario" name="formAct">
+                        <label for="deportes">ACTIVIDADES</label><br/>
+                        <input type="checkbox" name="deportes" value="Aerobic">Aerobic<br/>
+                        <input type="checkbox" name="deportes" value="Ciclismo">Ciclismo<br/>
+                        <input type="checkbox" name="deportes" value="Yoga">Yoga<br/>
+                        <input type="checkbox" name="deportes" value="KickBoxing">KickBoxing<br/>
+                        <input type="checkbox" name="deportes" value="Crossfit">Crossfit<br/>
+                        <input type="checkbox" name="deportes" value="Karate">Karate<br/>
+                        <input type="checkbox" name="deportes" value="Sgrima">Sgrima<br/>
+                        <input type="button" class="boton" value="MOSTRAR" onclick="resaltarActividad()">
+                    </form>   
+                </div>
+
+                <div class="table" id="tercero">
+                    <table border="1" id="table2">
+                        <tr><td></td><td>Lunes</td><td>Martes</td><td>Miercoles</td><td>Jueves</td><td>Viernes</td></tr>
+                        <tr class="row" id="fisio1"><td class="hola">10:00 - 10:45</td></tr>
+                        <tr class="row" id="fisio2"><td>10:45 - 11:30</td></tr>
+                        <tr class="row" id="fisio3"><td>11:30 - 12:15</td></tr>
+                        <tr class="row" id="fisio4"><td>12:15 - 13:00</td></tr>
+                        <tr class="row" id="fisio5"><td>13:00 - 13:45</td></tr>
+                        <tr class="row" id="fisio6"><td>17:00 - 17:45</td></tr>
+                        <tr class="row" id="fisio7"><td>17:45 - 18:30</td></tr>
+                        <tr class="row" id="fisio8"><td>18:30 - 19:15</td></tr>
+                        <tr class="row" id="fisio9"><td>19:15 - 20:00</td></tr>
+                        <tr class="row" id="fisio10"><td>20:00 - 20:45</td></tr>
+                    </table>
+                </div>
+                
+                <div class="form" id="cuarto">
+                    <form class="formulario" name="fisio">
+                        <label for="fisio">FISIO:</label><br/>
+                        <input type="radio" name="fisio" value="Alfredo">Alfredo<br/>
+                        <input type="radio" name="fisio" value="Maria">Maria<br/>
+                        <input type="radio" name="fisio" value="Sonia">Sonia<br/>
+                        <input type="radio" name="fisio" value="Alberto">Alberto<br/>
+                        <input type="radio" name="fisio" value="Sergio">Sergio<br/>
+                        <input type="button" class="boton" value="MOSTRAR" onclick="resaltarFisio()">
+                    </form>   
+                </div>
+            </article>
+            <article id="foto">
+                <div id="fotos">
+                    <img class="img" src="../img/gym1.PNG" alt="gym1">
+                    <img class="img" src="../img/gym2.PNG" alt="gym2">
+                    <img class="img" src="../img/gym3.PNG" alt="gym3">
+                    <img class="img" src="../img/gym4.PNG" alt="gym4">
+                    <img class="img" src="../img/gym5.PNG" alt="gym5">
+                    <img class="img" src="../img/gym6.PNG" alt="gym6">
+                </div>            
+            </article>
         </section>
         <footer>
             <div id="left">
@@ -89,17 +188,17 @@
                     <p>Time to Sport</p>
                 </div>
                 <div>
-                    <img src="../img/twitter.jpg" alt="twitter"><a href="">Twitter</a><br/>
-                    <img src="../img/facebook.jpg" alt="facebook"><a href="">Facebook</a><br/>
-                    <img src="../img/instagram.PNG" alt="Instagram"><a href="">Instagram</a><br/>
+                    <img src="../img/twitter.jpg" alt="twitter"><a href="https://twitter.com/?lang=es">Twitter</a><br/>
+                    <img src="../img/facebook.jpg" alt="facebook"><a href="https://www.facebook.com/">Facebook</a><br/>
+                    <img src="../img/instagram.PNG" alt="Instagram"><a href="https://www.instagram.com/?hl=es">Instagram</a><br/>
                 </div>
             </div>
             <div id="center">
                 <ul>
-                    <li><a href="../html/imc.html">IMC</a></li>
-                    <li><a href="../html/fcm.html">Pulsaciones</a></li>
-                    <li><a href="../html/horario.html">Horario</a></li>
-                    <li><a href="../html/maquinaria.html">Maquinas</a></li>
+                    <li><a href="#IMC">IMC</a></li>
+                    <li><a href="#FMC">Pulsaciones</a></li>
+                    <li><a href="#horario">Horario</a></li>
+                    <li><a href="#galeria">Maquinas</a></li>
                 </ul>
             </div>
             <div id="right">

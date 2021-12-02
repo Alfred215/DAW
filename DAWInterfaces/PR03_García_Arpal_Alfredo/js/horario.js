@@ -60,7 +60,7 @@ function resaltarFisio(){
     }
 
     for(var i=0;i<5;i++){
-        for(var j=0;j<celdas.length-1;j++){
+        for(var j=0;j<=celdas.length-1;j++){
             if(celdas[j].innerHTML==seleccion){
                 celdas[j].style.backgroundColor="green";
             }else{

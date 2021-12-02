@@ -1,4 +1,4 @@
-function calcular(){
+function calcularIMC(){
     for(var i=1;i<9;i++){
         document.getElementById(i).style.color="black";
     }
