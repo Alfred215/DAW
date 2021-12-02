@@ -5,14 +5,16 @@
 
 html{
     margin: auto;
-    max-width: 1110px;
-    background-color: white;
+
+    background: url("../img/gym.jpg")no-repeat fixed;
+    background-size: 2000px 1000px;
 }
 
 body{
     max-width: 1100px;
-    margin: 5px;
-    background-color: white;
+    margin: auto;
+    height: 3000px;
+    background-color: rgba(255, 255, 255, 0.473);
 }
 
 a{
@@ -91,6 +93,7 @@ div#menu:hover>nav>ul>li{
 }
 
 aside{
+    margin-left: 5px;
     position: fixed;
     top: 210px;
     margin-top: 30px;
@@ -178,19 +181,41 @@ aside:hover>#paginas{
 }
 
 section{
-    margin-top: 200px;
-    margin-bottom: 240px;
     float: right;
     width: 760px;
 }
 
+div.espacio{
+
+    height: 220px;
+    width: 760px;
+}
+
 article{
-    margin-bottom: 300px;
+
+    padding-bottom: 10px;
+    color: black;
+    margin-bottom: 40px;
+}
+
+article#horario{
+    height: 790px;
+}
+
+article#galeria{
+    height: 700px;
+}
+
+article#galeria>h2{
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 40px;
 }
 
 article>div>h2{
     font-size: 40px;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 40px;
     
@@ -259,7 +284,7 @@ form.formulario{
 }
 
 article>div#fotos{
-    padding-top: 300px;
+    justify-content: space-between;
     float: left;
     flex-wrap: wrap;
     display: flex;
@@ -272,8 +297,6 @@ article>div#fotos{
 }
 
 footer{
-    position: fixed;
-    top:800px;
     margin-top: 20px;
     float: right;
     width: 1100px;
