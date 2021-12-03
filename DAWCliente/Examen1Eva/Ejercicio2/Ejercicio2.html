@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ejercicio2 - Expresiones regulares</title>
+        <script>
+            function validar(){
+                var telefono = document.getElementById("telefono").value;
+                var fecha = document.getElementById("fecha").value;
+                var numero = document.getElementById("numero").value;
+                validarTelefono(telefono);
+                validarFecha(fecha);
+                validarNumero(numero);
+            }
+
+            function validarTelefono(telefono){
+                var exTel=/^\d{9}$/;
+                if(exTel.test(telefono)){
+                    alert("Número de telefono correcto");
+                }else{
+                    alert("Número de telefono incorecto");
+                }
+            }
+
+            function validarFecha(fecha){
+                var exFec=/^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$/;
+                if(exFec.test(fecha)){
+                    alert("Fecha correcta");
+                }else{
+                    alert("Fecha incorecta");
+                } 
+            }
+
+            function validarNumero(numero){
+                var exNum=/^([0-9]|[11]\d|2[0-2])$/;
+                if(exNum.test(numero)){
+                    alert("Número correcto");
+                }else{
+                    alert("Número incorecto");
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <form id="form1">
+            <label>Telefono:<input type="text" id="telefono"></label><br>
+            <label>Fecha:<input type="text" id="fecha"></label><br>
+            <label>Número:<input type="text" id="numero"></label><br>
+            <input type="button" id="boton" value="validar" onclick="validar()">
+        </form>
+        <script>
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio1 - lista</title>
+        <script>
+            function insertar(){
+                var nombre = document.getElementById("nombre").value;
+                var edad = document.getElementById("edad").value;
+                var telefono = document.getElementById("telefono").value;
+
+                /*LLama al ul para poder crear los elementos li dentro*/
+                var ul = document.getElementsByTagName("ul");
+                var li = document.createElement("li");
+                var texto = document.createTextNode("Soy "+nombre+". Tengo "+edad+" años y mi telefono es el "+telefono);
+                //Introducimos el texto dentro del li y luego lo introducimos en el ul para que se muestre
+                li.appendChild(texto);
+                ul.appendChild(li);
+            }
+        </script>
+    </head>
+    <body>
+        <form id="form1"  name="form1">
+            <input id="nombre" name="nombre"><br>
+            <input id="edad" name="edad"><br>
+            <input id="telefono" name="telefono"><br>
+            <input type="button" id="botonInsertar" value="Insertar usuario"><br>
+        </form>
+        <h1>Lista de Clientes</h1>
+        <ul id="ul">
+
+        </ul>
+        <script>
+            document.getElementById("botonInsertar").addEventListener("click",insertar,false);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ejercicio4 - ES6</title>
+        <script>
+            listaProductos=[];
+            class Articulo{
+                constructor(codigo,nombre,localizacion,precio){
+                    this.codigo=codigo;
+                    this.nombre=nombre;
+                    this.localizacion=localizacion;
+                    this.precio=precio;
+                }
+
+                mostrar(){
+                    return(this.codigo+" "+this.nombre+" "+ this.localizacion+" "+this.precio);
+                }
+            }
+
+            class ProductoFresco extends Articulo{
+                constructor(codigo,nombre,localizacion,precio,duracion){
+                    super(codigo,nombre,localizacion,precio);
+                    this.fechaRecepcion=new Date();
+                    this.duracion=duracion;
+                }
+            }
+
+            function crearArticulo(){
+                var codigo = document.getElementById("codigo").value;
+                var nombre = document.getElementById("nombre").value;
+                var loca = document.getElementById("localizacion").value;
+                var precio = document.getElementById("precio").value;
+                var duracion = document.getElementById("duracion").value;
+
+                var articulo = new ProductoFresco(codigo,nombre,loca,precio,duracion);
+                listaProductos.push(articulo);
+
+                var table=document.getElementById("producto");
+                var tr =document.createElement("tr");
+                tr.innerHTML+="<td>"+codigo+"</td><td>"+nombre+"</td><td>"+loca+"</td><td>"+precio+"</td><td>"+articulo.fechaRecepcion+"</td><td>"+duracion+" dias</td>";
+                table.appendChild(tr);  
+            }
+
+            function comprobar(){
+                var codigo= document.getElementById("buscar").value;
+                for(let i = 0; i<listaProductos.length;i++){
+                    if(listaProductos[i].codigo==codigo){
+                        alert(listaProductos[i].mostrar());
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+            <form>
+                <label>Codigo: </label><input type="text" value="" id="codigo"><br>
+                <label>nombre: </label><input type="text" value="" id="nombre"><br>
+                <label>Localizacion: </label><input type="text" value="" id="localizacion"><br>
+                <label>Precio: </label><input type="number" value="" id="precio"><br>
+                <label>Duracion: </label><input type="number" value="" id="duracion"><br>
+                <input type="button" onclick="crearArticulo();" value="Enviar"><br><br>
+            </form>
+
+            <form>
+                <label>Buscar codigo:</label><input type="text" value="" id="buscar"><br>
+                <input type="button" onclick="comprobar();" value="Comprobar"><br><br>
+            </form>
+
+            <table border="1" id="producto">
+                <tr><th>Codigo</th><th>Nombre</th><th>Localizacion</th><th>Precio</th><th>fechaRecepcion</th><th>duracion</th></tr>
+            </table>
+
+        <script>
+            
+            
+        </script>
+    </body>
+</html>
