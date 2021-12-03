@@ -160,7 +160,7 @@ div#menu:hover>nav>ul>li{
 }
 
 aside{
-    margin-left: 5px;
+    margin-left: 10px;
     position: fixed;
     top: 210px;
     margin-top: 30px;
@@ -306,6 +306,7 @@ article>div>form>input{
 }
 
 article>div>form>input.boton{
+    background-color: rgb(192, 220, 233);
     height: 25px;
     font-size: 18px;
 }
