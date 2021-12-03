@@ -4,6 +4,7 @@
         <title>Gym</title>
         <meta charset="UTF-8"/>
         <link type="text/css" rel="stylesheet" href="../css/pruebas.css"/> 
+        <link type="text/css" rel="stylesheet" href="../css/pruebas.css" media="print"/>
         <script type="text/javascript" src="../js/imc.js"></script>
         <script type="text/javascript" src="../js/fcm.js"></script>
         <script type="text/javascript" src="../js/horario.js"></script>  
@@ -55,7 +56,7 @@
         <section>
             <article id="IMC">
                 <div class="espacio"></div>
-                <div>
+                <div class="color">
                     <h2>Calculadora de IMC</h2>
                     <p id="first">Esto es un calculador de índice de masa corporal, 
                         que se usa para conocer si te encuentras en un peso saludable. 
@@ -66,7 +67,7 @@
                         (Esta calculador está diseñada para personas de más de 20 años de edad)
                     </p>
                 </div>
-                <div>
+                <div class="color">
                     <form>
                     <label>Peso en Kg    </label><input type="number" id="peso" value=""><br>
                     <label>Altura en centímetros     </label><input type="number" id="altura" value=""><br>
@@ -88,7 +89,7 @@
 
             <article id="FMC">  
                 <div class="espacio"></div>  
-                <div>
+                <div class="color">
                     <h2>Calculadora de FCM</h2>
                     <p id="first">Esto es un calculador de índice de masa corporal, 
                         que se usa para conocer si te encuentras en un peso saludable. 
@@ -99,7 +100,7 @@
                         (Esta calculador está diseñada para personas de más de 20 años de edad)
                     </p>
                 </div>
-                <div>
+                <div class="color">
                     <form action="./fcm.js">
                         <label>Edad: </label><input type="number" id="edad" value=""><br>
                         <label>Sexo: </label><input type="text" id="sexo" value=""><label> (Hombre o Mujer) </label><br>

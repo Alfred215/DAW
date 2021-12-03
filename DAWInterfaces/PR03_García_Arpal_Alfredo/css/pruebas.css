@@ -3,6 +3,73 @@
     margin: 0mm;
 }
 
+@media print{
+    div#titulo{
+        margin-left:80px;
+    }
+
+    div#menu{
+        display: none;
+    }
+
+    aside{
+        position: relative;
+        display: none;
+    }
+
+    nav{
+        display: none;
+    }
+
+    div#left{
+        display: none;
+    }
+
+    a{
+        display: none;
+    }
+
+    div#right{
+        display: none;
+    }
+
+    h2{
+        text-align: center;
+        width: 80%;
+    }
+
+    form{
+        display: none;
+    }
+
+    #horario{
+        page-break-before: always;
+    }
+
+    #galeria{
+        page-break-before: always;
+    }
+
+    #horario>div>h2{
+        width: 100%;
+    }
+
+    #galeria>h2{
+        width: 88%;
+    }
+
+    article{
+        margin-left: 30px;
+        width: 730px;
+        height: 400px;
+    }
+
+    div.form{
+        display: none;
+    }
+
+}
+
 html{
     margin: auto;
 
@@ -186,13 +253,11 @@ section{
 }
 
 div.espacio{
-
     height: 220px;
     width: 760px;
 }
 
 article{
-
     padding-bottom: 10px;
     color: black;
     margin-bottom: 40px;
