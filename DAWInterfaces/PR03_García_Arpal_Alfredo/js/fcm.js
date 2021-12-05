@@ -10,6 +10,10 @@ function calcularFMC(){
             document.getElementById("10").innerHTML=((fcm*70)/100)+" - "+((fcm*80)/100);
             document.getElementById("11").innerHTML=((fcm*80)/100)+" - "+((fcm*90)/100);
             document.getElementById("12").innerHTML=((fcm*90)/100)+" - "+((fcm*100)/100);
+            document.getElementById("9").style.color="green";
+            document.getElementById("10").style.color="green";
+            document.getElementById("11").style.color="green";
+            document.getElementById("12").style.color="green";
         }
     }else{
         alert("Escriba: Mujer o Hombre")

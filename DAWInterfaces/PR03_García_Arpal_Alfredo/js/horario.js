@@ -29,7 +29,7 @@ function resaltarActividad(){
     var  table1  =  document.getElementById("table1");
     var  celdas  =  table1.getElementsByTagName('td');
     for(var i=0;i<=celdas.length-1;i++) {
-        celdas[i].style.backgroundColor ="white";
+        celdas[i].style.backgroundColor ="rgba(255, 255, 255, 0.514)";
     }
 
     for(var i=0;i<actividad.length;i++) {
@@ -64,7 +64,7 @@ function resaltarFisio(){
             if(celdas[j].innerHTML==seleccion){
                 celdas[j].style.backgroundColor="green";
             }else{
-                celdas[j].style.backgroundColor="white";
+                celdas[j].style.backgroundColor="rgba(255, 255, 255, 0.514)";
             }
         }
     }

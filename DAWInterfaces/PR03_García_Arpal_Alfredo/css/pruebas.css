@@ -72,15 +72,14 @@
 
 html{
     margin: auto;
-
     background: url("../img/gym.jpg")no-repeat fixed;
     background-size: 2000px 1000px;
 }
 
 body{
-    max-width: 1100px;
+    max-width: 1110px;
     margin: auto;
-    height: 3000px;
+    height: 3250px;
     background-color: rgba(255, 255, 255, 0.473);
 }
 
@@ -90,9 +89,11 @@ a{
 }
 
 div#titulo{
+    border-radius: 10px;
+    margin-left: 5px;
     width: 1100px;
     position: fixed;
-    background-color: white;
+    background-color: rgb(192, 220, 233);
 }
 
 header{
@@ -155,7 +156,7 @@ div#menu>nav>ul>li{
 div#menu:hover>nav>ul>li{
     border-radius: 10px;
     padding: 10px;
-    background-color: rgb(192, 220, 233);
+    background-color: rgba(255, 255, 255, 0.473);
     list-style-type: none;
 }
 
@@ -248,6 +249,7 @@ aside:hover>#paginas{
 }
 
 section{
+    margin-right: 5px;
     float: right;
     width: 760px;
 }
@@ -290,7 +292,7 @@ article>div>p{
     width: 650px;
     margin-left: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
+    font-size: 18px;
 }
 
 article>div>form{
@@ -298,6 +300,10 @@ article>div>form{
     margin-bottom: 20px;
     margin-left: 30px;
     font-size: 20px;
+    background-color: rgba(192, 220, 233, 0.822);
+    border: solid 2px black;
+    padding: 5px;
+    display: inline-block;
 }
 
 article>div>form>input{
@@ -306,15 +312,20 @@ article>div>form>input{
 }
 
 article>div>form>input.boton{
-    background-color: rgb(192, 220, 233);
-    height: 25px;
+    background-color: rgb(245, 245, 245);
+    height: 32px;
     font-size: 18px;
+    padding: 5px;
 }
 
 article>div>ul#lista{
     font-size: 18px;
     margin-left: 20px;
     list-style-type: none;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(255, 255, 255, 0.384);
+    padding: 10px;
+    display: inline-block;
 }
 
 article>div>form>input{
@@ -329,6 +340,13 @@ article>div>form>input{
 table{
     margin-left: 20px;
     margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.514);
+    border: solid 2px black;
+    font-size: 16px;
+}
+
+td{
+    border: solid 2px black;
 }
 
 div.table{
@@ -365,7 +383,7 @@ article>div#fotos{
 footer{
     margin-top: 20px;
     float: right;
-    width: 1100px;
+    width: 1110px;
     background-color: #777676;
     justify-content: space-between;
     display: flex;
