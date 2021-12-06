@@ -40,5 +40,4 @@ function mostrar(calculo){
         document.getElementById('muestra').innerHTML="Obeso (Tipo III) "+calculo;
         document.getElementById('8').style.color="red";
     }
-    document.getElementById('lista').style.display="block";
 }
