@@ -4,8 +4,14 @@
 }
 
 @media screen and (max-width: 1121px) {
+    html{
+        background: url("../img/gym.jpg")no-repeat fixed;
+        background-size: 1000px 1000px;
+    }
+
     body{
         width: 810px;
+        max-height: 3400px;
     }
 
     div#titulo{
@@ -26,6 +32,10 @@
     div#menu{
         width: 500px;
         height: 200px;
+    }
+
+    article#galeria{
+        width: 500px;
     }
 
     footer{
@@ -286,7 +296,7 @@ section{
 }
 
 div.espacio{
-    height: 220px;
+    height: 200px;
     width: 760px;
 }
 
@@ -412,7 +422,7 @@ article>div#fotos{
 }
 
 footer{
-    margin-top: 20px;
+    margin-top: 10px;
     float: right;
     max-width: 1110px;
     background-color: #777676;
