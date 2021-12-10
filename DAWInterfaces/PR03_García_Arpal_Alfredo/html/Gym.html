@@ -10,9 +10,11 @@
         <script type="text/javascript" src="../js/horario.js"></script>  
     </head>
     <body onload="crear()">
+
+        <!--Esta es la sección de la cabecera donde encontramos por un lado la cabecera con el logo y por el otro lado el menu, donde encontramos, el titulo y el menu -->
         <div id="titulo">
            <header>
-                <img src="../img/logo/logo.jpg">
+                <img src="../img/logo/logo.jpg" alt="logo">
             </header>
             <div id="menu">
                 <h1>Time to Sport</h1>
@@ -26,7 +28,7 @@
                 </nav>
             </div>
         </div>
-
+        <!--Esta es la seccion del aside, que se encuentra a la derecha, debajo de la cabecera. En esta encontramos el login y las páginas para comprar  -->
         <aside>
             <img src="../img/lupa.PNG" alt="buscar">
             <div id="login">
@@ -53,12 +55,14 @@
                 </ul>
             </div>
         </aside>
+        <!--Esta es la parte de section, donde vamos a encontrar toda la información. Está dividida en varios articles, con su respectiva información y funciones  -->
         <section>
+            <!--Article de IMC, encontramos un poco de información y el formulario para comprobar el indice de masa corporal -->
             <article id="IMC">
                 <div class="espacio"></div>
                 <div class="color">
                     <h2>Calculadora de IMC</h2>
-                    <p id="first">Esto es un calculador de índice de masa corporal, 
+                    <p class="first">Esto es un calculador de índice de masa corporal, 
                         que se usa para conocer si te encuentras en un peso saludable. 
                         De todas formas es recomendable no hacer mucho caso a este tipo de calculadoras, 
                         ya que es una aproximación y cada persona, es diferente. 
@@ -73,8 +77,8 @@
                     <label>Altura en centímetros     </label><input type="number" id="altura" value=""><br>
                     <input type="button" onclick="calcularIMC()" value="Enviar" class="boton">
                     </form>
-                    <h3 class="muestra"><span id="muestra"></span></h2>
-                    <ul id="lista">
+                    <h3 class="muestra"><span id="muestra"></span></h3>
+                    <ul class="lista">
                         <li id="1">&lt;16.00: Infrapeso (delgadez severa)</li>
                         <li id="2">16.00 - 16.99: Infrapeso (delgadez moderada)</li>
                         <li id="3">17.00 - 18.49: Infrapeso (delgadez aceptable)</li>
@@ -86,12 +90,12 @@
                     </ul>
                 </div>
             </article>
-
+            <!--Article de FMC, encontramos un poco de información y el formulario para comprobar la frecuencia cardíaca máxima -->
             <article id="FMC">  
                 <div class="espacio"></div>  
                 <div class="color">
                     <h2>Calculadora de FCM</h2>
-                    <p id="first">Esto es un calculador de frecuencia cardíaca máxima, 
+                    <p class="first">Esto es un calculador de frecuencia cardíaca máxima, 
                         que se usa para conocer tus rangos de frecuencia en función de la zona en la que te encuentres. 
                         De todas formas es recomendable no hacer mucho caso a este tipo de calculadoras, 
                         ya que es una aproximación y cada persona, es diferente. 
@@ -104,10 +108,10 @@
                     <form action="./fcm.js">
                         <label>Edad: </label><input type="number" id="edad" value=""><br>
                         <label>Sexo: </label><input type="text" id="sexo" value=""><label> (Hombre o Mujer) </label><br>
-                        <input type="button" class="boton" src="fcm.js" onclick="calcularFMC()" value="Enviar">
+                        <input type="button" class="boton" onclick="calcularFMC()" value="Enviar">
                     </form>
-                    <h3 id="h2" class="muestra"></h2>
-                    <ul id="lista">
+                    <h3 id="h2" class="muestra"></h3>
+                    <ul class="lista">
                         <li>Zona de recuperación (60% - 70%) <span id="9"></span></li>
                         <li>Zona de aeróbica (70% - 80%) <span id="10"></span></li>
                         <li>Zona de anaeróbica (80% - 90%) <span id="11"></span></li>
@@ -115,12 +119,12 @@
                     </ul>
                 </div>
             </article>
-
+            <!--Article de horario, encontramos la tabla con el horario de las actividades y los fisios, y sus respectivos formularios-->
             <article id="horario">
                 <div class="espacio"></div>
                 <div class="table" id="primero">
                     <h2>Horario</h2>
-                    <table border="1" id="table1">
+                    <table id="table1">
                         <tr><th></th><th>Lunes</th><th>Martes</th><th>Miercoles</th><th>Jueves</th><th>Viernes</th><th>Sabado</th></tr>
                         <tr id="deporte1"><td>7:00 - 9:00</td></tr>
                         <tr id="deporte2"><td>9:00 - 11:00</td></tr>
@@ -134,7 +138,7 @@
 
                 <div class="form" id="segundo">
                     <form  class="formulario" id="formulario" name="formAct">
-                        <label for="deportes">ACTIVIDADES</label><br/>
+                        <label id="deportes">ACTIVIDADES</label><br/>
                         <input type="checkbox" name="deportes" value="Aerobic">Aerobic<br/>
                         <input type="checkbox" name="deportes" value="Ciclismo">Ciclismo<br/>
                         <input type="checkbox" name="deportes" value="Yoga">Yoga<br/>
@@ -147,7 +151,7 @@
                 </div>
 
                 <div class="table" id="tercero">
-                    <table border="1" id="table2">
+                    <table id="table2">
                         <tr><th></th><th>Lunes</th><th>Martes</th><th>Miercoles</th><th>Jueves</th><th>Viernes</th></tr>
                         <tr class="row" id="fisio1"><td class="hola">10:00 - 10:45</td></tr>
                         <tr class="row" id="fisio2"><td>10:45 - 11:30</td></tr>
@@ -164,7 +168,7 @@
                 
                 <div class="form" id="cuarto">
                     <form class="formulario" name="fisio">
-                        <label for="fisio">FISIO:</label><br/>
+                        <label id="fisio">FISIO:</label><br/>
                         <input type="radio" name="fisio" value="Alfredo">Alfredo<br/>
                         <input type="radio" name="fisio" value="Maria">Maria<br/>
                         <input type="radio" name="fisio" value="Sonia">Sonia<br/>
@@ -174,7 +178,7 @@
                     </form>   
                 </div>
             </article>
-
+            <!--Article de galeria, encontramos algunas fotos del gimnasio -->
             <article id="galeria">
                 <div class="espacio"></div>
                 <h2>Galeria de imagenes</h2>
@@ -188,6 +192,7 @@
                 </div>            
             </article>
         </section>
+        <!--Esta es la sección de footer, en la que encontramos las redes sociales, un menu y la licencia -->
         <footer>
             <div id="left">
                 <div id="blog">

@@ -2,66 +2,62 @@
     padding: 0mm;
     margin: 0mm;
 }
-
+/*Media screen para tablet. En el momento que la página se vea reducida a menos de 1121px de ancho, se modificara la página*/
 @media screen and (max-width: 1121px) {
-    html{
-        background: url("../img/gym.jpg")no-repeat fixed;
-        background-size: 1000px 1000px;
-    }
-
+    /*Establezco el ancho a 810px*/
     body{
         width: 810px;
         max-height: 3400px;
     }
-
+    /*Establezco el ancho a 800px*/
     div#titulo{
         width: 800px;
         display: flex;
     }
-
+    /*Establezco el ancho y alto del header*/
     header{
         height: 200px;
         max-width: 300px;
     }
-    
+    /*Modifico el ancho y alto de la imagen del header*/
     header>img{
         width: 300px;
         height: 135px;
     }
-
+    /*Modifico el ancho y alto del menu*/
     div#menu{
         width: 500px;
         height: 200px;
     }
-
+    /*Modifico el ancho del article galeria*/
     article#galeria{
         width: 500px;
     }
-
+    /*Modifico el ancho y la letra del footer*/
     footer{
         width: 810px;
         font-size: 15px;
     }
-
+    /*Modifico el ancho del elemento que se encuentra a la izquierda en el footer*/
     footer>#left{
         width: 32%;
     }
 }
-
+/*Media print para la impresión de la página*/
 @media print{
     div#titulo{
         margin-left:80px;
     }
-
+    /*Elimino el menu de la impresión*/
     div#menu{
         display: none;
     }
-
+    /*Elimino el aside de la impresión*/
     aside{
         position: relative;
         display: none;
     }
-
+    /*Elimino el nav de la impresión*/
     nav{
         display: none;
     }
@@ -69,7 +65,7 @@
     div#left{
         display: none;
     }
-
+    /*Elimino los enlaces de la impresión*/
     a{
         display: none;
     }
@@ -82,15 +78,15 @@
         text-align: center;
         width: 80%;
     }
-
+    /*Elimino los formularios*/
     form{
         display: none;
     }
-
+    /*Salto de página*/
     #horario{
         page-break-before: always;
     }
-
+    /*Salto de página*/
     #galeria{
         page-break-before: always;
     }
@@ -102,7 +98,7 @@
     #galeria>h2{
         width: 88%;
     }
-
+    /*Modifico el tamaño de los articles*/
     article{
         margin-left: 30px;
         width: 730px;
@@ -112,15 +108,15 @@
     div.form{
         display: none;
     }
-
 }
 
+/*Coloco una imagen del fondo en el html*/
 html{
     margin: auto;
     background: url("../img/gym.jpg")no-repeat fixed;
     background-size: 2000px 1000px;
 }
-
+/*Establezco un ancho maximo de body, una altura y le coloco un color de fondo*/
 body{
     max-width: 1110px;
     margin: auto;
@@ -128,6 +124,7 @@ body{
     background-color: rgba(255, 255, 255, 0.473);
 }
 
+/*Pongo el tipo de letra a todos los encabezados*/
 h1{
     font-family: sans-serif;
 }
@@ -140,15 +137,15 @@ h3{
     font-family: sans-serif;
 }
 
-h{
+h4{
     font-family: sans-serif;
 }
-
+/*Quito la decoración y le pongo un color a los enlaces*/
 a{
     text-decoration: none;
     color: black;
 }
-
+/*Establezco el ancho maximo a la sección de titulo, una posición fija y un color de fondo */
 div#titulo{
     border-radius: 10px;
     margin-left: 5px;
@@ -156,7 +153,7 @@ div#titulo{
     position: fixed;
     background-color: rgb(192, 220, 233);
 }
-
+/*Coloco a la izquierda y establezco un ancho y alto al header*/
 header{
     height: 220px;
     width: 500px;
@@ -168,7 +165,7 @@ header>img{
     max-height: 216px;
     float: right;
 }
-
+/*Coloco el menu a la derecha y establezco un ancho y alto al menu*/
 div#menu{
     width: 600px;
     height: 220px;
@@ -181,12 +178,13 @@ div#menu>h1{
     width: 100%;
     text-align: center;
 }
-
+/*Coloco una anumación al nav*/
 div#menu>nav{
     opacity: 0;
     -webkit-transition: opacity 1s,  background-color 3s linear;
     transition: opacity 1s, background-color 3s linear;
 }
+/*Al ponerte encima del nav, aparecen los elementos*/
 div#menu:hover>nav{
     opacity: 1;
     display: block;
@@ -201,7 +199,7 @@ div#menu>nav>ul{
     display: flex;
     justify-content: space-between;
 }
-
+/*Coloco una animació a los elementos de la lista del menu*/
 div#menu>nav>ul>li{
     -webkit-transition:  background-color 3s, border-radius 3s linear;
     transition:  background-color 3s, border-radius 3s linear;
@@ -216,7 +214,7 @@ div#menu:hover>nav>ul>li{
     background-color: rgba(255, 255, 255, 0.473);
     list-style-type: none;
 }
-
+/*Genero el aside fijo a la izquierda, con un alto y ancho y le coloco una animación*/
 aside{
     margin-left: 10px;
     position: fixed;
@@ -228,21 +226,22 @@ aside{
     -webkit-transition: height 1s, width 1s linear;
     transition: height 1s, width 1s linear;
 }
+
 aside>img{
     width: 30px;
     height: 30px;
 }
-
+/*Cuando te posicionas sobre el aside, modifica su anchura y altura, y aparecen los elementos*/
 aside:hover{
     width: 300px;
     height: 400px;
     overflow: hidden;
 }
-
+/*La imagen de la lupa desaparece una vez que te pones encima*/
 aside:hover>img{
     display: none;
 }
-
+/*El login aparece en oculto hasta se activa el hover del aside y tiene un color de fondo*/
 div#login{
     background-color: rgba(77, 88, 241, 0.767);
     display: none;
@@ -267,7 +266,7 @@ div#login>input{
     float: left;
     margin-top: 10px;
 }
-
+/*La sección de las páginas se encuentra oculta hasta que se activa el hover del aside y tienen un color de fondo*/
 div#paginas{
     background-color: rgba(77, 88, 241, 0.767);
     display: none;
@@ -292,19 +291,19 @@ div#paginas>ul>li{
 div#paginas>ul>li>a{
     color: rgb(255, 255, 255);
 }
-
+/*Muestra el login y le coloca un tamaño*/
 aside:hover>#login{
     display: block;
     width: 260px;
     height: 140px;
 }
-
+/*Muestra las páginas y le coloca un tamaño*/
 aside:hover>#paginas{
     display: block;
     width: 260px;
     height: 210px;
 }
-
+/*la section esta colocada a la derecha y con un ancho de 760px*/
 section{
     margin-right: 5px;
     float: right;
@@ -315,7 +314,7 @@ div.espacio{
     height: 200px;
     width: 760px;
 }
-
+/*Todos los articles tienen un color de letra negro y espaciados arriba y abajo*/
 article{
     padding-bottom: 10px;
     color: black;
@@ -336,7 +335,7 @@ article#galeria>h2{
     margin-bottom: 20px;
     margin-left: 40px;
 }
-
+/*Todos los h2 dentro de los articles, tienen un tamaño de letra de 40px y espaciados*/
 article>div>h2{
     font-size: 40px;
     margin-top: 20px;
@@ -344,7 +343,7 @@ article>div>h2{
     margin-left: 40px;
     
 }
-
+/*Todos los p de los articles, tienen el mismo tipo de letra, un color de fondo, un tamaño de letra de 18px y espaciados */
 article>div>p{
     width: 650px;
     margin-left: 20px;
@@ -354,7 +353,7 @@ article>div>p{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
 }
-
+/*Todos los form de los articles, tienen el mismo color de fondo, tamaño, tamaño de letra y espaciados*/
 article>div>form{
     margin-top: 20px;
     margin-bottom: 20px;
@@ -378,7 +377,7 @@ article>div>form>input.boton{
     padding: 5px;
 }
 
-article>div>ul#lista{
+article>div>ul.lista{
     font-size: 18px;
     margin-left: 20px;
     list-style-type: none;
