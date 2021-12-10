@@ -364,19 +364,19 @@ article>div>form{
     padding: 5px;
     display: inline-block;
 }
-
+/*Todos los input de los articles, tienen el mismo tamaño de letra*/
 article>div>form>input{
     height: 20px;
     margin-top: 5px;
 }
-
+/*Todos los botones de los articles, tienen el mismo color de fondo, tamaño de letra y altura*/
 article>div>form>input.boton{
     background-color: rgb(245, 245, 245);
     height: 32px;
     font-size: 18px;
     padding: 5px;
 }
-
+/*Todas las listas de los articles, tienen el mismo tipo de letra, el color de fondo, tamaño de letra y espaciados*/
 article>div>ul.lista{
     font-size: 18px;
     margin-left: 20px;
@@ -396,7 +396,7 @@ article>div>form>input{
     font-size: 25px;
     margin-left: 20px;
 }
-
+/*Las tablas tienen un color de fondo, un tamaño de letra y un borde */
 table{
     margin-left: 20px;
     margin-bottom: 20px;
@@ -404,7 +404,7 @@ table{
     border: solid 2px black;
     font-size: 16px;
 }
-
+/*Los td y tr tienen un borde, para distinguir las celdas*/
 td{
     border: solid 2px black;
 }
@@ -431,7 +431,7 @@ form.formulario{
 #formulario{
     margin-top: 75px;
 }
-
+/*La sección de fotos, tiene un espaciado entre los elementos, esta colocados con un flex, de forma que al sobrepasar el ancho de la sección, salta de linea*/
 article>div#fotos{
     justify-content: space-between;
     float: left;
@@ -439,12 +439,12 @@ article>div#fotos{
     display: flex;
     margin-top: 20px;
 }
-
+/*Todas las imagenes tienen el mismo tamaño*/
 .img{
     width: 250px;
     height: 183px;
 }
-
+/*El footer tiene espaciado entre los elementos, un color de fondo y estan colocados los elementos en fila*/
 footer{
     margin-top: 10px;
     float: right;
