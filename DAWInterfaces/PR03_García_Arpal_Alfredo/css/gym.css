@@ -454,7 +454,7 @@ footer{
     display: flex;
     flex-direction: row;
 }
-
+/*El elemento de la izquierda donde encontramos las redes, tiene espaciado entre los elementos, estan colocados en fila, la letra en color blanco y ocupa en el footer un 30% de ancho*/
 div#left{
     margin-left: 40px;
     margin-top: 20px;
@@ -487,7 +487,7 @@ div#left>div>a{
     margin-left: 10px;
     color:white;
 }
-
+/*El elemento central, tiene un ancho del 30%, estan espaciados los elementos y en fila*/
 div#center{
     margin-top: 20px;
     width: 30%;
@@ -505,7 +505,7 @@ div#center>ul{
 div#center>ul>li>a{
     color: blue;
 }
-
+/*El elemento de la deracha, tiene un ancho del 35% sobre el footer, estan colocados los elementos en fila y el texto esta alineado a la derecha*/
 div#right{
     margin-top: 20px;
     margin-right: 40px;
