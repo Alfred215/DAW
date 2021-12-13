@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejemplo3</title>
+        <script src="../Software/jquery-3.4.1.min.js" type="text/javascript"></script>
+        <script>
+            $ (document).ready(function(){ 
+                $("a").click(function(evento) {
+                    alert("has pulsado el enlace, pero vamos a cancelar el evento... Por tanto,no vamos a llervarte a DesarrolloWeb.com");
+                    evento.preventDefault(alert("de vuelta"));
+                    });
+                });
+        </script>
+    </head>
+    <body>
+        <a href="http://www.desarrolloweb.com/">DesarrolloWeb.com</a>
+    </body>
+</html>
