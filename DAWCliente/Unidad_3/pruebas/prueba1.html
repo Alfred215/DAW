@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prueba1</title>
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <script>
+            // crear cookies
+            document.cookie="comida_favoria=arroz; max-age=3600";
+            document.cookie="color_favorito=amarillo";
+
+            var testvalue="Hola mundo";
+            document.cookie="testcookie="+encodeURIComponent(testvalue);
+
+            // cookie con caducidad para el 1 de febrero del 2068 a las 11:20
+            var expiresdate=new Date(2068,1,02,11,20);
+            var cookievalue="Buenas tardes";
+            document.cookie="testcookie2=".encodeURIComponent(cookievalue)+"; expires="+expiresdate.toUTCString();
+        </script>
+    </body>
+</html>
