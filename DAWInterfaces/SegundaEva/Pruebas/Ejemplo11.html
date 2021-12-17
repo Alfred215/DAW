@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejemplo10</title>
+        <script src="https://code.jquery.com/jquery-1.8.3.js" type="text/javascript"></script>
+        <script>
+        
+            $ (document).ready(function(){ 
+                $(".preg").click(function(){
+                   $(this).parent().next().toggle();
+               });
+
+               $("#todos").click(function(){
+                   $('.respuesta').toggle('slow');
+               });
+               
+            });
+
+        </script>
+
+        <style>
+            .respuesta{
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Pregunta 1 ... (<a href="#" class="preg">ver respuesta</a>)</p>
+        <p class="respuesta">Respuesta 1 ...</p>
+        <p>Pregunta 2 ... (<a href="#" class="preg">ver respuesta</a>)</p>
+        <p class="respuesta">Respuesta 2 ...</p> 
+        <p>Pregunta 3 ... (<a href="#" class="preg">ver respuesta</a>)</p> 
+        <p class="respuesta">Respuesta 3 ...</p>
+
+        <a href="#" id="todos">Mostrar y ocultar todas las respuestas</a>
+    </body>
+</html>
