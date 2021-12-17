@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Almacenamiento1</title>
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <script>
+           var str='{"name": "Manz","life":99}';
+
+           //convertir de JSON a objeto JS
+            var obj=JSON.parse(str);
+            obj.name;
+            obj.life;
+
+            //covertir de objeto JS a JSON
+            var obj2={
+                nombre="Juan",
+                edad=45,
+                saludar:function(){
+                    return "hola";
+                }
+            };
+
+            var str2=JSON.stringify(obj2);
+            alert(str2);
+        
+        </script>
+    </body>
+</html>
