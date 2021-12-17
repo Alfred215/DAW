@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Almacenamiento1</title>
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <script>
+            // Local Storage
+            //Crear Item
+            localStorage.setItem("ciudad","Zaragoza");
+            var a=localStorage.getItem("ciudad");
+
+            //Borrar Item
+            localStorage.removeItem("ciudad");
+            
+            //Sesión storage
+            var storageArray=[5,3,"Madrid","España"];
+            sessionStorage.setItem("array1",storageArray);
+            alert(sessionStorage.getItem("array1"));
+        
+        </script>
+    </body>
+</html>

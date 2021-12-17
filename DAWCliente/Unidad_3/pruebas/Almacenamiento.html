@@ -16,9 +16,25 @@
             document.cookie="testcookie="+encodeURIComponent(testvalue);
 
             // cookie con caducidad para el 1 de febrero del 2068 a las 11:20
-            var expiresdate=new Date(2068,1,02,11,20);
+            var expiresdate=new Date(2068,01,02,11,20);
             var cookievalue="Buenas tardes";
             document.cookie="testcookie2=".encodeURIComponent(cookievalue)+"; expires="+expiresdate.toUTCString();
+        
+            //Borrar cookie
+            document.cookie="username=; max-age=0";
+
+            //Modificar cookie
+            document.cookie="color_favorito=azul";
+
+            //Leer cookie
+            var listadoCookie=document.cookie;
+            alert(listadoCookie);
+
+            var array=listadoCookie.split(";");
+            for(i=0;i<array.length;i++){
+                alert(array[i]);
+            }
+        
         </script>
     </body>
 </html>
