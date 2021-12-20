@@ -8,17 +8,51 @@
     <script>
 
         $(document).ready(function () {
-
+            $("#mostrar_panel").click(function (e) {
+                if ($("#panel-oculto").css("display") == "none") {
+                    $("#panel-oculto").toggle("fast");
+                    $(this).val("INFO -");
+                } else {
+                    $("#panel-oculto").toggle("fast");
+                    $(this).val("INFO +");
+                }
+            });
         });
-        
-
     </script>
+    <style media="screen">
+        #mostrar_panel{
+            z-index: 1;
+        }
+        #panel-oculto {
+            display: none;
+            padding-top:10px;
+            padding-left: 100px;
+            width: 500px;
+            height: 500px;
+            z-index: 2;
+            position: fixed;
+            color: white;
+            background-color: rgb(70, 70, 70);   
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Panel deslizante vertical con jQuery</h1>
-    <p>El panel deslizante y el botón de disparo a la izquierda tienen una posición absuluta</p>
-    <p></p>
+    <div id="panel-oculto">
+        <h2>PANEL DESLIZANTE</h2>
+        <p>Aquí está el panel deslizante realizado con jQuery
+        con la función de alternar (toggle) y algo de CSS3
+        para las esquinas redondeadas<br><br>
+        Este panel también se puede colocar a la derecha. 
+        Esto podría ser particularmente útil si, like me, tiene
+        un diseño de sitio web alineado a la izquierda</p>
+        <h2>UN POCO SOBRE MI</h2>
+        <p>Me llamo Yolanda Escors, soy profesora de sistemas 
+        y aplicaciones informáticas CSS, HTML y 
+        jQuery entre otras cosas...</p>
+    </div>
+    <input type="button" id="mostrar_panel" value="Info +">
+    
 </body>
 
 </html>
