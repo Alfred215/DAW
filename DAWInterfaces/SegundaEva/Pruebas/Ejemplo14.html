@@ -3,12 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Ejemplo13</title>
+    <title>Ejemplo14</title>
     <script src="../Software/jquery-3.4.1.min.js" type="text/javascript"></script>
     <script>
 
         $(document).ready(function () {
             $("#mostrar_panel").click(function (e) {
+                if($("#panel-oculto-menu").css("display") != "none"){
+                    $("#panel-oculto-menu").toggle("fast");
+                    $("#mostrar_panel_menu").val("INFO +");
+                }
+
                 if ($("#panel-oculto").css("display") == "none") {
                     $("#panel-oculto").toggle("fast");
                     $(this).val("INFO -");
@@ -17,27 +22,98 @@
                     $(this).val("INFO +");
                 }
             });
+
+            $("#mostrar_panel_menu").click(function (e) {
+                if($("#panel-oculto").css("display") != "none"){
+                    $("#panel-oculto").toggle("fast");
+                    $("#mostrar_panel").val("INFO +");
+                }
+
+                if ($("#panel-oculto-menu").css("display") == "none") {
+                    $("#panel-oculto-menu").toggle("fast");
+                    $(this).val("MENÚ -");
+                } else {
+                    $("#panel-oculto-menu").toggle("fast");
+                    $(this).val("MENÚ +");
+                }
+            });
         });
     </script>
     <style media="screen">
         #mostrar_panel{
-            z-index: 1;
+            top: 100px;
+            left: 10px;
+            position: fixed;
+            text-align: center;
+            width: 80px;
         }
+
+        #mostrar_panel_menu{
+            top: 130px;
+            left: 10px;
+            position: fixed;
+            text-align: center;
+            width: 80px;
+        }
+
         #panel-oculto {
             display: none;
-            padding-top:10px;
+            padding-top:15px;
             padding-left: 100px;
             width: 500px;
             height: 500px;
-            z-index: 2;
-            position: fixed;
+            margin-top: -30px;
             color: white;
             background-color: rgb(70, 70, 70);   
+        }
+
+        #panel-oculto>div>ul{
+            list-style-type: none;
+        }
+
+        #panel-oculto>div>.drch{
+            float: right;
+        }
+
+        #panel-oculto>div>ul.drch{
+            padding-left: 0px;
+            margin-right: -48px;
+        }
+
+        #panel-oculto>div>.izq{
+            float: left;  
+        }
+
+        #panel-oculto>div>ul.izq{
+            padding-left: 0px;
+            margin-left: -60px;
+        }
+
+        #panel-oculto>div{
+            width: 400px;
+            height: 50px;
+        }
+
+        #panel-oculto-menu {
+            display: none;
+            padding-top:15px;
+            padding-left: 100px;
+            margin-top: -30px;
+            width: 500px;
+            height: 500px;
+            color: white;
+            background-color: rgb(70, 70, 70);   
+        }
+
+        #panel-oculto-menu>ul{
+            list-style-type: none;
         }
     </style>
 </head>
 
 <body>
+    <input type="button" id="mostrar_panel" value="INFO +"><br>
+    <input type="button" id="mostrar_panel_menu" value="MENÚ +">
     <div id="panel-oculto">
         <h2>PANEL DESLIZANTE</h2>
         <p>Aquí está el panel deslizante realizado con jQuery
@@ -50,8 +126,39 @@
         <p>Me llamo Yolanda Escors, soy profesora de sistemas 
         y aplicaciones informáticas CSS, HTML y 
         jQuery entre otras cosas...</p>
+        <div>
+        <h2 class="drch">Redes Sociales</h2>
+        <h2 class="izq">Menú</h2>    
+        </div>
+        <div>
+        <ul class="izq">
+            <li>Home</li>
+            <li>A cerca de</li>
+            <li>Portafolio</li>
+            <li>Contacto</li>
+            <li>Blog</li>
+        </ul>    
+        <ul class="drch">
+            <li>Opción</li>
+            <li>Opción</li>
+            <li>Opción</li>
+            <li>Opción</li>
+            <li>Opción</li>
+        </ul>
+        
+        </div>
     </div>
-    <input type="button" id="mostrar_panel" value="Info +">
+    <div id="panel-oculto-menu">
+        <h2>Menú panel 1</h2>
+        <ul>
+            <li>Home</li>
+            <li>A cerca de</li>
+            <li>Portafolio</li>
+            <li>Contacto</li>
+            <li>Blog</li>
+        </ul>
+    </div>
+    
     
 </body>
 
