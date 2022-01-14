@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Ejercicio 1 AJAX</title>
+        <script>
+            function irse(){
+                var boton = document.getElementById("ir");
+                boton.style.display="none";
+
+                peticion_http.onreadystatechange=procesaRespuesta;
+                peticion_http.open("GET","holaMundo.txt",true);
+                peticion_http.send(null); 
+            }
+
+            function procesaRespuesta(){
+                var parrafo = document.getElementById("parrafo");
+                if(peticion_http.readyState== 4 && peticion_http.status==200){
+                    //si los datos están listos y la respuesta es correcta
+                    parrafo.textContent=peticion_http.responseText;
+                }
+            }
+
+        </script>
+    </head>
+
+    <body>
+        <p id="parrafo"></p>
+        <input type="submit" onclick="irse();" id="ir" value="Cambia el contenido">
+        <script>
+        </script>
+    </body>
+
+</html>
