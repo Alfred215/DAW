@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejemplo 23</title>
+        <script src="../Software/jquery-3.4.1.min.js" type="text/javascript"></script>
+
+        <script>
+            var imagenes =['img/img1.jpg','img/img2.jpg','img/img3.jpg','img/img4.jpg','img/img5.jpg','img/img6.jpg','img/img7.jpg','img/img8.jpg'];
+
+            //creamos una función para reproducir las imagenes
+            var x= 0;
+            var timer;
+            var reproducir = function(){
+                if(x > imagenes.length){
+                    x=0
+                }
+                $("#imagen").attr('src', imagenes[x]);
+                x++;
+                timer = setTimeout('reproducir()',100);
+            }
+
+            //creamos una función para parar animación
+            var parar = function(){clearTimeout(timer);}
+
+            $(document).ready(function(){
+                reproducir();
+
+                $("#btn_run").click(function(){
+                    reproducir();
+                })
+
+                $("#btn_stop").click(function(){
+                    parar();
+                });
+            });
+        </script>
+
+        <style>
+            #cajita{
+                background-color: black;
+                height: 300px;
+                padding-top: 30px;
+            }
+
+            #imagen{
+                width: 250px;
+                height: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="cajita">
+            <center><img src='' id="imagen"></center>
+        </div>
+
+        <button id="btn_run">Iniciar animación</button>
+        <button id="btn_stop">Parar animación</button>
+    </body>
+</html>

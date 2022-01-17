@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+       <meta charset="UTF-8">
+       <title>Ejemplo18</title>
+       <script src="../Software/jquery-3.4.1.min.js" type="text/javascript"></script>
+       <script>
+            $(document).ready(function(){
+                $(window).resize(function(){
+                    var ancho = $(this).width();
+                    var alto = $(this).height();
+                    $("#resultado").html("ancho = "+ ancho +" alto = "+alto);
+                });
+
+                $("#contenido").scroll(function(){
+                    $("#resultado1").html("posicion del scroll de la caja: "+$(this).scrollTop());
+                });
+            })
+       </script>
+       <style>
+           #contenido{
+               width: 250px;
+               height: 250px;
+               overflow: scroll;
+           }
+       </style>
+   </head> 
+   <body>
+       <div id="contenido">
+            Se ha realizado  (21-12-2021) una «Jornada  en el Balneario de Panticosa » con el grupo de segundo curso del ciclo de Estética Integral y Bienestar ,donde se ha desarrollado diferentes actividades.
+            En primer lugar una Charla formativa sobre los tipos de aguas  termales del balneario y la importancia de los Peloides en los tratamientos termales.Se ha llevado a cabo por el médico-hidrólogo Antonio Hernández Torres.
+            Después el alumnado ha podido realizar el circuito termal  en Termas Tiberio, comprobando los beneficios  del agua y de sus instalaciones.
+            Ayer, día 21 de diciembre, a punto de empezar las vacaciones de Navidad, los Departamentos de Lengua, Inglés y Plástica entregaron los premios a las alumnas ganadoras de los concursos de relatos y de ilustraciones que se han celebrado a lo largo de este primer trimestre.
+            Y por último, una demostración práctica de masaje Tailandés y otro masaje craneal, realizados por una de  las profesionales  del  balneario M° Carmen Recuenco.
+       </div>
+
+       <div id="resultado"></div>
+       <div id="resultado1"></div>
+   </body>
+</html>
