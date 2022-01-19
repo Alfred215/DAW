@@ -1,51 +1,51 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <title>Ejercicio 2 AJAX</title>
-        <script>
-            function listarNoticias(){
-                var noticias = peticion_http.responseText;
-
-                for(var i = 0;i<noticias.lenght();i++){
-                    alert("adios");
-                    /*if(noticias[i]=="c"){
-                        var cadena =noticias.chartAt(i)+noticias.chartAt(i+1)+noticias.chartAt(i+2)+noticias.chartAt(i+3)+noticias.chartAt(i+4)+noticias.chartAt(i+5);
-                        alert(cadena);
-                    }*/
+<head>
+    <title>Ejercicio 2 AJAX</title>
+    <script>
+        function listarNoticias() {
+            if (peticion_http.readyState == 4 && peticion_http.status == 200) {
+                var listadoNoticia = peticion_http.responseXML.getElementsByTagName("noticia");
+                for (i = 0; i < listadoNoticia.length; i++) {
+                    crearItem(listadoNoticia[i].lastElementChild.textContent);
+                    var listado = document.getElementById("lista");
+                    var nuevoElemento = document.createElement("li");
                 }
-
-                /*for( var i=0;i<2;i++){
-                    var lista= document.getElementById("lista");
-                    var li = document.createElement("li");
-                    var texto;
-                    if(peticion_http.readyState== 4 && peticion_http.status==200){
-                        texto = document.createTextNode(peticion_http.responseText);
-                    }
-                    li.appendChild(texto);
-                    lista.appendChild(li);
-                }*/
-                
+                alert("Datos recibidos");
+            } else {
+                alert("En proceso");
             }
-        </script>
-    </head>
+        }
 
-    <body>
-        <ul id="lista">
+        function crearItem(item) {
+            var listado = document.getElementById("lista");
+            var nuevoElemento = document.createElement("li");
+            var texto = document.createTextNode(item);
+            nuevoElemento.appendChild(texto);
+            listado.appendChild(nuevoElemento);
+        }
 
-        </ul>
 
-        <script>
-            if (window.XMLHttpRequest) {
-                peticion_http = new XMLHttpRequest();
-            }else if(window.ActiveXObject){
-                peticion_http = new ActiveXObject("Microsoft.XMLHTTP");
-            }else{
-                alert("Su navegador no soporta ajax")
-            }
+    </script>
+</head>
 
-            peticion_http.onreadystatechange=listarNoticias;
-            peticion_http.open("GET","noticias.xml",true);
-            peticion_http.send(null);
-        </script>
-    </body>
+<body>
+    <ul id="lista">
+
+    </ul>
+
+    <script>
+        if (window.XMLHttpRequest) {
+            peticion_http = new XMLHttpRequest();
+        } else if (window.ActiveXObject) {
+            peticion_http = new ActiveXObject("Microsoft.XMLHTTP");
+        } else {
+            alert("Su navegador no soporta ajax")
+        }
+
+        peticion_http.onreadystatechange = listarNoticias;
+        peticion_http.open("GET", "noticias.xml", true);
+        peticion_http.send(null);
+    </script>
+</body>

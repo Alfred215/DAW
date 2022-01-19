@@ -1,34 +1,41 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <title>Ejercicio 1 AJAX</title>
-        <script>
-            function irse(){
-                var boton = document.getElementById("ir");
-                boton.style.display="none";
-
-                peticion_http.onreadystatechange=procesaRespuesta;
-                peticion_http.open("GET","holaMundo.txt",true);
-                peticion_http.send(null); 
+<head>
+    <title>Ejercicio 1 AJAX</title>
+    <script>
+        function irse() {
+            if (window.XMLHttpRequest) {
+                peticion_http = new XMLHttpRequest();
+                alert("Su navegador soporta ajax con objetos XMLHttpRequest");
+            } else if (window.ActiveXObject) {
+                peticion_http = new ActiveXObject("Microsoft.XMLHTTP");
+                alert("Su navegador soporta AJAX con objetos active");
+            } else {
+                alert("Su navegador no soporta ajax")
             }
+            
+            peticion_http.onreadystatechange = procesaRespuesta;
+            peticion_http.open("GET", "holaMundo.txt", true);
+            peticion_http.send(null);
+        }
 
-            function procesaRespuesta(){
-                var parrafo = document.getElementById("parrafo");
-                if(peticion_http.readyState== 4 && peticion_http.status==200){
-                    //si los datos están listos y la respuesta es correcta
-                    parrafo.textContent=peticion_http.responseText;
-                }
+        function procesaRespuesta() {
+            var parrafo = document.getElementById("ir");
+            if (peticion_http.readyState == 4 && peticion_http.status == 200) {
+                //si los datos están listos y la respuesta es correcta
+                parrafo.parentElement.innerHTML = peticion_http.responseText;
             }
+        }
 
-        </script>
-    </head>
+    </script>
+</head>
 
-    <body>
-        <p id="parrafo"></p>
-        <input type="submit" onclick="irse();" id="ir" value="Cambia el contenido">
-        <script>
-        </script>
-    </body>
+<body>
+    <input type="button" id="ir" value="Cambia el contenido">
+    <script>
+        document.getElementById("ir").addEventListener("click", irse, false);
+    </script>
+</body>
 
 </html>
