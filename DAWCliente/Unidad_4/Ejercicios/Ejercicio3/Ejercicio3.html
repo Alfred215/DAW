@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio 2 AJAX</title>
+    <script>
+        function tablaCatalogo() {
+            if (window.XMLHttpRequest) {
+                peticion_http = new XMLHttpRequest();
+            } else if (window.ActiveXObject) {
+                peticion_http = new ActiveXObject("Microsoft.XMLHTTP");
+            } else {
+                alert("Su navegador no soporta ajax")
+            }
+
+            peticion_http.onreadystatechange = cargarTabla;
+            peticion_http.open("GET", "cd_catalog.xml", true);
+            peticion_http.send(null);
+        }
+
+        function cargarTabla() {
+            if (peticion_http.readyState == 4 && peticion_http.status == 200) {
+                var listadoNoticia = peticion_http.responseXML.getElementsByTagName("CD");
+                for (i = 0; i < listadoNoticia.length; i++) {
+                    alert("hola");
+                    crearTabla(listadoNoticia[i].getElementsByTagName("TITLE").textContent, listadoNoticia[i].getElementsByTagName("ARTIST").textContent);
+                    var table = document.getElementById("table");
+                    var tr = document.createElement("tr");
+                }
+                alert("Datos recibidos");
+            } else {
+                alert("En proceso");
+            }
+        }
+
+        function crearTabla(titulo,artista) {
+            alert("Hola");
+            var table = document.getElementById("demo");
+            var tr = document.createElement("tr");
+            var texto = document.textContent="<td>"+titulo+"</td> <td>"+artista+"</td>";
+            tr.appendChild(texto);
+            table.appendChild(tr);
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <div id="texto">
+        <h1>Colección de Cds</h1>
+        <button id="cargaCatalogo">Carga catálogo</button>
+    </div>
+
+    <table id="demo">
+
+    </table>
+
+    <script>
+        document.getElementById("cargaCatalogo").addEventListener("click", tablaCatalogo, false);
+    </script>
+</body>
