@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Ejercicio 2 AJAX</title>
+    <title>Ejercicio 3 AJAX</title>
     <script>
         function tablaCatalogo() {
             if (window.XMLHttpRequest) {
@@ -19,38 +19,57 @@
         }
 
         function cargarTabla() {
+            var parrafo = document.getElementById("parrafo");
             if (peticion_http.readyState == 4 && peticion_http.status == 200) {
                 var listadoNoticia = peticion_http.responseXML.getElementsByTagName("CD");
                 for (i = 0; i < listadoNoticia.length; i++) {
-                    alert("hola");
-                    crearTabla(listadoNoticia[i].getElementsByTagName("TITLE").textContent, listadoNoticia[i].getElementsByTagName("ARTIST").textContent);
+                    crearTabla(listadoNoticia[i].childNodes[1].textContent, listadoNoticia[i].childNodes[3].textContent);
                     var table = document.getElementById("table");
                     var tr = document.createElement("tr");
                 }
-                alert("Datos recibidos");
+                parrafo.innerText="Datos recibidos";
+                //alert("Datos recibidos");
             } else {
-                alert("En proceso");
+                parrafo.innerText="En proceso";
+                //alert("En proceso");
             }
         }
 
         function crearTabla(titulo,artista) {
-            alert("Hola");
             var table = document.getElementById("demo");
             var tr = document.createElement("tr");
-            var texto = document.textContent="<td>"+titulo+"</td> <td>"+artista+"</td>";
-            tr.appendChild(texto);
+            var td1 = document.createElement("td");
+            var td2 = document.createElement("td");
+            var texto1 = document.createTextNode(titulo);
+            var texto2 = document.createTextNode(artista);
+            td1.appendChild(texto1);
+            td2.appendChild(texto2);
+            tr.appendChild(td1);
+            tr.appendChild(td2);
             table.appendChild(tr);
         }
 
 
     </script>
+    <style>
+        table,th,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,td{
+            padding: 5px;
+        }
+    </style>
 </head>
 
 <body>
     <div id="texto">
         <h1>Colección de Cds</h1>
-        <button id="cargaCatalogo">Carga catálogo</button>
-    </div>
+        <button id="cargaCatalogo">Carga catálogo</button><br>
+        <br>
+        <p id="parrafo"></p>
+    </div><br>
 
     <table id="demo">
 
