@@ -1,34 +1,122 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <title>PruebaExtra</title>
-        <script src="../Software/jquery-3.4.1.min.js" type="text/javascript"></script>
 
-        <script>
-            $(document).ready(function(){
-                $("#btn_0").click(function(){
-                        $("#cajita").animate({left:"+=300"},2000).animate({top:"+=300"},2000).animate({left:"-=300"},2000).animate({top:"-=300"},2000);
-                    });
+<head>
+    <meta charset="UTF-8">
+    <title>PruebaExtra</title>
+    <link href="../Software/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <script src="../Software/jquery-3.4.1.min.js" type="text/javascript"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn_0").click(function () {
+                $("#cajita1").animate({ left: "+=1700" }, 2000).animate({ top: "+=680" }, 2000).animate({ left: "-=1700" }, 2000).animate({ top: "-=680" }, 2000);
+                $("#cajita2").animate({ top: "+=680" }, 2000).animate({ left: "-=1700" }, 2000).animate({ top: "-=680" }, 2000).animate({ left: "+=1700" }, 2000);
+                $("#cajita3").animate({ top: "-=680" }, 2000).animate({ left: "+=1700" }, 2000).animate({ top: "+=680" }, 2000).animate({ left: "-=1700" }, 2000);
+                $("#cajita4").animate({ left: "-=1700" }, 2000).animate({ top: "-=680" }, 2000).animate({ left: "+=1700" }, 2000).animate({ top: "+=680" }, 2000);
             });
-        </script>
-        <style>
-            #cajita{
-                position: relative;
-                width: 100px;
-                height: 100px;
-                background-color: blue;
-            }
 
-            #btn_0{
-                position: fixed;
-                left: 180px;
-                top: 190px;
-            }
-        </style>
-    </head>
-    <body>
+            $('#cajita1').click(function(){
+                $("#escondida1").toggle("fast");
+                $(this).toggleClass("active");
+            });
+        });
+    </script>
+    <style>
+        #cajita1 {
+            position: fixed;
+            width: 200px;
+            height: 180px;
+            background-color: red;
+        }
+
+        #cajita2 {
+            position: fixed;
+            left: 1700px;
+            width: 200px;
+            height: 180px;
+            background-color: red;
+        }
+
+        #cajita3 {
+            position: fixed;
+            top: 680px;
+            width: 200px;
+            height: 180px;
+            background-color: red;
+        }
+
+        #cajita4 {
+            position: fixed;
+            left: 1700px;
+            top: 680px;
+            width: 200px;
+            height: 180px;
+            background-color: red;
+        }
+
+        #escondida1 {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            top: -20px;
+            left: -20px;
+            background-color: green;
+        }
+
+        #escondida1:hover {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            color: green;
+            width: 100%;
+            height: 100%;
+        }
+
+        #btn_0 {
+            margin-top: 40%;
+            margin-left: 16%;
+            width: 200px;
+            height: 50px;
+            background-color: green;
+        }
+
+        #central {
+            background-color: blue;
+            width: 300px;
+            height: 300px;
+            top: 270px;
+            left: 800px;
+            position: fixed;
+        }
+
+        span.simbolo {
+            margin-top: 20%;
+            margin-left: 28%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="central">
         <button id="btn_0">Iniciar</button>
-        <div id="cajita"></div>
-    </body>
+    </div>
+    <div id="cajita1">
+        <span class="fa fa-eye fa-5x simbolo"></span>
+    </div>
+    <div id="cajita2">
+        <span class="fa fa-check fa-5x simbolo"></span>
+    </div>
+    <div id="cajita3">
+        <span class="fa fa-car fa-5x simbolo"></span>
+    </div>
+    <div id="cajita4">
+        <span class="fa fa-comment fa-5x simbolo"></span>
+    </div>
+    <div id="escondida1">
+
+    </div>
+
+</body>
+
 </html>
