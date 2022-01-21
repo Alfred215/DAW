@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio 4 AJAX</title>
+    <script>
+        function cargarJSON() {
+            if (window.XMLHttpRequest) {
+                peticion_http = new XMLHttpRequest();
+            } else if (window.ActiveXObject) {
+                peticion_http = new ActiveXObject("Microsoft.XMLHTTP");
+            } else {
+                alert("Su navegador no soporta ajax")
+            }
+
+            peticion_http.onreadystatechange = cargarTabla;
+            peticion_http.open("GET", "json_demo.json", true);
+            peticion_http.send(null);
+        }
+
+        function cargarTabla() {
+            var json = peticion_http.responseText;
+            var obj = JSON.parse(json);
+            document.getElementById("salida").innerHTML = obj.name;
+        }
+
+
+    </script>
+    <style>
+        button {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="btn">Coger JSON</button>
+
+    <div id="salida">
+
+    </div>
+
+    <script>
+        document.getElementById("btn").addEventListener("click", cargarJSON, false);
+    </script>
+</body>
