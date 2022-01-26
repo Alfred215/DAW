@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio 6 AJAX</title>
+    <script>
+        var contador = 0;
+
+        function cargarJSON() {
+            if (window.XMLHttpRequest) {
+                peticion_http = new XMLHttpRequest();
+            } else if (window.ActiveXObject) {
+                peticion_http = new ActiveXObject("Microsoft.XMLHTTP");
+            } else {
+                alert("Su navegador no soporta ajax")
+            }
+
+            peticion_http.onreadystatechange = cargarDatos;
+            peticion_http.open("GET", "actividades.json", true);
+            peticion_http.send(null);
+        }
+
+        function cargarDatos() {
+            var json = peticion_http.responseText;
+            var obj = JSON.parse(json);
+            if (contador == 0) {
+                for (var j = 0; j < obj.actividad.length; j++) {
+                    crearTabla(obj.actividad[j].name, obj.actividad[j].descrip, obj.actividad[j].tipo, obj.actividad[j].duration, obj.actividad[j].calorias, obj.actividad[j].beneficios, obj.actividad[j].ejercicio)
+                }
+            }
+            contador++;
+        }
+
+        function crearTabla(name, descrip, tipo, duracion, calorias, beneficios, ejercicio) {
+            var tabla = document.getElementById("tabla");
+            var tr = document.createElement("tr");
+            var td = document.createElement("td");
+            alert("hola");
+            for (var j = 0; j < 7; j++) {
+                switch (j) {
+                    case 0:
+                    var texto = document.createTextNode(name);
+                    td.appendChild(texto);
+                        break;
+                    case 1:
+                    var texto1 = document.createTextNode(descrip);
+                    td.appendChild(texto1);
+                        break;
+                    case 2:
+                    var texto2 = document.createTextNode(tipo);
+                    td.appendChild(texto2);
+                        break;
+                    case 3:
+                    var texto3 = document.createTextNode(duracion);
+                    td.appendChild(texto3);
+                        break;
+                    case 4:
+                    var text4 = document.createTextNode(calorias);
+                    td.appendChild(texto4);
+                        break;
+                    case 5:
+                    var text5 = document.createTextNode(beneficios);
+                    td.appendChild(texto5);
+                        break;
+                    case 6:
+                    var texto6 = document.createTextNode(ejercicio);
+                    td.appendChild(texto6);
+                        break;
+                }
+            }
+            tr.appendChild(td);
+            document.getElementById("parrafo").innerHTML += name + descrip + tipo + duracion + calorias + beneficios + ejercicio + "<br>";
+            tabla.appendChild(tr);
+        }
+
+
+    </script>
+    <style>
+        button {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="btn">Cargar JSON</button>
+    <p id="parrafo"></p>
+    <table id="tabla">
+        <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Tipo</th>
+            <th>Duración</th>
+            <th>Calorías</th>
+            <th>Beneficios</th>
+            <th>Tipo de ejercicio</th>
+        </tr>
+    </table>
+
+    <script>
+        document.getElementById("btn").addEventListener("click", cargarJSON, false);
+    </script>
+</body>
