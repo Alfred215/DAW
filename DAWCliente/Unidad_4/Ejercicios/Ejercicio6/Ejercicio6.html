@@ -25,7 +25,7 @@
             var obj = JSON.parse(json);
             if (contador == 0) {
                 for (var j = 0; j < obj.actividad.length; j++) {
-                    crearTabla(obj.actividad[j].name, obj.actividad[j].descrip, obj.actividad[j].tipo, obj.actividad[j].duration, obj.actividad[j].calorias, obj.actividad[j].beneficios, obj.actividad[j].ejercicio)
+                    crearTabla(obj.actividad[j].name, obj.actividad[j].descrip, obj.actividad[j].tipo.join(), obj.actividad[j].duration, obj.actividad[j].calorias, obj.actividad[j].beneficios.join(), obj.actividad[j].ejercicio)
                 }
             }
             contador++;
@@ -34,42 +34,7 @@
         function crearTabla(name, descrip, tipo, duracion, calorias, beneficios, ejercicio) {
             var tabla = document.getElementById("tabla");
             var tr = document.createElement("tr");
-            var td = document.createElement("td");
-            alert("hola");
-            for (var j = 0; j < 7; j++) {
-                switch (j) {
-                    case 0:
-                    var texto = document.createTextNode(name);
-                    td.appendChild(texto);
-                        break;
-                    case 1:
-                    var texto1 = document.createTextNode(descrip);
-                    td.appendChild(texto1);
-                        break;
-                    case 2:
-                    var texto2 = document.createTextNode(tipo);
-                    td.appendChild(texto2);
-                        break;
-                    case 3:
-                    var texto3 = document.createTextNode(duracion);
-                    td.appendChild(texto3);
-                        break;
-                    case 4:
-                    var text4 = document.createTextNode(calorias);
-                    td.appendChild(texto4);
-                        break;
-                    case 5:
-                    var text5 = document.createTextNode(beneficios);
-                    td.appendChild(texto5);
-                        break;
-                    case 6:
-                    var texto6 = document.createTextNode(ejercicio);
-                    td.appendChild(texto6);
-                        break;
-                }
-            }
-            tr.appendChild(td);
-            document.getElementById("parrafo").innerHTML += name + descrip + tipo + duracion + calorias + beneficios + ejercicio + "<br>";
+            tr.innerHTML="<td>"+name+"</td> <td>"+descrip+"</td><td>"+tipo+"</td><td>"+duracion+"</td><td>"+calorias+"</td><td>"+beneficios+"</td><td>"+ejercicio+"</td>";
             tabla.appendChild(tr);
         }
 
@@ -86,7 +51,7 @@
 
     <button id="btn">Cargar JSON</button>
     <p id="parrafo"></p>
-    <table id="tabla">
+    <table id="tabla" border="1">
         <tr>
             <th>Nombre</th>
             <th>Descripción</th>
