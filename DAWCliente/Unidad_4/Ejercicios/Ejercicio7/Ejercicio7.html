@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Ejercicio 7</title>
+    <script>
+        function showHint() {
+            if (window.XMLHttpRequest) {
+                peticion_http = new XMLHttpRequest();
+            } else if (window.ActiveXObject) {
+                peticion_http = new ActiveXObject("Microsoft.XMLHTTP");
+            } else {
+                alert("Su navegador no soporta ajax")
+            }
+
+            //Preparar la petición
+            querystring = "q=" + document.getElementById("txt1").value;
+            peticion_http.onreadystatechange = cargarDatos;
+            peticion_http.open("POST", "gethint.php", true);
+            peticion_http.setRequestHeader("$a",querystring);
+            
+            //Enviar la petición
+            peticion_http.send(querystring);     
+        }
+
+        function cargarDatos(){
+            document.getElementById("txtHint").innerHTML=peticion_http.responseText;
+        }
+    </script>
+</head>
+
+<body>
+    <h2>The XMLhttpRequest Object</h2>
+    <h3>Start typing a name in the input field below</h3>
+
+    <p>Suggestions:<span id="txtHint"></span></p>
+    <p>First name: <input type="text" id="txt1"></p>
+
+    <div id="resultado"></div>
+    <script>
+        document.getElementById("txt1").addEventListener("keyup", showHint, false);
+    </script>
+</body>
+
+</html>
