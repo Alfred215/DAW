@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Prueba JQUERY 1</title>
+        <script src="../../../DAWInterfaces/SegundaEva/Software/jquery-3.6.0.min.js"></script>
+        <script>
+            function saludar(){
+                //document.getElementById("parrafo").textContent="Hola mundo";
+
+                // Con jquery
+                $("#parrafo").html("Hola mundo");
+                
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" id="boton" value="Mostrar saludo">
+        <p id="parrafo"></p>
+        <script>
+            //document.getElementById("boton").addEventListener("click",saludar,false);
+
+            //Con jquery
+            $("#boton").click(saludar);
+            //$("#boton").click(function(){
+                //$("#parrafo").html("Hola mundo");
+            //});
+        </script>
+    </body>
+</html>
