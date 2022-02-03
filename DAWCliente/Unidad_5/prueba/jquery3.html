@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Prueba JQUERY 3</title>
+        <script src="../jquery-3.6.0.min.js"></script>
+        <script>
+            //$("p").filter(".importante") selecciona todos los párrafos
+            //con la clase llamada "importante".
+
+            //$("p#primero").find("bold") devuelve las etiquetas con negrita del párrafo primero
+
+            //Ejercicio: Cambiar el color a rojo al párrafo tres con el metodo find
+            $(document).ready(function(){
+                $("p").find("importante").click(function(){
+                    $(this).css("color", "rojo")
+                })
+            });   
+        </script>
+    </head>
+    <body>
+        <p id="parrafo">Párrafo 1</p><br>
+        <p>Párrafo 2</p><br>
+        <p class="importante">Párrafo 3</p>
+        <script>
+            
+        </script>
+    </body>
+</html>

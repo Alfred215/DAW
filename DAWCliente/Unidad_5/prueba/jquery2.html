@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Prueba JQUERY 2</title>
+        <script src="../jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                //al pasar el ratón por enciama de un párrafo 
+                //cambia el texto a rojo
+                $("p").mouseover(function() {
+                    $(this).css("color", "red");
+                });
+                //al salir de un párrafo, cambia el color del párrafo a negro
+                $("p").mouseout(function() {
+                    $(this).css("color", "black");
+                });
+                //al hacer click en el primer párrafo muestra un alert que muestra "Has hecho click"
+                $("#parrafo").click(function() {
+                    alert("Has pulsado el primer párrafo")
+                });
+                //al hacer click en el tercer párrafo se oculta su texto
+                $(".importante").click(function() {
+                    $(this).hide();
+                });
+            });   
+        </script>
+    </head>
+    <body>
+        <p id="parrafo">Párrafo 1</p><br>
+        <p>Párrafo 2</p><br>
+        <p class="importante">Párrafo 3</p>
+        <script>
+            
+        </script>
+    </body>
+</html>
