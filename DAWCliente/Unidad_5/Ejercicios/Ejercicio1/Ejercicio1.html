@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 1 JQUERY</title>
+        <script src="../../jquery-3.6.0.min.js"></script>
+        <script  type="text/javascript">
+            $(document).ready(function(){
+                //Eliminar todo
+                $("#boton1").click(function(){
+                    $("li").remove();
+                });
+
+                //Restaurar
+                $("#boton2").click(function(){
+
+                });
+
+                //Añadir un elemento al final
+                $("#boton3").click(function(){
+
+                });
+
+                //Añadir un elemento al principio
+                $("#boton4").click(function(){
+
+                });
+
+                //Eliminar el primer elemento
+                $("#boton5").click(function(){
+                    $("li").filter(":first").remove();
+                });
+
+                //Eliminar el ultimo elemento
+                $("#boton6").click(function(){
+                    $("li").filter(":last").remove();
+                });
+
+                //Decorar colores alternos
+                $("#boton7").click(function(){
+
+                });
+            });   
+        </script>
+    </head>
+    <body>
+        <h2>Manipulando DOM</h2>
+        <ul>
+            <li>Primer Item</li>
+            <li>Segundo Item</li>
+            <li>Tercer Item</li>
+            <li>Cuarto Item</li>
+        </ul>
+        <p>
+            <input type="button" id="boton1" value="Eliminar la lista completa"><br/>
+            <input type="button" id="boton2" value="Restaurar lista"><br/>
+            <input type="button" id="boton3" value="Añadir un elemento al final de la lista"><br/>
+            <input type="button" id="boton4" value="Añadir un elemento al principio de la lista"><br/>
+            <input type="button" id="boton5" value="Elimina el primer elemento"><br/>
+            <input type="button" id="boton6" value="Eliminar el ultimo elemento"><br/>
+            <input type="button" id="boton7" value="Decorar colores alternos"><br/>
+        </p>
+    </body>
+</html>

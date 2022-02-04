@@ -12,16 +12,19 @@
 
             //Ejercicio: Cambiar el color a rojo al párrafo tres con el metodo find
             $(document).ready(function(){
-                $("p").find("importante").click(function(){
-                    $(this).css("color", "rojo")
-                })
+                $("div").find(".importante").css("color", "red"); //Si funciona
+                //$("p").filter(":last").css("color", "red"); Si funciona
+                //$("p").find(".importante").css("color", "rojo"); No funciona
             });   
         </script>
     </head>
     <body>
-        <p id="parrafo">Párrafo 1</p><br>
-        <p>Párrafo 2</p><br>
-        <p class="importante">Párrafo 3</p>
+        <div id="textos">
+            <p id="parrafo">Párrafo 1</p><br/>
+            <p>Párrafo 2</p><br/>
+            <p class="importante">Párrafo 3</p>
+        </div>
+        
         <script>
             
         </script>
