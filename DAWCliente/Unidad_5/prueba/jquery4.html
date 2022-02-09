@@ -12,7 +12,17 @@
                //Extraer la información del input
                alert($("input").val());
 
-               //
+               //Modificar el primer párrafo
+               $("p").eq(0).html("Nuevo texto del párrafo");
+
+               //Cambiar el enlace con el texto del input a través de un botón
+               $("#cambiar").click(function(){
+                    $("a").attr({
+                        "title":"Ir al enlace",
+                        "href":$("input").filter(":first").val()
+                    });
+                    alert("Enlace cambiado");
+               });
             });   
         </script>
     </head>

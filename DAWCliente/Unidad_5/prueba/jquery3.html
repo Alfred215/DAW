@@ -15,6 +15,15 @@
                 $("div").find(".importante").css("color", "red"); //Si funciona
                 //$("p").filter(":last").css("color", "red"); Si funciona
                 //$("p").find(".importante").css("color", "rojo"); No funciona
+            
+                //encadenamiento de selecciones
+                $("div#textos")
+                    .find("p")
+                        .eq(0)
+                        .html("Texto cambiado en el primer párrafo")
+                    .end()
+                        .eq(1)
+                        .html("Texto cambiado en el segundo párrafo");
             });   
         </script>
     </head>
