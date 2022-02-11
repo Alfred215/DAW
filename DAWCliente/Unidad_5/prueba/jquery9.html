@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Prueba JQUERY 8</title>
+        <title>Prueba JQUERY 9</title>
         <script src="../jquery-3.6.0.min.js"></script>
         <script>
             $(document).ready(function(){
@@ -14,7 +14,7 @@
             function cargarXML(){
                 $.ajax({
                     method:"get",
-                    url:"cd_catalog.xml",
+                    url:"actividades.json"
                 }).done(function(data){
                     cargarTabla(data);
                     alert("Texto grabado con exito");
@@ -26,22 +26,25 @@
             }
 
             function cargarTabla(data){
-                var listaCD=$(data).find("CD");
-                $("#tabla").append("<tr><th>Titulo</th><th>Artista</th><th>Pais</th></tr>");
-                for(i=0;i<listaCD.length;i++){
-                    var titulo=$(listaCD).eq(i).find("TITLE").text();
-                    var artista=$(listaCD).eq(i).find("ARTIST").text();
-                    var pais=$(listaCD).eq(i).find("COUNTRY").text();
-
-                    //situarte en la tabla y con .append(codigo html)
-                    $("#tabla").append("<tr><td>"+titulo+"</td><td>"+artista+"</td><td>"+pais+"</td></tr>");
+                $("#tabla").append("<tr><td>Actividad</td><td>Tipo</td></tr>");
+                var elementos=$(data);
+                alert(elementos);
+                for(i=0;i<elementos.length;i++){
+                    var nombre=elementos.eq(i).prop("name");
+                    alert(nombre);
+                    var tipo=elementos.eq(i).prop("tipo");
+                    grabarFila(nombre,tipo);
                 }
+            }
+
+            function grabarFila(name,type){
+                $("#tabla").append("<tr><td>"+name+"</td><td>"+type+"</td></tr>"); 
             }
 
         </script>
     </head>
     <body>
-        <input type="button" id="boton" value="Cargar txt"><br/>
+        <input type="button" id="boton" value="Cargar JSON"><br/>
         <tabla id="tabla" border="1">
         </tabla>    
     </body>
