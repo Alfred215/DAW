@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Prueba JQUERY 6</title>
+        <script src="../jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                //Añadir un elemento al final
+                $("#boton1").click(function(){
+                    $("ul").append("<li>Nuevo elemento al final</li>");
+                });
+
+                //cambiar el color a los elementos li al hacer click
+                $("ul").find("li").click(function(){
+                    $(this).css("color","red");
+                });
+
+                //Delegación de evento click para cambiar el color a todos los li que hagas click
+                $("ul").on("click","li",function(){
+                    $(this).css("color","red");
+                });
+            });   
+        </script>
+    </head>
+    <body>
+        <h2>Manipulando DOM</h2>
+        <ul>
+            <li>Primer Item</li>
+            <li>Segundo Item</li>
+            <li>Tercer Item</li>
+            <li>Cuarto Item</li>
+        </ul>
+
+        <input type="button" id="boton1" value="Añadir un elemento al final de la lista">
+    </body>
+</html>

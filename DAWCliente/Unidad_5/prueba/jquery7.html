@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Prueba JQUERY 7</title>
+        <script src="../jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                // cargar un txt del servidor
+                $("#boton").click(function(){
+                    cargarTXT();
+                });
+            });   
+
+            function cargarTXT(){
+                $.ajax({
+                    method:"get",
+                    url:"saludo.txt",
+                }).done(function(data){
+                    $("#parrafo").text(data);
+                    alert("Texto grabado con exito");
+                }).fail(function(){
+                    alert("Ha existido un error");
+                }).always(function(){
+                    alert("Trabajo realizado");
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" id="boton" value="Cargar txt"><br/>
+        <p id="parrafo"></p>    
+    </body>
+</html>
