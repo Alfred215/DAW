@@ -13,7 +13,8 @@
 
                 //Restaurar
                 $("#boton2").click(function(){
-
+                    $("li").remove();
+                    $("ul").append("<li>Primer Item</li><li>Segundo Item</li><li>Tercer Item</li><li>Cuarto Item</li>");
                 });
 
                 //Añadir un elemento al final
@@ -23,7 +24,7 @@
 
                 //Añadir un elemento al principio
                 $("#boton4").click(function(){
-
+                    $("ul").prepend("<li>Nuevo elemento al final</li>");
                 });
 
                 //Eliminar el primer elemento
@@ -38,7 +39,8 @@
 
                 //Decorar colores alternos
                 $("#boton7").click(function(){
-
+                    $("ul li:even").css("color","red");
+                    $("ul li:odd").css("color","green");
                 });
             });   
         </script>
