@@ -1,7 +1,7 @@
-﻿
-    [
+﻿{
+    "actividad":[
         { "name":"boxeo", "descrip":"Dar puñetazos a un saco", "tipo":["cuerpo-baile","cuerpo-mente"],"duration":"2", "calorias":"6000","beneficios":["articulación","tonificacion"],"ejercicio":"movilidad articular" },
         { "name":"yoga", "descrip":"Relagarse en una esterilla", "tipo":["mente","tono"],"duration":"40", "calorias":"500","beneficios":["control postural","coordinacion"],"ejercicio":"elasticidad muscular" },
         { "name":"kickboxing", "descrip":"Hacer movimientos de velocidad", "tipo":["velocidad-baile","cuerpo-mente"],"duration":"1", "calorias":"5000","beneficios":["tonificar","coordinacion"],"ejercicio":"tonificar" }
     ]
-
+}
