@@ -32,14 +32,9 @@
                 $("#cuadro").animate({height:$(".cuadro").height()},2000);
             }
             var reproducirCuadro1 = function(padLR,padTB,topeAncho,topeAlto,ancho1,alto1){
-                $("#cuadro1").animate({width:ancho1-padLR},2000);
-                $("#cuadro1").animate({width:$(".cuadro1").width(),left:topeAncho},2000);
-                $("#cuadro1").animate({height:alto1-padTB},2000);
-                $("#cuadro1").animate({height:$(".cuadro1").height(),top:topeAlto},2000);
-                $("#cuadro1").animate({left:"180",width:ancho1-padLR},2000);
-                $("#cuadro1").animate({width:$(".cuadro1").width(),left:"180"},2000);
-                $("#cuadro1").animate({height:alto1-padTB,top:"80"},2000);
-                $("#cuadro1").animate({height:$(".cuadro1").height()},2000);
+                $("#cuadro1").animate({top:"780px",left:"1560px"},2000);
+                $("#cuadro1").animate({top:"80px",left:"180px"},2000);
+                timer = setTimeout('reproducirCuadro1()',10);
             }
             var reproducirSol = function(){
                 
