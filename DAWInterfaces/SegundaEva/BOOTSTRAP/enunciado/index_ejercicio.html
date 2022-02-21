@@ -14,7 +14,9 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
 
     <style type="text/css">
-
+        .ultima{
+            margin-bottom: 170px;
+        }
     </style>
 </head>
 
@@ -27,11 +29,29 @@
             </header>
         </div>
 
+        <nav class="navbar navbar-inverse navbar-fixed-bottom">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                    <li class="active>"><a href="#">INICIO</a></li>
+                    <li><a href="#">COCHES</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">MOTOS
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">RACING</a></li>
+                            <li><a href="#">NAKED</a></li>
+                            <li><a href="#">TOURING</a></li>  
+                        </ul>
+                    </li>
+                    <li><a href="#">CAMIONES</a></li>
+                </ul>
+            </div>
+        </nav>
+
         <div class="row">
-            <div class="col-lg-1"></div>
-            <aside class="col-lg-1 text-center">
-                <div class="col-lg-1"></div>
-                <div class="dropdown col-lg-10 bg-back height-2">
+            <aside class="col-lg-2 col-md-3 col-sm-12 col-xs-12 text-center">
+                <div class="col-lg-2"></div>
+                <div class="dropdown col-lg-10 bg-back height-2 border">
                     <button class="btn btn-white dropdown-toggle mt" type="button" id="dropdownMenu1"
                         data-toggle="dropdown">Menu 1</button><br>
                     <button class="btn btn-white dropdown-toggle mt" type="button" id="dropdownMenu2"
@@ -46,57 +66,69 @@
                     <button class="btn btn-white dropdown-toggle mt" type="button" id="dropdownMenu4"
                         data-toggle="dropdown">Menu 4</button><br>
                 </div>
-                <div class="col-lg-1"></div>
             </aside>
-            <section class="col-lg-10 height-6 flex">
-                <div class="height-4 col-lg-3 panel-default">
-                    <div class="bg-back panel-heading">
-                        <h2 class="text-center p_top height-0_8 ">FOTO 1</h2>
+            <section class="col-lg-10 col-md-9 col-sm-10 col-xs-10 ultima">
+                <article class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="panel panel-default height-4">
+                        <div class="panel-heading">
+                            <h2 class="p_left p_top height-0_8 ">FOTO 1</h2>
+                        </div>
+                        <div class="panel-body">
+                            <img src="img/foto1.jpg" class="img-responsive">
+                        </div>
                     </div>
-                    <div class="panel-body">
-                        <img src="img/foto1.jpg">
+                </article>
+                
+                <article class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="panel panel-default height-4">
+                        <div class="panel-heading ">
+                            <h2 class="p_left p_top height-0_8 ">FOTO 2</h2>
+                        </div>
+                        <div class="panel-body">
+                            <img src="img/foto2.jpg" class="img-responsive">
+                        </div>
                     </div>
-                </div>
-                <div class="height-4 col-lg-3 panel-default">
-                    <div class="bg-back panel-heading">
-                        <h2 class="text-center p_top height-0_8 ">FOTO 2</h2>
+                </article>
+                <article class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="panel panel-default height-4">
+                        <div class="panel-heading ">
+                            <h2 class="p_left p_top height-0_8 ">FOTO 3</h2>
+                        </div>
+                        <div class="panel-body">
+                            <img src="img/foto3.jpg" class="img-responsive">
+                        </div>
                     </div>
-                    <div class="panel-body ">
-                        <img src="img/foto2.jpg">
+                </article>
+                <article class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="panel panel-default height-4">
+                        <div class="panel-heading ">
+                            <h2 class="p_left p_top height-0_8 ">FOTO 4</h2>
+                        </div>
+                        <div class="panel-body">
+                            <img src="img/foto4.jpg" class="img-responsive">
+                        </div>
                     </div>
-                </div>
-                <div class="height-4 col-lg-3 panel-default">
-                    <div class="bg-back panel-heading">
-                        <h2 class="text-center p_top height-0_8 ">FOTO 3</h2>
+                </article>
+                <article class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="panel panel-default height-4">
+                        <div class="panel-heading ">
+                            <h2 class="p_left p_top height-0_8 ">FOTO 5</h2>
+                        </div>
+                        <div class="panel-body">
+                            <img src="img/foto5.jpg" class="img-responsive">
+                        </div>
                     </div>
-                    <div class="panel-body ">
-                        <img src="img/foto3.jpg"> 
+                </article>
+                <article class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="panel panel-default height-4">
+                        <div class="panel-heading ">
+                            <h2 class="p_left p_top height-0_8 ">FOTO 6</h2>
+                        </div>
+                        <div class="panel-body">
+                            <img src="img/foto6.jpg" class="img-responsive">
+                        </div>
                     </div>
-                </div>
-                <div class="height-4 col-lg-3 panel-default">
-                    <div class="bg-back panel-heading">
-                        <h2 class="text-center p_top height-0_8 ">FOTO 4</h2>
-                    </div>
-                    <div class="panel-body ">
-                        <img src="img/foto4.jpg ">
-                    </div>
-                </div>
-                <div class="height-4 col-lg-3 panel-default">
-                    <div class="bg-back panel-heading">
-                        <h2 class="text-center p_top height-0_8 ">FOTO 5</h2>
-                    </div>
-                    <div class="panel-body">
-                        <img src="img/foto5.jpg">
-                    </div>
-                </div>
-                <div class="height-4 col-lg-3 panel-default">
-                    <div class="bg-back panel-heading">
-                        <h2 class="text-center p_top height-0_8 ">FOTO 6</h2>
-                    </div>
-                    <div class="panel-body">
-                        <img src="img/foto6.jpg">
-                    </div>
-                </div>
+                </article>
             </section>
         </div>
     </div>
