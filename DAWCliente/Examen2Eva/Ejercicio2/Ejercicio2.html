@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicio 2 - jugadores</title>
+    <script src="../../jquery-3.6.0.min.js"></script>
+    <script>
+        function cargar(){
+            if (window.XMLHttpRequest) {
+                peticion_http = new XMLHttpRequest();
+                alert("Su navegador soporta ajax con objetos XMLHttpRequest");
+            }else if(window.ActiveXObject){
+                peticion_http = new ActiveXObject("Microsoft.XMLHTTP");
+                alert("Su navegador soporta AJAX con objetos active");
+            }else{
+                alert("Su navegador no soporta ajax")
+            }
+
+            //Asignar la función de procesamiento
+            peticion_http.onreadystatechange=procesaRespuesta;
+
+            //Preparar la petición
+            peticion_http.open("GET","jugadores.json",true); //asincrono
+            
+            //Enviar la petición
+            peticion_http.send(null);
+        }
+
+        function procesaRespuesta() {
+            if (peticion_http.readyState == 4 && peticion_http.status == 200) {
+                //recoge el json de jugadores y lo convierte en objeto
+                var json = peticion_http.responseText;
+                var obj = JSON.parse(json);
+                //Recojo el valor del select y le resto uno porque el array empieza en 0 en vez de uno 
+                var i= document.getElementById("opciones").value;
+                crearTabla(obj.jugadores[i-1].nombre, obj.jugadores[i-1].equipo, obj.jugadores[i-1].habilidades.join(), obj.jugadores[i-1].posicion);     
+            }
+        }
+
+        function crearTabla(nombre,equipo,habilidades,posicion) {
+            //crea la tabla 
+            var tabla = document.getElementById("tabla");
+            var tr = document.createElement("tr");
+            tr.innerHTML="<td>"+nombre+"</td> <td>"+equipo+"</td><td>"+habilidades+"</td><td>"+posicion+"</td>";
+            tabla.appendChild(tr);
+        }
+        
+    </script>
+</head>
+
+<body>
+    <select id="opciones" name="opciones">
+        <option value="1">Leo Messi</option>
+        <option value="2">Pique</option>
+        <option value="3">Iker Casillas</option>
+        <option value="4">Cristiano</option>
+    </select>
+    <button id="btn1">Grabar actividades en la tabla </button>
+    <table id="tabla" border="1">
+        <tr>
+            <th>Nombre</th>
+            <th>Equipo</th>
+            <th>Habilidades</th>
+            <th>Posición</th>
+        </tr>
+    </table>
+    <script>
+        document.getElementById("btn1").addEventListener("click", cargar, false);
+    </script>
+</body>
+
+</html>

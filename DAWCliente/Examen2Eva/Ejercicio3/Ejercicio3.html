@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicio 3</title>
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(inicio);
+
+        function inicio() {
+            //En el momento que carge la página, llamara a cargarXML
+            cargarXML();   
+        }
+
+        function cargarXML() {
+            //Manda la peticíon post al archivo biblioteca.xml y recoge sus datos, una vez hecho eso, llama a cargarUl
+            $.ajax({
+                    method: "post",
+                    url: "biblioteca.xml"
+                })
+                .done(function(data) {
+                    cargarUl(data);
+                    alert("Texto grabado");
+                })
+                .fail(function() {
+                    alert("Ha ocurrido un error");
+                })
+                .always(function() {
+                    alert("Trabajo realizado");
+                });
+        }
+
+        function cargarUl(data){
+            //Busca la etiqueta libro dentro del archivo y recoge sus valores
+            var listaLibro=$(data).find("libro");
+            //Recorremos los valores que habia dentro de la etiqueta libro y los insertamos en la lista
+            for(i=0;i<listaLibro.length;i++){
+                var titulo=$(listaLibro).eq(i).find("titulo").text();
+                var autor=$(listaLibro).eq(i).find("autor").text();
+                $("ul").append("<li>"+titulo+"</li><li>"+autor+"</li>");
+            }
+            //LLamo al metodo de cambiar color, para darle colores alternos a los li
+            cambiarColor();
+        }
+
+        function cambiarColor(){
+            $("ul li:even").css("color","red");
+            $("ul li:odd").css("color","green"); 
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Ejercicio de Jquery, petición Post y XML</h2>
+    <ul>
+
+    </ul>
+</body>
+
+</html>

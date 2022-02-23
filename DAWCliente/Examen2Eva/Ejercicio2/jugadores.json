@@ -1,0 +1,8 @@
+﻿{
+    "jugadores":[
+        { "nombre":"Leo Messi", "equipo":"Barcelona", "habilidades":["velocidad","punteria"],"posicion":"Delantero centro" },
+        { "nombre":"Pique", "equipo":"Barcelona", "habilidades":["fuerza","resistencia"],"posicion":"Defensa"},
+        { "nombre":"Iker Casillas", "equipo":"Oporto", "habilidades":["reflejos","velocidad"],"posicion":"Portero"},
+        { "nombre":"Cristiano", "equipo":"Madrid", "habilidades":["punteria","fuerza"],"posicion":"Delantero"}
+    ]
+}
