@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Parte II 2ª Evaluación Bootstrap 2021-22 tipo B</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="generator" content="CSE HTML Validator (https://www.htmlvalidator.com/)">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- DEFINA AQUÍ EL CÓDIGO CSS -->
+    <style type="text/css">
+        .margin{
+            margin-top: 80px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- DEFINA AQUÍ LA BARRA DE NAVEGACIÓN -->
+    <!-- Utilizo el elemento nav para crear la barra de navegación y utilizo nevbar-fixed-top 
+    para fijarla arriba de la página -->
+    <nav class="nav navbar-default navbar-fixed-top">
+        <!-- El navbar-heeder, sirve para ponerle un titulo a la barra de navegación, 
+        en este caso aparecera a la izquierda -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Examen 2ª Eval. Parte 2 Bootstrap</a>
+            <!-- Este botón, donde utilizo el collapse, sirve para que una vez que la pantalla 
+            sea pequeña y no se pueda ver el menú completo, cree a la derecha un botón 
+            que desplegara el menú -->
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" 
+            data-target="#menu" aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <!-- Menú con todas las opciones, donde todos los enlaces tienen la clase de btn y btn-link
+        para que se vean todos los enlaces de color azul y al posicionarse enciama cambie el color
+        de fondo  -->
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="nav navbar-nav">
+                <li><a class="btn btn-link" href="#">OPCIÓN 1</a></li>
+                <li><a class="btn btn-link" href="#">OPCIÓN 2</a></li>
+                <!-- Menú desplegable  -->
+                <li><a class="btn btn-link" href="#" class="dropdown-toggle" id="opcion3" 
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    OPCIÓN 3 <span class="caret"></span></a>
+                    <ul class="dropdown-menu" aria-labelledby="opcion3">
+                        <li><a href="#">OPCIÓN 3.1</a></li>
+                        <li><a href="#">OPCIÓN 3.2</a></li>
+                        <li><a href="#">OPCIÓN 3.3</a></li>
+                    </ul>
+                </li>
+                <li><a class="btn btn-link" href="#">OPCIÓN 4</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- END BARRA NAVEGACIÓN -->
+
+
+
+    <!-- DEFINA AQUÍ EL JUMBOTRON -->
+        <div class="jumbotron text-center margin">
+            <h2>Garcí Arpal, Alfredo</h1>
+                <p>Diseño de interfaces web. Bootstrap. <a class="btn btn-warning" href="#">Leer más &raquo;</a></p>
+        </div>
+
+    <!-- END JUMBUTRON -->
+
+
+    <!-- DEFINA AQUÍ LA SECTION  -->
+    <div class="container">
+        <div class="row">
+            <section>
+                <!-- Los articles tienen un tamaño definidido en función del tamañado de la ventana,
+                si la ventana es mayor a 992px entonces siempre se veran los tres en la misma linea, 
+                sin embargo, si la ventana tiene un tamaño menor al nombrado antes solo se veran dos
+                en una misma linea y si el tamaño es menor a 768px entonces solo se vera uno por fila -->
+                <article class="col-md-4 col-sm-6 col-xs-12">
+                        <img src="img/FPB.png" class="img-responsive">
+                        <h2>F.P Básica</h2>
+                        <p>
+                            Estará fija en la parte superior.
+                            Tendrá una cabecera con el siguiente texto “Examen 2ª Eval. Parte 2 Bootstrap”, que será un enlace.
+                            Tendrá los siguientes ítems: OPCIÓN 1, OPCIÓN 2, OPCIÓN 3 y OPCIÓN 4, del OPCIÓN 3 se despliega un
+                            submenú con los ítems: OPCIÓN 3.1, OPCIÓN 3.2 y OPCIÓN 3.3
+                        </p>
+                    <p class="text-left">
+                        <a class="btn btn-success" href="#">Ver detalles &raquo;</a>
+                    </p>
+                </article>
+                <article class="col-md-4 col-sm-6 col-xs-12">
+                        <img src="img/GM.png" class="img-responsive">
+                        <h2>F.P Grado Medio</h2>
+                        <p>
+                            Estará fija en la parte superior.
+                            Tendrá una cabecera con el siguiente texto “Examen 2ª Eval. Parte 2 Bootstrap”, que será un enlace.
+                            Tendrá los siguientes ítems: OPCIÓN 1, OPCIÓN 2, OPCIÓN 3 y OPCIÓN 4, del OPCIÓN 3 se despliega un
+                            submenú con los ítems: OPCIÓN 3.1, OPCIÓN 3.2 y OPCIÓN 3.3
+                        </p>
+                        <p class="text-center">
+                        <a class="btn btn-danger" href="#">Ver detalles &raquo;</a>
+                        </p>
+                </article>
+                <article class="col-md-4 col-sm-6 col-xs-12">
+                        <img src="img/GS.png" class="img-responsive">
+                        <h2>F.P Grado Superior</h2>
+                        <p>
+                            Estará fija en la parte superior.
+                            Tendrá una cabecera con el siguiente texto “Examen 2ª Eval. Parte 2 Bootstrap”, que será un enlace.
+                            Tendrá los siguientes ítems: OPCIÓN 1, OPCIÓN 2, OPCIÓN 3 y OPCIÓN 4, del OPCIÓN 3 se despliega un
+                            submenú con los ítems: OPCIÓN 3.1, OPCIÓN 3.2 y OPCIÓN 3.3 
+                        </p>
+                    <p class="text-right">
+                        <a class="btn btn-info" href="#">Ver detalles &raquo;</a>
+                    </p>
+                </article>
+            </section>
+        </div>
+    
+
+    <!-- END SECTION -->
+
+
+    <!-- DEFINA AQUÍ EL FOOTER  -->
+    <footer>
+        <p class="text-center">&copy; IES Santiago Hernández</p>
+    </footer>
+    <!-- END FOOTER -->
+
+    </div>
+</body>
+
+</html>
